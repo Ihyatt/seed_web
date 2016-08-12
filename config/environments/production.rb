@@ -53,6 +53,14 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "seed_web_#{Rails.env}"
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { host: 'seed-web.herokuapp.com', port: 3000 }
+  config.action_mailer.smtp_settings = {
+    :address        => ENV["MAILGUN_SMTP_SERVER"],
+    :port           => ENV["MAILGUN_SMTP_PORT"],
+    :authentication => :plain,
+    :domain         => ENV["MAILGUN_DOMAIN"],
+    :user_name      => ENV["MAILGUN_SMTP_LOGIN"],
+    :password       => ENV["MAILGUN_SMTP_PASSWORD"]
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
