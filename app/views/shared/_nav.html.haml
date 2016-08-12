@@ -1,0 +1,15 @@
+%nav.navbar.navbar-full.navbar-dark.bg-inverse
+  %a.navbar-brand{:href => root_path} Seed
+  %ul.nav.navbar-nav
+    %li.nav-item
+      %a.nav-link{:href => about_path} About
+    - if !user_signed_in?
+      %li.nav-item
+        %a.nav-link{:href => new_user_registration_path} Sign Up
+      %li.nav-item
+        %a.nav-link{:href => new_user_session_path} Login
+    - else
+      %li.nav-item
+        %a.nav-link{:href => destroy_user_session_path} Logout
+
+  
