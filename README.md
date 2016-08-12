@@ -21,6 +21,7 @@ Foreman
 Copy .env.example to .env
 
 * Database creation
+rake db:create
 
 * Database initialization
 
