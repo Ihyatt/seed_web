@@ -1,5 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:user) { FactoryGirl.build(:user) }
+
+  describe "associations" do
+  end
+
+  describe 'validations' do
+    it { is_expected.to validate_presence_of(:email) }
+    it { is_expected.to validate_uniqueness_of(:email) }
+  end
 end

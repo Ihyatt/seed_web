@@ -6,6 +6,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
+  # Validations
+  validates :email, :uniqueness => true, :presence => true
+
+  # Callbacks
   after_initialize :setup, :if => :new_record?
 
   def setup
