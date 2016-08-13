@@ -16,6 +16,9 @@ class SurveysController < ApplicationController
   # GET /surveys/new
   def new
     @survey = Survey.new
+    @survey.user = current_user
+    @survey.save
+    redirect_to @survey
   end
 
   # GET /surveys/1/edit
