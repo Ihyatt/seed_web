@@ -38,7 +38,7 @@ group :development, :test do
   gem 'guard'
   gem 'guard-bundler', require: false
   gem 'guard-rspec', require: false
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -51,7 +51,8 @@ group :development do
 end
 
 group :test do
-  gem 'capybara' 
+  gem 'capybara'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
