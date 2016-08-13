@@ -7,9 +7,11 @@ RSpec.describe Message, type: :model do
   end
 
   describe 'validations' do
-    it { is_expected.to validate_presence_of(:conversation) }
-    it { is_expected.to validate_presence_of(:user) }
-    it { is_expected.to validate_presence_of(:text) }
+    it { should validate_presence_of(:conversation) }
+    it { should validate_presence_of(:user) }
+    it { should validate_presence_of(:text) }
     
   end
+
+  
 end
