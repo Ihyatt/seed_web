@@ -15,7 +15,10 @@ Postgres
 RVM
 ImageMagick
 Redis
-Foreman 
+Foreman
+```
+gem install foreman
+```
 
 * Configuration
 Copy .env.example to .env
