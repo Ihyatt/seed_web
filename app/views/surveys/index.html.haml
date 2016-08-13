@@ -7,8 +7,7 @@
         %tr
           %th ID
           %th By
-          %th
-          %th
+          %th Questions
           %th
 
       %tbody
@@ -16,9 +15,9 @@
           %tr
             %td= link_to survey.id, survey
             %td= link_to survey.user.email, survey
-            %td= link_to 'Show', survey
-            %td= link_to 'Edit', edit_survey_path(survey)
-            %td= link_to 'Destroy', survey, :method => :delete, :data => { :confirm => 'Are you sure?' }
+            %td= survey.questions.count
+            / %td= link_to 'Edit', edit_survey_path(survey)
+            %td= link_to 'Delete', survey, :method => :delete, :data => { :confirm => "Delete Survey #{survey.id}?" } if user_signed_in?
 
     %br
 

@@ -15,13 +15,13 @@
       %h3
         = question.title
     .col-xs-1
-      = link_to "Edit", edit_survey_question_path(@survey,question)
+      = link_to "Edit", edit_survey_question_path(@survey,question) if user_signed_in?
     .col-xs-1
-      = link_to 'Delete', survey_question_path(@survey,question), :method => :delete, :data => { :confirm => 'Are you sure?' }
+      = link_to 'Delete', survey_question_path(@survey,question), :method => :delete, :data => { :confirm => 'Are you sure?' } if user_signed_in?
     
     
   
 %hr.m-t-3
 / = link_to 'Edit Survey', edit_survey_path(@survey)
 / \|
-= link_to 'Add Question', new_survey_question_path(@survey), class: 'btn btn-primary'
+= link_to 'Add Question', new_survey_question_path(@survey), class: 'btn btn-primary' if user_signed_in?
