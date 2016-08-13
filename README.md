@@ -3,11 +3,12 @@
 1. Clone to local
 2. cd seed_web
 3. Install dependencies listed below
-3. bundle install
-4. Copy .env.example to .env
-5. rake db:create
-6. rake db:seed
-7. foreman start -f Procfile.dev
+4. bundle install
+5. Copy .env.example to .env
+6. bundle exec spring binstub --all
+7. rake db:create
+8. rake db:seed
+9. foreman start -f Procfile.dev
 
 Starts the server and guard to run rspec
 
