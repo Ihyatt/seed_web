@@ -16,8 +16,12 @@ RVM
 ImageMagick
 Redis
 Foreman
+
 ```
 gem install foreman
+```
+```
+brew install terminal-notifier
 ```
 
 * Configuration

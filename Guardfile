@@ -80,3 +80,5 @@ guard :bundler do
   # Assume files are symlinked from somewhere
   files.each { |file| watch(helper.real_path(file)) }
 end
+
+notification :terminal_notifier if `uname` =~ /Darwin/
