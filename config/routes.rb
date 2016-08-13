@@ -5,7 +5,11 @@ Rails.application.routes.draw do
     end
   end
   
-  devise_for :users, controllers: {registrations: 'registrations'}
+  devise_for :users,
+    path:        '',
+    path_names:  {:sign_in => 'login', :sign_out => 'logout', :edit => 'settings'},
+    controllers: {registrations: 'registrations'}
+
   get 'about' => 'pages#about', as: :about
   root to: 'pages#index'
 end
