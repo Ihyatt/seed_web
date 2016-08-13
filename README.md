@@ -54,6 +54,9 @@ rspec
 ```
 
 * Services (job queues, cache servers, search engines, etc.)
+Sidekiq handles all background jobs and mailers
+
 
 * Deployment instructions
+git push heroku && heroku run rake db:migrate --app seed-web
 
