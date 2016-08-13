@@ -31,6 +31,7 @@ gem 'devise'
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'rolify'
 gem 'friendly_id', '~> 5.1.0'
+gem 'redis', '~>3.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
