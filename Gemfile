@@ -40,6 +40,7 @@ group :development, :test do
   gem 'guard-bundler', require: false
   gem 'guard-rspec', require: false
   gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :development do
