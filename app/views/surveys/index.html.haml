@@ -1,0 +1,25 @@
+.row.m-t-1
+  .col-sm-12
+    %h1 Surveys
+
+    %table.table
+      %thead
+        %tr
+          %th ID
+          %th By
+          %th
+          %th
+          %th
+
+      %tbody
+        - @surveys.each do |survey|
+          %tr
+            %td= link_to survey.id, survey
+            %td= link_to survey.user.email, survey
+            %td= link_to 'Show', survey
+            %td= link_to 'Edit', edit_survey_path(survey)
+            %td= link_to 'Destroy', survey, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+    %br
+
+    = link_to 'New Survey', new_survey_path, class: "btn btn-primary"
