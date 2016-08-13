@@ -10,6 +10,8 @@
         %a.nav-link{:href => new_user_session_path} Login
     - else
       %li.nav-item
+        %a.nav-link{:href => surveys_path} Surveys
+      %li.nav-item
         %a.nav-link{:href => edit_user_registration_path} Settings
       %li.nav-item
         %a.nav-link{:href => destroy_user_session_path} Logout
