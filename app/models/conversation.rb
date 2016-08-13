@@ -1,4 +1,9 @@
 class Conversation < ApplicationRecord
+  # Associations
+  has_many :messages, dependent: :destroy, inverse_of: :conversation
+  has_many :users, -> { distinct }, through: :messages
+
+  # Extensions
   extend FriendlyId
   friendly_id :slug
 

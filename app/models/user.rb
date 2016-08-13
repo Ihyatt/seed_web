@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  # Associations
+  has_many :messages, dependent: :destroy, inverse_of: :user
+
   # Extensions
   rolify
   # Include default devise modules. Others available are:
