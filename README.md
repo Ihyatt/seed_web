@@ -2,6 +2,7 @@
 
 1. Clone to local
 2. cd seed_web
+3. Install dependencies listed below
 3. bundle install
 4. Copy .env.example to .env
 5. rake db:create
@@ -14,22 +15,25 @@ Starts the server and guard to run rspec
 * Ruby version 2.3.1
 
 * System dependencies
-
 Postgres
-
-* Local dependencies
-
-RVM
-ImageMagick
+Sidekiq
 Redis
 
+* Local dependencies
+Postgres - http://postgresapp.com/
+Homebrew
+RVM - https://rvm.io/
+ImageMagick 
+Terminal Notifier
+Foreman
+
 ```
+brew install redis
+brew install terminal-notifier
+brew install imagemagick
 gem install foreman
 ```
 
-```
-brew install terminal-notifier
-```
 
 * Configuration
 
