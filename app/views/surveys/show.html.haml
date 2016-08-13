@@ -11,14 +11,17 @@
   
 - @survey.questions.each do |question|
   .row.m-b-1
-    .col-xs-1
-      = link_to "Edit", edit_survey_question_path(@survey,question)
     .col-xs-10
       %h3
         = question.title
+    .col-xs-1
+      = link_to "Edit", edit_survey_question_path(@survey,question)
+    .col-xs-1
+      = link_to 'Delete', survey_question_path(@survey,question), :method => :delete, :data => { :confirm => 'Are you sure?' }
+    
     
   
 %hr.m-t-3
-= link_to 'Edit Survey', edit_survey_path(@survey)
-\|
-= link_to 'Add Question', new_survey_question_path(@survey)
+/ = link_to 'Edit Survey', edit_survey_path(@survey)
+/ \|
+= link_to 'Add Question', new_survey_question_path(@survey), class: 'btn btn-primary'
