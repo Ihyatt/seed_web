@@ -9,6 +9,7 @@
 bundle install
 bundle exec spring binstub --all
 rake db:create
+rake db:migrate
 rake db:seed
 ```
 
