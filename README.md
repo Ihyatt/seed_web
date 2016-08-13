@@ -16,6 +16,7 @@ Starts the server and guard to run rspec
 ```
 foreman start -f Procfile.dev
 ```
+Open http://localhost:3000/
 
 * Ruby version 2.3.1
 
