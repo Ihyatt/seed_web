@@ -47,5 +47,16 @@ resource "Users" do
       expect(user_json["created_at"]).not_to be_nil
       expect(user_json["updated_at"]).not_to be_nil
     end
+
+    example "Get A User With Error" do
+      do_request(id: 1234)
+
+      expect(status).to eq(200)
+      
+      json = JSON.parse(response_body)
+      expect(json["success"]).to eq(false)
+      expect(json["status"]).to eq(404)
+      expect(json["errors"][0]["message"]).to eq("Couldn't find User with 'id'=1234")
+    end
   end
 end

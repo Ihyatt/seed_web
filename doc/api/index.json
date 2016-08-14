@@ -11,6 +11,13 @@
           "method": "get"
         },
         {
+          "description": "Get A User With Error",
+          "link": "users/get_a_user_with_error.json",
+          "groups": "all",
+          "route": "/api/v1/users/:id",
+          "method": "get"
+        },
+        {
           "description": "Get All Users",
           "link": "users/get_all_users.json",
           "groups": "all",

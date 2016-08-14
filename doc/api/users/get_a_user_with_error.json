@@ -2,7 +2,7 @@
   "resource": "Users",
   "http_method": "GET",
   "route": "/api/v1/users/:id",
-  "description": "Get A User",
+  "description": "Get A User With Error",
   "explanation": null,
   "parameters": [
     {
@@ -17,7 +17,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users/2",
+      "request_path": "/api/v1/users/1234",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
@@ -28,17 +28,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 2,\n    \"email\": \"madisyn.gaylord_2@grimes.info\",\n    \"created_at\": \"2016-08-14T21:46:45.081Z\",\n    \"updated_at\": \"2016-08-14T21:46:45.081Z\",\n    \"uid\": \"2a5c4c6a\",\n    \"first_name\": null,\n    \"last_name\": null,\n    \"locale\": null,\n    \"timezone\": null,\n    \"gender\": null\n  },\n  \"pagination\": null\n}",
+      "response_body": "{\n  \"success\": false,\n  \"status\": 404,\n  \"errors\": [\n    {\n      \"message\": \"Couldn't find User with 'id'=1234\"\n    }\n  ]\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"390040e9a06bf2d855f5acac971f680e\"",
+        "ETag": "W/\"7d1fcb86a24bbbad8ea5c463d3c94d8d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "3085fb9e-8a81-445f-8b07-b279426c97ec",
-        "X-Runtime": "0.021707",
-        "Content-Length": "264"
+        "X-Request-Id": "961bb607-27a9-4b92-a281-cbf5bb18c4f1",
+        "X-Runtime": "0.010500",
+        "Content-Length": "89"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
