@@ -146,7 +146,6 @@ resource "Users" do
     parameter :last_name, "First Name"
 
     example "Update A User" do
-      puts "orginal email #{user.email}"
       email = FactoryGirl.generate(:email)
       do_request(id: user.id, email: email, first_name: "Ketan", write_key: api_key.write_key)
 

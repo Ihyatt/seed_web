@@ -17,29 +17,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users/2?write_key=dca30bd8ab7c1c404ea6dfb15e097a13",
+      "request_path": "/api/v1/users/9?write_key=cdbe46f1e82ce58459123e3d942e0021",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "dca30bd8ab7c1c404ea6dfb15e097a13"
+        "write_key": "cdbe46f1e82ce58459123e3d942e0021"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 2,\n    \"email\": \"ila_keebler_2@wehnerkilback.name\",\n    \"created_at\": \"2016-08-14T22:25:10.263Z\",\n    \"updated_at\": \"2016-08-14T22:25:10.263Z\",\n    \"uid\": \"a9cd85e1\",\n    \"first_name\": null,\n    \"last_name\": null,\n    \"locale\": null,\n    \"timezone\": null,\n    \"gender\": null\n  },\n  \"pagination\": null\n}",
+      "response_body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 9,\n    \"email\": \"delbert_2@dickinson.biz\",\n    \"created_at\": \"2016-08-14T22:29:05.324Z\",\n    \"updated_at\": \"2016-08-14T22:29:05.324Z\",\n    \"uid\": \"303ffff2\",\n    \"first_name\": null,\n    \"last_name\": null,\n    \"locale\": null,\n    \"timezone\": null,\n    \"gender\": null\n  },\n  \"pagination\": null\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"a7284d81ad6ed67da4f7d75057e49259\"",
+        "ETag": "W/\"75c09d2c3408b54477529475478b0dba\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "336d1558-4fa2-43bd-a395-3281576910fd",
-        "X-Runtime": "0.015356",
-        "Content-Length": "267"
+        "X-Request-Id": "03268a65-fa10-4eed-a977-3038f6b19cf6",
+        "X-Runtime": "0.072850",
+        "Content-Length": "258"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
