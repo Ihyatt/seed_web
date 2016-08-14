@@ -11,9 +11,10 @@ resource "Users" do
       expect(status).to eq(200)
       
       json = JSON.parse(response_body)
-      expect(json.count).to eq(1)
+      users = json["data"]
+      expect(users.count).to eq(1)
 
-      user_json = json[0]
+      user_json = users[0]
       expect(user_json["id"]).to eq(user.id)
       expect(user_json["uid"]).to eq(user.uid)
       expect(user_json["created_at"]).not_to be_nil
@@ -34,7 +35,7 @@ resource "Users" do
       json = JSON.parse(response_body)
       #json.should == ""
 
-      user_json = json
+      user_json = json["data"]
       expect(user_json["id"]).to eq(user.id)
       expect(user_json["uid"]).to eq(user.uid)
       expect(user_json["created_at"]).not_to be_nil
