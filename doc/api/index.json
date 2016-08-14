@@ -1,0 +1,23 @@
+{
+  "resources": [
+    {
+      "name": "Users",
+      "examples": [
+        {
+          "description": "Get A User",
+          "link": "users/get_a_user.json",
+          "groups": "all",
+          "route": "/api/v1/users/:id",
+          "method": "get"
+        },
+        {
+          "description": "Get All Users",
+          "link": "users/get_all_users.json",
+          "groups": "all",
+          "route": "/api/v1/users",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

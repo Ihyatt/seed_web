@@ -76,3 +76,7 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+RspecApiDocumentation.configure do |config|
+  config.format = :json
+end

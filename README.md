@@ -60,6 +60,11 @@ rake db:create
 rspec
 ```
 
+* Update API Docs
+```
+rake docs:generate
+```
+
 * Services (job queues, cache servers, search engines, etc.)
 Sidekiq handles all background jobs and mailers
 

@@ -61,6 +61,10 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    apitome (0.1.0)
+      kramdown
+      railties
+      rspec_api_documentation
     arel (7.1.1)
     autoprefixer-rails (6.4.0.1)
       execjs
@@ -157,6 +161,7 @@ GEM
     json (1.8.3)
     jsonapi (0.1.1.beta2)
       json (~> 1.8)
+    kramdown (1.11.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -311,6 +316,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
+  apitome
   bootstrap (~> 4.0.0.alpha3.1)
   byebug
   capybara

@@ -1,0 +1,47 @@
+{
+  "resource": "Users",
+  "http_method": "GET",
+  "route": "/api/v1/users/:id",
+  "description": "Get A User",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "User ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/users/2",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 2,\n  \"uid\": \"0e170022\",\n  \"created_at\": \"2016-08-14T20:55:23Z\",\n  \"updated_at\": \"2016-08-14T20:55:23Z\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"703d18ab97d2267adfc588700c811d96\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "f0e9a250-6f84-405c-8aab-9e94d0914348",
+        "X-Runtime": "0.035502",
+        "Content-Length": "97"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
