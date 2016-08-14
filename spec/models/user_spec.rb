@@ -5,6 +5,7 @@ RSpec.describe User, type: :model do
 
   describe "associations" do
     it { should have_many :messages }
+    it { should have_many :api_keys }
   end
 
   describe 'validations' do

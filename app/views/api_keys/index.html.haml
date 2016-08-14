@@ -8,7 +8,6 @@
       %th Write key
       %th
       %th
-      %th
 
   %tbody
     - @api_keys.each do |api_key|
@@ -17,9 +16,8 @@
         %td= api_key.read_key
         %td= api_key.write_key
         %td= link_to 'Show', api_key
-        %td= link_to 'Edit', edit_api_key_path(api_key)
         %td= link_to 'Destroy', api_key, :method => :delete, :data => { :confirm => 'Delete your api keys?' }
 
 %br
 
-= link_to 'New API key', new_api_key_path
+= link_to 'New API key', new_api_key_path, class: 'btn btn-primary'

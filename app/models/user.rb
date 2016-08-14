@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Associations
   has_many :messages, dependent: :destroy, inverse_of: :user
+  has_many :api_keys, dependent: :destroy, inverse_of: :user
 
   # Extensions
   rolify
