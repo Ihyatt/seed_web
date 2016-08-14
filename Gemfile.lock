@@ -172,6 +172,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
+    mustache (1.0.3)
     mustermann (0.4.0)
       tool (~> 0.2)
     nenv (0.3.0)
@@ -245,6 +246,10 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    rspec_api_documentation (4.8.0)
+      activesupport (>= 3.0.0)
+      mustache (~> 1.0, >= 0.99.4)
+      rspec (~> 3.0, >= 3.0.0)
     ruby_parser (3.8.2)
       sexp_processor (~> 4.1)
     sass (3.4.22)
@@ -331,6 +336,7 @@ DEPENDENCIES
   redis (~> 3.2)
   rolify
   rspec-rails
+  rspec_api_documentation
   sass-rails (~> 5.0)
   shoulda-matchers (~> 3.1)
   sidekiq
