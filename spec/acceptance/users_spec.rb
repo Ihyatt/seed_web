@@ -2,13 +2,15 @@ require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
 resource "Users" do
-  let(:user) { FactoryGirl.create(:user)}
+  let(:user) { FactoryGirl.create(:user) }
+  let(:api_key) { FactoryGirl.create(:api_key, user: user) }
+  
   get "/api/v1/users" do
     parameter :page, "Page of users"
 
     example "Get All Users" do
       user
-      do_request
+      do_request(write_key: api_key.write_key)
 
       expect(status).to eq(200)
       
@@ -34,7 +36,7 @@ resource "Users" do
     parameter :id, "User ID", required: true
 
     example "Get A User" do
-      do_request(id: user.id)
+      do_request(id: user.id, write_key: api_key.write_key)
 
       expect(status).to eq(200)
       
@@ -49,7 +51,7 @@ resource "Users" do
     end
 
     example "Get A User With Error" do
-      do_request(id: 1234)
+      do_request(id: 1234, write_key: api_key.write_key)
 
       expect(status).to eq(200)
       
