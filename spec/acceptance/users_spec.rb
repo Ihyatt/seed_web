@@ -137,4 +137,33 @@ resource "Users" do
       expect(json["errors"][0]["field"]).to eq("email")
     end
   end
+
+  put "/api/v1/users/:id.json" do
+    parameter :id, "User ID", required: true
+    parameter :email, "New Email"
+    parameter :password, "New Password"
+    parameter :first_name, "First Name"
+    parameter :last_name, "First Name"
+
+    example "Update A User" do
+      puts "orginal email #{user.email}"
+      email = FactoryGirl.generate(:email)
+      do_request(id: user.id, email: email, first_name: "Ketan", write_key: api_key.write_key)
+
+      expect(status).to eq(200)
+      
+      # reload the user due to update call
+      user.reload
+      expect(user.unconfirmed_email).to eq(email)
+      expect(user.first_name).to eq("Ketan")
+
+      json = JSON.parse(response_body)
+
+      user_json = json["data"]
+      expect(user_json["id"]).to eq(user.id)
+      expect(user_json["uid"]).to eq(user.uid)
+      expect(user_json["created_at"]).not_to be_nil
+      expect(user_json["updated_at"]).not_to be_nil
+    end
+  end
 end

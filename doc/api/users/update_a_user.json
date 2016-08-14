@@ -1,0 +1,64 @@
+{
+  "resource": "Users",
+  "http_method": "PUT",
+  "route": "/api/v1/users/:id.json",
+  "description": "Update A User",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "User ID"
+    },
+    {
+      "name": "email",
+      "description": "New Email"
+    },
+    {
+      "name": "password",
+      "description": "New Password"
+    },
+    {
+      "name": "first_name",
+      "description": "First Name"
+    },
+    {
+      "name": "last_name",
+      "description": "First Name"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/v1/users/9.json",
+      "request_body": "email=maggie_11%40mcculloughklein.net&first_name=Ketan&write_key=dca30bd8ab7c1c404ea6dfb15e097a13",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"status\": 200,\n  \"data\": {\n    \"uid\": \"ab2f22c9\",\n    \"id\": 9,\n    \"email\": \"bailee.daugherty_10@ortizbernhard.io\",\n    \"first_name\": \"Ketan\",\n    \"created_at\": \"2016-08-14T22:25:10.764Z\",\n    \"updated_at\": \"2016-08-14T22:25:10.805Z\",\n    \"last_name\": null,\n    \"locale\": null,\n    \"timezone\": null,\n    \"gender\": null\n  },\n  \"pagination\": null\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"823185279c0a722d1898199b20f28ddd\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "b8a6e09f-663d-4e91-83f6-7a3233b2c4bd",
+        "X-Runtime": "0.030071",
+        "Content-Length": "274"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

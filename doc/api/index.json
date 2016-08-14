@@ -58,6 +58,13 @@
           "groups": "all",
           "route": "/api/v1/users",
           "method": "get"
+        },
+        {
+          "description": "Update A User",
+          "link": "users/update_a_user.json",
+          "groups": "all",
+          "route": "/api/v1/users/:id.json",
+          "method": "put"
         }
       ]
     }

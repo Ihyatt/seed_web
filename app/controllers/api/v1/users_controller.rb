@@ -34,8 +34,21 @@ class API::V1::UsersController < API::V1::APIController
     end
   end
 
+  def update
+    @user = User.find params[:id]
+    if @user.update_attributes(user_params)
+      resource = APIResource.new
+      resource.status = response.status
+      resource.data = @user
+      render json: resource
+    else
+      @errors = @user.errors
+      render_errors(@errors, 400)
+    end
+  end
+
   private
   def user_params
-    params.permit(:first_name, :last_name, :email, :password)
+    params.permit(:email, :password, :first_name, :last_name )
   end
 end
