@@ -1,3 +1,3 @@
 class APIResourceSerializer < ActiveModel::Serializer
-  attributes :status, :data
+  attributes :status, :data, :pagination
 end

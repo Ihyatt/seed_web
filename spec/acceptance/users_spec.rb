@@ -4,6 +4,8 @@ require 'rspec_api_documentation/dsl'
 resource "Users" do
   let(:user) { FactoryGirl.create(:user)}
   get "/api/v1/users" do
+    parameter :page, "Page of users"
+
     example "Get All Users" do
       user
       do_request
@@ -20,7 +22,11 @@ resource "Users" do
       expect(user_json["created_at"]).not_to be_nil
       expect(user_json["updated_at"]).not_to be_nil
 
-      #json.should == ""
+      pagination = json["pagination"]
+      expect(pagination["page"]).to eq(1)
+      expect(pagination["total_pages"]).to eq(1)
+      expect(pagination["count"]).to eq(User.all.size)
+
     end
   end
 

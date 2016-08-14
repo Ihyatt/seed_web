@@ -28,17 +28,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 2,\n    \"email\": \"ursula_2@carroll.biz\",\n    \"created_at\": \"2016-08-14T21:26:56.649Z\",\n    \"updated_at\": \"2016-08-14T21:26:56.649Z\",\n    \"uid\": \"a054ab88\",\n    \"first_name\": null,\n    \"last_name\": null,\n    \"locale\": null,\n    \"timezone\": null,\n    \"gender\": null\n  }\n}",
+      "response_body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 2,\n    \"email\": \"palma_2@corwin.io\",\n    \"created_at\": \"2016-08-14T21:40:45.511Z\",\n    \"updated_at\": \"2016-08-14T21:40:45.511Z\",\n    \"uid\": \"a1ab3bd7\",\n    \"first_name\": null,\n    \"last_name\": null,\n    \"locale\": null,\n    \"timezone\": null,\n    \"gender\": null\n  },\n  \"pagination\": null\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"0e518e883b3ced754f531bb11536e7a0\"",
+        "ETag": "W/\"c4c99b8fcf2c7e1ce60bdb2d63399c54\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "bf68599d-27c4-4aff-8c25-6aa3ac6f6bfc",
-        "X-Runtime": "0.016301",
-        "Content-Length": "237"
+        "X-Request-Id": "d7695d87-c1dd-4044-8ef4-7d2f18c98448",
+        "X-Runtime": "0.013317",
+        "Content-Length": "252"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
