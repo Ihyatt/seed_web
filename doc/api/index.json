@@ -4,6 +4,34 @@
       "name": "Users",
       "examples": [
         {
+          "description": "Create A User",
+          "link": "users/create_a_user.json",
+          "groups": "all",
+          "route": "/api/v1/users",
+          "method": "post"
+        },
+        {
+          "description": "Create A User with Existing Email Error",
+          "link": "users/create_a_user_with_existing_email_error.json",
+          "groups": "all",
+          "route": "/api/v1/users",
+          "method": "post"
+        },
+        {
+          "description": "Create A User with Missing Email Error",
+          "link": "users/create_a_user_with_missing_email_error.json",
+          "groups": "all",
+          "route": "/api/v1/users",
+          "method": "post"
+        },
+        {
+          "description": "Create A User with Missing Password Error",
+          "link": "users/create_a_user_with_missing_password_error.json",
+          "groups": "all",
+          "route": "/api/v1/users",
+          "method": "post"
+        },
+        {
           "description": "Get A User",
           "link": "users/get_a_user.json",
           "groups": "all",

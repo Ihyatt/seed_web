@@ -70,4 +70,71 @@ resource "Users" do
       expect(json["errors"][0]["message"]).to eq("Invalid Write Key")
     end
   end
+
+  post "/api/v1/users" do
+    parameter :email, "User Email", required: true
+    parameter :password, "User Password", required: true
+
+    example "Create A User" do
+      email = FactoryGirl.generate(:email)
+      password = "testtest"
+      do_request(email: email, password: password, write_key: api_key.write_key)
+
+      expect(status).to eq(200)
+      
+      # get the newly created user
+      user = User.last
+
+      json = JSON.parse(response_body)
+      #json.should == ""
+
+      user_json = json["data"]
+      expect(user_json["id"]).to eq(user.id)
+      expect(user_json["uid"]).to eq(user.uid)
+      expect(user_json["created_at"]).not_to be_nil
+      expect(user_json["updated_at"]).not_to be_nil
+    end
+
+    example "Create A User with Missing Password Error" do
+      email = FactoryGirl.generate(:email)
+      password = nil
+      do_request(email: email, password: password, write_key: api_key.write_key)
+
+      expect(status).to eq(400)
+      
+      json = JSON.parse(response_body)
+      expect(json["success"]).to eq(false)
+      expect(json["status"]).to eq(400)
+      expect(json["errors"][0]["message"]).to eq("Password can't be blank")
+      expect(json["errors"][0]["field"]).to eq("password")
+    end
+
+    example "Create A User with Missing Email Error" do
+      email = nil
+      password = "testtest"
+      do_request(email: email, password: password, write_key: api_key.write_key)
+
+      expect(status).to eq(400)
+      
+      json = JSON.parse(response_body)
+      expect(json["success"]).to eq(false)
+      expect(json["status"]).to eq(400)
+      expect(json["errors"][0]["message"]).to eq("Email can't be blank")
+      expect(json["errors"][0]["field"]).to eq("email")
+    end
+
+    example "Create A User with Existing Email Error" do
+      email = user.email
+      password = "testtest"
+      do_request(email: email, password: password, write_key: api_key.write_key)
+
+      expect(status).to eq(400)
+      
+      json = JSON.parse(response_body)
+      expect(json["success"]).to eq(false)
+      expect(json["status"]).to eq(400)
+      expect(json["errors"][0]["message"]).to eq("Email has already been taken")
+      expect(json["errors"][0]["field"]).to eq("email")
+    end
+  end
 end
