@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160814194430) do
+ActiveRecord::Schema.define(version: 20160814195149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,9 @@ ActiveRecord::Schema.define(version: 20160814194430) do
     t.string   "write_key",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id",    null: false
     t.index ["read_key"], name: "index_api_keys_on_read_key", unique: true, using: :btree
+    t.index ["user_id"], name: "index_api_keys_on_user_id", using: :btree
     t.index ["write_key"], name: "index_api_keys_on_write_key", unique: true, using: :btree
   end
 
@@ -113,6 +115,7 @@ ActiveRecord::Schema.define(version: 20160814194430) do
     t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
   end
 
+  add_foreign_key "api_keys", "users"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
   add_foreign_key "questions", "surveys"
