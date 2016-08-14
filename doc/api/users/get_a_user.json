@@ -28,17 +28,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 2,\n  \"uid\": \"0e170022\",\n  \"created_at\": \"2016-08-14T20:55:23Z\",\n  \"updated_at\": \"2016-08-14T20:55:23Z\"\n}",
+      "response_body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 2,\n    \"email\": \"ursula_2@carroll.biz\",\n    \"created_at\": \"2016-08-14T21:26:56.649Z\",\n    \"updated_at\": \"2016-08-14T21:26:56.649Z\",\n    \"uid\": \"a054ab88\",\n    \"first_name\": null,\n    \"last_name\": null,\n    \"locale\": null,\n    \"timezone\": null,\n    \"gender\": null\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"703d18ab97d2267adfc588700c811d96\"",
+        "ETag": "W/\"0e518e883b3ced754f531bb11536e7a0\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "f0e9a250-6f84-405c-8aab-9e94d0914348",
-        "X-Runtime": "0.035502",
-        "Content-Length": "97"
+        "X-Request-Id": "bf68599d-27c4-4aff-8c25-6aa3ac6f6bfc",
+        "X-Runtime": "0.016301",
+        "Content-Length": "237"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
