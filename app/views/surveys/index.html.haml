@@ -1,0 +1,24 @@
+.row.m-t-1
+  .col-sm-12
+    %h1 Surveys
+
+    %table.table
+      %thead
+        %tr
+          %th ID
+          %th By
+          %th Questions
+          %th
+
+      %tbody
+        - @surveys.each do |survey|
+          %tr
+            %td= link_to "Survey #{survey.id}", survey
+            %td= survey.user.email
+            %td= survey.questions.count
+            / %td= link_to 'Edit', edit_survey_path(survey)
+            %td= link_to 'Delete', survey, :method => :delete, :data => { :confirm => "Delete Survey #{survey.id}?" } if user_signed_in?
+
+    %br
+
+    = link_to 'New Survey', new_survey_path, class: "btn btn-primary" if user_signed_in?

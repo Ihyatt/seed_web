@@ -2,6 +2,8 @@
   %a.navbar-brand{:href => root_path} Seed
   %ul.nav.navbar-nav
     %li.nav-item
+      %a.nav-link{:href => surveys_path} Surveys
+    %li.nav-item
       %a.nav-link{:href => about_path} About
     - if !user_signed_in?
       %li.nav-item

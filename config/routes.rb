@@ -1,6 +1,11 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  
+  resources :surveys do
+    resources :questions, except: [:index]
+  end
+
   authenticate :user do
     mount Sidekiq::Web => '/sidekiq'
   end
