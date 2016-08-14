@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160813221620) do
+ActiveRecord::Schema.define(version: 20160814194430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "api_keys", force: :cascade do |t|
+    t.string   "read_key",   null: false
+    t.string   "write_key",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["read_key"], name: "index_api_keys_on_read_key", using: :btree
+    t.index ["write_key"], name: "index_api_keys_on_write_key", using: :btree
+  end
 
   create_table "conversations", force: :cascade do |t|
     t.string   "slug",       null: false
