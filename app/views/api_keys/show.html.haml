@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Read key:
+  = @api_key.read_key
+%p
+  %b Write key:
+  = @api_key.write_key
+
+= link_to 'Delete Key', @api_key, :method => :delete, :data => { :confirm => 'Delete your api keys?' }
+\|
+= link_to 'Back', api_keys_path

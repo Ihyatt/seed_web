@@ -2,6 +2,7 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   
+  resources :api_keys
   resources :surveys do
     resources :questions, except: [:index]
   end
