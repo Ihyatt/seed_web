@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20160814194430) do
     t.string   "write_key",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["read_key"], name: "index_api_keys_on_read_key", using: :btree
-    t.index ["write_key"], name: "index_api_keys_on_write_key", using: :btree
+    t.index ["read_key"], name: "index_api_keys_on_read_key", unique: true, using: :btree
+    t.index ["write_key"], name: "index_api_keys_on_write_key", unique: true, using: :btree
   end
 
   create_table "conversations", force: :cascade do |t|
