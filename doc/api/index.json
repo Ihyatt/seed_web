@@ -18,6 +18,13 @@
           "method": "get"
         },
         {
+          "description": "Get A User With Invalid Write Key",
+          "link": "users/get_a_user_with_invalid_write_key.json",
+          "groups": "all",
+          "route": "/api/v1/users/:id",
+          "method": "get"
+        },
+        {
           "description": "Get All Users",
           "link": "users/get_all_users.json",
           "groups": "all",

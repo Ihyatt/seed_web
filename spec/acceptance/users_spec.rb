@@ -60,5 +60,14 @@ resource "Users" do
       expect(json["status"]).to eq(404)
       expect(json["errors"][0]["message"]).to eq("Couldn't find User with 'id'=1234")
     end
+
+    example "Get A User With Invalid Write Key" do
+      do_request(id: 1234, write_key: "foo")
+      json = JSON.parse(response_body)
+      
+      expect(json["success"]).to eq(false)
+      expect(json["status"]).to eq(403)
+      expect(json["errors"][0]["message"]).to eq("Invalid Write Key")
+    end
   end
 end

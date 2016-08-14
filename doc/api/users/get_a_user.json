@@ -17,28 +17,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users/2",
+      "request_path": "/api/v1/users/2?write_key=f53ad28fc557fbb8d657a35d09195e2a",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
+        "write_key": "f53ad28fc557fbb8d657a35d09195e2a"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 2,\n    \"email\": \"madisyn.gaylord_2@grimes.info\",\n    \"created_at\": \"2016-08-14T21:46:45.081Z\",\n    \"updated_at\": \"2016-08-14T21:46:45.081Z\",\n    \"uid\": \"2a5c4c6a\",\n    \"first_name\": null,\n    \"last_name\": null,\n    \"locale\": null,\n    \"timezone\": null,\n    \"gender\": null\n  },\n  \"pagination\": null\n}",
+      "response_body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 2,\n    \"email\": \"avis_2@sporerlarson.name\",\n    \"created_at\": \"2016-08-14T21:58:26.098Z\",\n    \"updated_at\": \"2016-08-14T21:58:26.098Z\",\n    \"uid\": \"ce7d3ea4\",\n    \"first_name\": null,\n    \"last_name\": null,\n    \"locale\": null,\n    \"timezone\": null,\n    \"gender\": null\n  },\n  \"pagination\": null\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"390040e9a06bf2d855f5acac971f680e\"",
+        "ETag": "W/\"4a7381f2a79e5dc4bbdd3d1981e6ebbd\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "3085fb9e-8a81-445f-8b07-b279426c97ec",
-        "X-Runtime": "0.021707",
-        "Content-Length": "264"
+        "X-Request-Id": "dbe3027b-2b01-493a-ba42-3b093858fb27",
+        "X-Runtime": "0.017744",
+        "Content-Length": "259"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

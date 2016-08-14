@@ -16,28 +16,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users",
+      "request_path": "/api/v1/users?write_key=f53ad28fc557fbb8d657a35d09195e2a",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
+        "write_key": "f53ad28fc557fbb8d657a35d09195e2a"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id\": 1,\n      \"email\": \"agustin_1@connbarton.name\",\n      \"created_at\": \"2016-08-14T21:46:44.736Z\",\n      \"updated_at\": \"2016-08-14T21:46:44.736Z\",\n      \"uid\": \"6767d03a\",\n      \"first_name\": null,\n      \"last_name\": null,\n      \"locale\": null,\n      \"timezone\": null,\n      \"gender\": null\n    }\n  ],\n  \"pagination\": {\n    \"page\": 1,\n    \"total_pages\": 1,\n    \"count\": 1\n  }\n}",
+      "response_body": "{\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id\": 1,\n      \"email\": \"stephanie_yundt_1@mitchellfarrell.biz\",\n      \"created_at\": \"2016-08-14T21:58:25.727Z\",\n      \"updated_at\": \"2016-08-14T21:58:25.727Z\",\n      \"uid\": \"9d4112cf\",\n      \"first_name\": null,\n      \"last_name\": null,\n      \"locale\": null,\n      \"timezone\": null,\n      \"gender\": null\n    }\n  ],\n  \"pagination\": {\n    \"page\": 1,\n    \"total_pages\": 1,\n    \"count\": 1\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d45b2baac4917076360b92b3b21c4d61\"",
+        "ETag": "W/\"d39ad00ae9b07abbcd8db722b9a0ea1e\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "47292912-0634-4554-9b88-5f634d5f2776",
-        "X-Runtime": "0.095333",
-        "Content-Length": "294"
+        "X-Request-Id": "d7662b02-5e56-4591-822e-21bbaf3aae0e",
+        "X-Runtime": "0.073806",
+        "Content-Length": "306"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
