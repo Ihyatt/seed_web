@@ -21,10 +21,7 @@ jQuery(document).on 'turbolinks:load', ->
 
       $('#new_message').submit (e) ->
         $this = $(this)
-        console.log($this)
         textarea = $this.find('#message_text')
-        console.log(textarea)
-        console.log(textarea.val())
         if $.trim(textarea.val()).length > 1
           App.global_chat.send_message textarea.val(), messages.data('conversation-id')
           textarea.val('')
