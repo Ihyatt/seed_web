@@ -1,7 +1,8 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-  
+  resources :messages, only: [:create]
+
   resources :api_keys, except: [:edit, :update]
   resources :surveys do
     resources :questions, except: [:index]

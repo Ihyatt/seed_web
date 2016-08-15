@@ -2,6 +2,15 @@
   Chat with
   = @conversation.customer.email
 
+#messages{"data-conversation-id" => @conversation.id}
+  = render @conversation.messages.by_recent
 
 %hr
-= link_to 'Back', conversations_path
+= form_for @message do |f|
+  = f.hidden_field :conversation_id, value: @conversation.id
+  .row
+    .col-xs-10
+      .form-group
+        = f.text_field :text, class: 'form-control', placeholder: "Message"
+    .col-xs-2
+      = f.submit "Send", class: 'btn btn-primary btn-block'

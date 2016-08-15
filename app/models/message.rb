@@ -1,4 +1,8 @@
 class Message < ApplicationRecord
+  # Scopes
+  scope :by_recent, -> {order('created_at ASC')}
+
+  # Associations
   belongs_to :conversation
   belongs_to :user
 
@@ -6,4 +10,5 @@ class Message < ApplicationRecord
   validates :conversation, :presence => true
   validates :user, :presence => true
   validates :text, :presence => true
+  validates :platform, :presence => true
 end

@@ -18,6 +18,7 @@ class ConversationsController < ApplicationController
   def show
     @conversation = Conversation.friendly.find(params[:id])
     authorize @conversation
+    @message = Message.new
   end
 
   def destroy

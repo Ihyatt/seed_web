@@ -1,0 +1,11 @@
+.media.message{:class => ("message-left" if message.user == message.conversation.customer)}
+  / %a.media-left{:href => "#"}
+  /   %img.media-object{:alt => "Generic placeholder image", :src => "..."}/
+  .media-body
+    %p.media-heading
+      %strong
+        = message.user.email
+      %small.text-muted
+        = time_ago_in_words(message.created_at)
+        ago
+    = message.text

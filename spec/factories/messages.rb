@@ -3,5 +3,6 @@ FactoryGirl.define do
     conversation
     user
     text {Faker::Lorem.sentence}
+    platform "web"
   end
 end
