@@ -1,0 +1,15 @@
+%h1 Chats
+
+%table.table
+  %thead
+    %tr
+      %th User
+      %th
+
+  %tbody
+    = render @conversations
+    
+
+%hr
+
+= link_to 'Start Chat', new_conversation_path, class: 'btn btn-primary'

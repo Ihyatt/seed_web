@@ -39,6 +39,8 @@ RSpec.describe Conversation, type: :model do
       conversation2 = Conversation.create_for_customer(user)
 
       expect(Conversation.count).to eq(1)
+      expect(conversation1).not_to be_nil
+      expect(conversation2).not_to be_nil
       expect(conversation1).to eq(conversation2)
     end
   end
