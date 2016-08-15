@@ -16,14 +16,16 @@ jQuery(document).on 'turbolinks:load', ->
         messages.append data['message']
 
       send_message: (message, conversation_id) ->
+        return if $.trim(message).length == 0
         console.log("send message " + message + " to " + conversation_id)
         @perform 'send_message', message: message, conversation_id: conversation_id
 
       $('#new_message').submit (e) ->
         $this = $(this)
         textarea = $this.find('#message_text')
-        if $.trim(textarea.val()).length > 1
-          App.global_chat.send_message textarea.val(), messages.data('conversation-id')
-          textarea.val('')
+        message = textarea.val()
+        console.log("message " + message)
+        App.global_chat.send_message message, messages.data('conversation-id')
+        textarea.val('')
         e.preventDefault()
         return false
