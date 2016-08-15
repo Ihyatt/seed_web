@@ -35,6 +35,10 @@ class User < ApplicationRecord
     end
   end
 
+  def is_admin
+    self.has_role?(:admin)
+  end
+
   # Send Devise notifications through ActiveJob deliver_later
   # https://github.com/plataformatec/devise#activejob-integration
   def send_devise_notification(notification, *args)

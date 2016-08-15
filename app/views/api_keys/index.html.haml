@@ -16,7 +16,7 @@
         %td= api_key.read_key
         %td= api_key.write_key
         %td= link_to 'Show', api_key
-        %td= link_to 'Destroy', api_key, :method => :delete, :data => { :confirm => 'Delete your api keys?' }
+        %td= link_to 'Delete', api_key, :method => :delete, :data => { :confirm => 'Delete your api keys?' } if policy(api_key).destroy?
 
 %br
 

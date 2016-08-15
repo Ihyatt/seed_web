@@ -7,6 +7,6 @@
   %b Write key:
   = @api_key.write_key
 
-= link_to 'Delete Key', @api_key, :method => :delete, :data => { :confirm => 'Delete your api keys?' }
+= link_to 'Delete Key', @api_key, :method => :delete, :data => { :confirm => 'Delete your api keys?' } if policy(@api_key).destroy?
 \|
 = link_to 'Back', api_keys_path

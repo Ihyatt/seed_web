@@ -8,9 +8,11 @@
 
   .form-group
     = f.label :read_key
-    = f.text_field :read_key, class: 'form-control'
+    = f.text_field :read_key, class: 'form-control', disabled: true
+    = f.hidden_field :read_key, value: @api_key.read_key
   .form-group
     = f.label :write_key
-    = f.text_field :write_key, class: 'form-control'
+    = f.text_field :write_key, class: 'form-control', disabled: true
+    = f.hidden_field :write_key, value: @api_key.write_key
   
   = f.submit 'Save', class: "btn btn-primary"
