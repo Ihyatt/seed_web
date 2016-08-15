@@ -16,11 +16,6 @@ class SurveyPolicy < ApplicationPolicy
     user.present?
   end
   
-  def edit?
-    return false if user.nil?
-    survey.user == user || user.is_admin
-  end
-
   def update?
     return false if user.nil?
     survey.user == user || user.is_admin
