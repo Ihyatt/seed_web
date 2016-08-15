@@ -16,11 +16,17 @@ class APIKeyPolicy < ApplicationPolicy
     end
   end
 
+  def new?
+    user.present?
+  end
+  
   def show?
+    return false if user.nil?
     api_key.user == user || user.is_admin
   end
 
   def destroy?
+    return false if user.nil?
     api_key.user == user || user.is_admin
   end
 end

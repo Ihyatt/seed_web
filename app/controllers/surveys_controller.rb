@@ -15,6 +15,7 @@ class SurveysController < ApplicationController
 
   # GET /surveys/new
   def new
+    authorize Survey
     @survey = Survey.new
     @survey.user = current_user
     @survey.save
@@ -23,6 +24,7 @@ class SurveysController < ApplicationController
 
   # GET /surveys/1/edit
   def edit
+    authorize @survey
   end
 
   # POST /surveys
@@ -44,6 +46,7 @@ class SurveysController < ApplicationController
   # PATCH/PUT /surveys/1
   # PATCH/PUT /surveys/1.json
   def update
+    authorize @survey
     respond_to do |format|
       if @survey.update(survey_params)
         format.html { redirect_to @survey, notice: 'Survey was successfully updated.' }
@@ -58,6 +61,7 @@ class SurveysController < ApplicationController
   # DELETE /surveys/1
   # DELETE /surveys/1.json
   def destroy
+    authorize @survey
     @survey.destroy
     respond_to do |format|
       format.html { redirect_to surveys_url, notice: 'Survey was successfully destroyed.' }

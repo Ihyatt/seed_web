@@ -20,4 +20,4 @@
 
 %br
 
-= link_to 'New API key', new_api_key_path, class: 'btn btn-primary'
+= link_to 'New API key', new_api_key_path, class: 'btn btn-primary' if policy(APIKey).new?
