@@ -3,6 +3,7 @@ class CreateResponses < ActiveRecord::Migration[5.0]
     create_table :responses do |t|
       t.references :question, foreign_key: true, null: false
       t.string :kind, null: false
+      t.string :value
 
       t.timestamps
     end

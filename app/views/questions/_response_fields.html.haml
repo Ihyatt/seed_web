@@ -1,0 +1,26 @@
+.nested-fields
+  .row
+    .col-sm-2
+      .form-group
+        = f.label :kind
+        = f.select :kind, [Response::TEXT, Response::SINGLE_CHOICE, Response::MULTIPLE_CHOICE], {}, {class: 'form-control'}
+    .col-sm-4
+      .form-group
+        = f.label :value
+        = f.text_field :value, class: 'form-control'
+        %small.form-text.text-muted
+          Only for single or multiple choice responses
+    .col-sm-4
+      .form-group
+        = f.label :placeholder
+        = f.text_field :placeholder, class: 'form-control'
+        %small.form-text.text-muted
+          Only for text responses
+    .col-sm-2
+      .form-group
+        = f.label :position
+        = f.text_field :position, class: 'form-control'
+        %small.form-text.text-muted
+          Higher comes first.
+  = link_to_remove_association "Remove", f, class: 'btn btn-sm btn-danger'
+  %hr

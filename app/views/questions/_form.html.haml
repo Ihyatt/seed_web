@@ -9,6 +9,13 @@
   .form-group
     = f.label :title
     = f.text_field :title, class: 'form-control'
- 
+  
+  %h3 Responses
+  #responses
+    = f.fields_for :responses do |response|
+      = render 'response_fields', f: response
+    = link_to_add_association 'Add Response', f, :responses, class: 'btn btn-sm btn-info'
+
+  %hr
   = f.submit 'Save', class: 'btn btn-primary'
   = link_to 'Cancel', @survey, class: "btn btn-link"
