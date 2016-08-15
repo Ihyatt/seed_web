@@ -9,7 +9,7 @@
       = @survey.user.email
 
   
-- @survey.questions.each do |question|
+- @survey.questions.by_position.each do |question|
   .row.m-b-1
     .col-xs-10
       %h3
