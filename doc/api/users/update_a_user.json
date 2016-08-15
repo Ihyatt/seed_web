@@ -33,8 +33,8 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/api/v1/users/16.json",
-      "request_body": "email=jarod.weimann_11%40donnelly.net&first_name=Ketan&write_key=cdbe46f1e82ce58459123e3d942e0021",
+      "request_path": "/api/v1/users/9.json",
+      "request_body": "email=annie.trantow_10%40goldner.info&first_name=Ketan&write_key=cd7c291f3a609cc69023161250b0f2f4",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -45,17 +45,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"status\": 200,\n  \"data\": {\n    \"uid\": \"799b8727\",\n    \"id\": 16,\n    \"email\": \"deangelo_wolff_10@will.org\",\n    \"first_name\": \"Ketan\",\n    \"created_at\": \"2016-08-14T22:29:05.975Z\",\n    \"updated_at\": \"2016-08-14T22:29:06.030Z\",\n    \"last_name\": null,\n    \"locale\": null,\n    \"timezone\": null,\n    \"gender\": null\n  },\n  \"pagination\": null\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 9,\n    \"uid\": \"9e7e1f76\",\n    \"created_at\": \"2016-08-15T05:59:59Z\",\n    \"updated_at\": \"2016-08-15T05:59:59Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"2eaa38e6128140130a670fd466f030ec\"",
+        "ETag": "W/\"675cd385f2c90a1d2ce63fd311b01398\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "dc65c192-9fd5-4970-b912-76f3a8310f9d",
-        "X-Runtime": "0.033028",
-        "Content-Length": "265"
+        "X-Request-Id": "aeae4703-edf1-47e5-b778-319c7318ee20",
+        "X-Runtime": "0.028272",
+        "Content-Length": "128"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

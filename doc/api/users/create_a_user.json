@@ -23,7 +23,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/users",
-      "request_body": "email=edison.mclaughlin_4%40vonrueden.io&password=testtest&write_key=cdbe46f1e82ce58459123e3d942e0021",
+      "request_body": "email=hollie.purdy_4%40adamsortiz.org&password=testtest&write_key=cd7c291f3a609cc69023161250b0f2f4",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -34,17 +34,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 12,\n    \"email\": \"edison.mclaughlin_4@vonrueden.io\",\n    \"created_at\": \"2016-08-14T22:29:05.630Z\",\n    \"updated_at\": \"2016-08-14T22:29:05.630Z\",\n    \"uid\": \"e281e152\",\n    \"first_name\": null,\n    \"last_name\": null,\n    \"locale\": null,\n    \"timezone\": null,\n    \"gender\": null\n  },\n  \"pagination\": null\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 5,\n    \"uid\": \"49107292\",\n    \"created_at\": \"2016-08-15T05:59:59Z\",\n    \"updated_at\": \"2016-08-15T05:59:59Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"841e8200a7babbd79bc1c7c30f7edd10\"",
+        "ETag": "W/\"b209afd71b678b58e3c0e854f2c9e824\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "6fe94ab7-e9ba-40a2-a361-d4ea77ac208b",
-        "X-Runtime": "0.042060",
-        "Content-Length": "268"
+        "X-Request-Id": "a97a2151-094c-4d02-b71d-920b7b74e4fd",
+        "X-Runtime": "0.038725",
+        "Content-Length": "128"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

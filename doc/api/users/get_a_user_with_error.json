@@ -17,14 +17,14 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users/1234?write_key=cdbe46f1e82ce58459123e3d942e0021",
+      "request_path": "/api/v1/users/1234?write_key=cd7c291f3a609cc69023161250b0f2f4",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "cdbe46f1e82ce58459123e3d942e0021"
+        "write_key": "cd7c291f3a609cc69023161250b0f2f4"
       },
       "request_content_type": null,
       "response_status": 200,
@@ -37,8 +37,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"7d1fcb86a24bbbad8ea5c463d3c94d8d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "a99d4b4a-2a81-40d7-a8ed-bbb60bae4838",
-        "X-Runtime": "0.012018",
+        "X-Request-Id": "c8daf6b7-8210-4a00-8057-7e6026e271a5",
+        "X-Runtime": "0.006571",
         "Content-Length": "89"
       },
       "response_content_type": "application/json; charset=utf-8",
