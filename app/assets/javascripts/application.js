@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require cocoon
+//= require tether.min
 //= require bootstrap
 //= require turbolinks
 //= require cable
