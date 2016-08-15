@@ -11,4 +11,6 @@ class Message < ApplicationRecord
   validates :user, :presence => true
   validates :text, :presence => true
   validates :platform, :presence => true
+
+  after_create_commit { MessageBroadcastJob.perform_later(self) }
 end

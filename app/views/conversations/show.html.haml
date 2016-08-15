@@ -11,6 +11,6 @@
   .row
     .col-xs-10
       .form-group
-        = f.text_field :text, class: 'form-control', placeholder: "Message"
+        = f.text_field :text, class: 'form-control', placeholder: "Message", autocomplete: "off"
     .col-xs-2
       = f.submit "Send", class: 'btn btn-primary btn-block'
