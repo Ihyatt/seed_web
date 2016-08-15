@@ -3,31 +3,18 @@ class API::V1::UsersController < API::V1::APIController
   def index
     scope = User.all
     @users = scope.page(params[:page])
-
-    resource = APIResource.new
-    resource.status = response.status
-    resource.data = @users
-    resource.set_pagination(@users, scope)
-
-    render json: resource
+    render_collection(@users, scope)
   end
 
   def show
     @user = User.find params[:id]
-    resource = APIResource.new
-    resource.status = response.status
-    resource.data = @user
-    render json: resource
+    render_resource(@user)
   end
 
   def create
     @user = User.new(user_params)
-
     if @user.save
-      resource = APIResource.new
-      resource.status = response.status
-      resource.data = @user
-      render json: resource
+      render_resource(@user)
     else
       @errors = @user.errors
       render_errors(@errors, 400)
@@ -37,10 +24,7 @@ class API::V1::UsersController < API::V1::APIController
   def update
     @user = User.find params[:id]
     if @user.update_attributes(user_params)
-      resource = APIResource.new
-      resource.status = response.status
-      resource.data = @user
-      render json: resource
+      render_resource(@user)
     else
       @errors = @user.errors
       render_errors(@errors, 400)

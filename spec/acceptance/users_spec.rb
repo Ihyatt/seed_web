@@ -24,7 +24,7 @@ resource "Users" do
       expect(user_json["created_at"]).not_to be_nil
       expect(user_json["updated_at"]).not_to be_nil
 
-      pagination = json["pagination"]
+      pagination = json["meta"]["pagination"]
       expect(pagination["page"]).to eq(1)
       expect(pagination["total_pages"]).to eq(1)
       expect(pagination["count"]).to eq(User.all.size)
