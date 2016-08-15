@@ -16,4 +16,5 @@
 //= require bootstrap
 //= require turbolinks
 //= require cable
+//= require channels/conversation
 //= require_tree .
