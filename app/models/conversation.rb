@@ -2,6 +2,7 @@ class Conversation < ApplicationRecord
   # Associations
   has_many :messages, dependent: :destroy, inverse_of: :conversation
   has_many :users, -> { distinct }, through: :messages
+  belongs_to :customer, class_name: 'User'
 
   # Extensions
   extend FriendlyId
@@ -9,6 +10,8 @@ class Conversation < ApplicationRecord
 
   # Validations
   validates :slug, :uniqueness => true, :presence => true
+  validates :customer, :presence => true
+  validates :customer_id, :uniqueness => true
 
   # Callbacks
   after_initialize :ensure_slug, on: :create
@@ -23,4 +26,7 @@ class Conversation < ApplicationRecord
     end
   end
 
+  def self.create_for_customer(customer)
+    conversation = self.where(customer: customer).first_or_create
+  end
 end
