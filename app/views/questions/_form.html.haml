@@ -6,9 +6,17 @@
         - @question.errors.full_messages.each do |msg|
           %li= msg
 
-  .form-group
-    = f.label :title
-    = f.text_field :title, class: 'form-control'
+  .row
+    .col-sm-10
+      .form-group
+        = f.label :title
+        = f.text_field :title, class: 'form-control'
+    .col-sm-2
+      .form-group
+        = f.label :position
+        = f.text_field :position, class: 'form-control'
+        %small.form-text.text-muted
+          Higher comes first.
   
   %h3 Responses
   #responses
