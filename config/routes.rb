@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :questions, except: [:index]
   end
 
-  authenticate :user do
+  authenticate :user, lambda { |user| user.is_admin } do
     mount Sidekiq::Web => '/sidekiq'
   end
 
