@@ -1,24 +1,25 @@
-.row.m-t-1
-  .col-sm-12
-    %h1 Surveys
+.container
+  .row.m-t-1
+    .col-sm-12
+      %h1 Surveys
 
-    %table.table
-      %thead
-        %tr
-          %th ID
-          %th By
-          %th Questions
-          %th
-
-      %tbody
-        - @surveys.each do |survey|
+      %table.table
+        %thead
           %tr
-            %td= link_to "Survey #{survey.id}", survey
-            %td= survey.user.display_name 
-            %td= survey.questions.count
-            / %td= link_to 'Edit', edit_survey_path(survey)
-            %td= link_to 'Delete', survey, :method => :delete, :data => { :confirm => "Delete Survey #{survey.id}?" } if policy(survey).destroy?
+            %th ID
+            %th By
+            %th Questions
+            %th
 
-    %br
+        %tbody
+          - @surveys.each do |survey|
+            %tr
+              %td= link_to "Survey #{survey.id}", survey
+              %td= survey.user.display_name 
+              %td= survey.questions.count
+              / %td= link_to 'Edit', edit_survey_path(survey)
+              %td= link_to 'Delete', survey, :method => :delete, :data => { :confirm => "Delete Survey #{survey.id}?" } if policy(survey).destroy?
 
-    = link_to 'New Survey', new_survey_path, class: "btn btn-primary" if policy(Survey).new?
+      %br
+
+      = link_to 'New Survey', new_survey_path, class: "btn btn-primary" if policy(Survey).new?

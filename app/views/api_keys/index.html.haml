@@ -1,23 +1,24 @@
-%h1 API Keys
+.container
+  %h1 API Keys
 
-%table.table
-  %thead
-    %tr
-      %th User
-      %th Read key
-      %th Write key
-      %th
-      %th
-
-  %tbody
-    - @api_keys.each do |api_key|
+  %table.table
+    %thead
       %tr
-        %td= api_key.user.email
-        %td= api_key.read_key
-        %td= api_key.write_key
-        %td= link_to 'Show', api_key
-        %td= link_to 'Delete', api_key, :method => :delete, :data => { :confirm => 'Delete your api keys?' } if policy(api_key).destroy?
+        %th User
+        %th Read key
+        %th Write key
+        %th
+        %th
 
-%br
+    %tbody
+      - @api_keys.each do |api_key|
+        %tr
+          %td= api_key.user.email
+          %td= api_key.read_key
+          %td= api_key.write_key
+          %td= link_to 'Show', api_key
+          %td= link_to 'Delete', api_key, :method => :delete, :data => { :confirm => 'Delete your api keys?' } if policy(api_key).destroy?
 
-= link_to 'New API key', new_api_key_path, class: 'btn btn-primary' if policy(APIKey).new?
+  %br
+
+  = link_to 'New API key', new_api_key_path, class: 'btn btn-primary' if policy(APIKey).new?
