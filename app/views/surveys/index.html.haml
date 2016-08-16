@@ -14,7 +14,7 @@
         - @surveys.each do |survey|
           %tr
             %td= link_to "Survey #{survey.id}", survey
-            %td= survey.user.email
+            %td= survey.user.display_name 
             %td= survey.questions.count
             / %td= link_to 'Edit', edit_survey_path(survey)
             %td= link_to 'Delete', survey, :method => :delete, :data => { :confirm => "Delete Survey #{survey.id}?" } if policy(survey).destroy?
