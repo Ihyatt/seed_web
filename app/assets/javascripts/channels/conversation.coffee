@@ -14,6 +14,7 @@ jQuery(document).on 'turbolinks:load', ->
       received: (data) ->
         console.log("received " + data)
         messages.append data['message']
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow")
 
       send_message: (message, conversation_id) ->
         return if $.trim(message).length == 0

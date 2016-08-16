@@ -4,8 +4,9 @@
   .media-body
     %p.media-heading
       %strong
-        = message.user.email
+        = message.user.display_name
       %small.text-muted
         = time_ago_in_words(message.created_at)
         ago
-    = message.text
+    %p.message-bubble
+      = message.text
