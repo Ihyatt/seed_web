@@ -1,28 +1,31 @@
 require 'rails_helper'
 
 RSpec.describe SurveyPolicy do
+  subject { SurveyPolicy.new(user, survey) }
 
-  let(:user) { User.new }
+  let(:survey) { FactoryGirl.build(:survey) }
+  let(:user) { FactoryGirl.build(:user) }
 
-  subject { described_class }
+  context 'being a visitor' do
+    let(:user) { nil }
 
-  permissions ".scope" do
-    pending "add some examples to (or delete) #{__FILE__}"
+    it { should permit_action(:show) }
+    it { should forbid_action(:update) }
+    it { should forbid_action(:destroy) }
   end
 
-  permissions :show? do
-    pending "add some examples to (or delete) #{__FILE__}"
+  context 'being a user' do
+    it { should permit_action(:show) }
+    it { should forbid_action(:update) }
+    it { should forbid_action(:destroy) }
   end
 
-  permissions :create? do
-    pending "add some examples to (or delete) #{__FILE__}"
+  context 'being the survey user' do
+    let(:survey) { FactoryGirl.build(:survey, user: user) }
+
+    it { should permit_action(:show) }
+    it { should permit_action(:update) }
+    it { should permit_action(:destroy) }
   end
 
-  permissions :update? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
-
-  permissions :destroy? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
 end

@@ -33,7 +33,6 @@ gem 'sidekiq'
 gem 'rack-protection', github: 'sinatra/rack-protection', require: false
 gem 'sinatra', github: 'sinatra', require: false
 gem 'active_model_serializers', '~> 0.10.0'
-gem 'rspec_api_documentation'
 gem 'apitome'
 gem 'kaminari'
 gem 'pundit'
@@ -48,6 +47,7 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'rspec_api_documentation'
 end
 
 group :development do
@@ -65,6 +65,7 @@ group :test do
   gem 'capybara'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'database_cleaner'
+  gem 'pundit-matchers', '~> 1.1.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

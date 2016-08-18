@@ -1,28 +1,39 @@
 require 'rails_helper'
 
 RSpec.describe ConversationPolicy do
+  subject { ConversationPolicy.new(user, conversation) }
 
-  let(:user) { User.new }
+  let(:conversation) { FactoryGirl.build(:conversation) }
+  let(:user) { FactoryGirl.build(:user) }
 
-  subject { described_class }
+  context 'being a visitor' do
+    let(:user) { nil }
 
-  permissions ".scope" do
-    pending "add some examples to (or delete) #{__FILE__}"
+    it { should forbid_action(:show) }
+    it { should forbid_action(:update) }
+    it { should forbid_action(:destroy) }
   end
 
-  permissions :show? do
-    pending "add some examples to (or delete) #{__FILE__}"
+  context 'being a user' do
+    it { should forbid_action(:show) }
+    it { should forbid_action(:update) }
+    it { should forbid_action(:destroy) }
   end
 
-  permissions :create? do
-    pending "add some examples to (or delete) #{__FILE__}"
+  context 'being the conversation customer' do
+    let(:conversation) { FactoryGirl.build(:conversation, customer: user) }
+
+    it { should permit_action(:show) }
+    it { should forbid_action(:update) }
+    it { should forbid_action(:destroy) }
   end
 
-  permissions :update? do
-    pending "add some examples to (or delete) #{__FILE__}"
+  context 'being an admin' do
+    let(:user) { FactoryGirl.build(:admin) }
+
+    it { should permit_action(:show) }
+    it { should permit_action(:update) }
+    it { should permit_action(:destroy) }
   end
 
-  permissions :destroy? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
 end

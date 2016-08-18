@@ -18,9 +18,9 @@ RSpec.describe Conversation, type: :model do
   end
 
   describe "users" do
-    let(:user1) {FactoryGirl.create(:user)}
-    let(:user2) {FactoryGirl.create(:user)}
-    let(:user3) {FactoryGirl.create(:user)}
+    let(:user1) {FactoryGirl.build(:user)}
+    let(:user2) {FactoryGirl.build(:user)}
+    let(:user3) {FactoryGirl.build(:user)}
     it "should get unique users in a conversation" do
       3.times do
         message = FactoryGirl.create(:message, conversation: conversation, user: user1)
