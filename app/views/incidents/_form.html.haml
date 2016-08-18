@@ -1,0 +1,26 @@
+= form_for @incident do |f|
+  - if @incident.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@incident.errors.count, "error")} prohibited this incident from being saved:"
+      %ul
+        - @incident.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :description
+    = f.text_area :description, placeholder: "What happened?"
+  .form-group
+    = f.label :start_time
+    = f.datetime_select :start_time
+  .form-group
+    = f.label :location
+    = f.text_field :location, placeholder: "San Francisco, CA"
+  .form-group
+    = f.label :latitude
+    = f.text_field :latitude
+  .form-group
+    = f.label :longitude
+    = f.text_field :longitude
+  %hr
+  = f.submit 'Save', class: "btn btn-primary"
+  = link_to 'Cancel', incidents_path, class: "btn btn-link"

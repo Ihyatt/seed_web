@@ -1,0 +1,24 @@
+.container.m-t-1
+  %h1 Incidents
+
+  %table.table
+    %thead
+      %tr
+        %th User
+        %th Location
+        %th Start time
+        %th
+        %th
+
+    %tbody
+      - @incidents.each do |incident|
+        %tr
+          %td= link_to incident.user.uid, incident
+          %td= link_to incident.location, incident
+          %td= link_to incident.start_time, incident
+          %td= link_to 'Edit', edit_incident_path(incident)
+          %td= link_to 'Destroy', incident, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+  %br
+
+  = link_to 'New Incident', new_incident_path, class: "btn btn-primary"

@@ -1,0 +1,25 @@
+%p
+  %b User:
+  = @incident.user.uid
+%p
+  %b Slug:
+  = @incident.slug
+%p
+  %b Description:
+  = @incident.description
+%p
+  %b Start time:
+  = @incident.start_time
+%p
+  %b Location:
+  = @incident.location
+%p
+  %b Latitude:
+  = @incident.latitude
+%p
+  %b Longitude:
+  = @incident.longitude
+
+= link_to 'Edit', edit_incident_path(@incident)
+\|
+= link_to 'Back', incidents_path
