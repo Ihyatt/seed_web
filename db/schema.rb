@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818143315) do
+ActiveRecord::Schema.define(version: 20160826184046) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,6 +82,12 @@ ActiveRecord::Schema.define(version: 20160818143315) do
     t.index ["survey_id"], name: "index_questions_on_survey_id", using: :btree
   end
 
+  create_table "races", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "responses", force: :cascade do |t|
     t.integer  "question_id",             null: false
     t.string   "kind",                    null: false
@@ -134,8 +140,10 @@ ActiveRecord::Schema.define(version: 20160818143315) do
     t.string   "locale"
     t.string   "timezone"
     t.string   "gender"
+    t.integer  "race_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["race_id"], name: "index_users_on_race_id", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["uid"], name: "index_users_on_uid", unique: true, using: :btree
   end
@@ -153,4 +161,5 @@ ActiveRecord::Schema.define(version: 20160818143315) do
   add_foreign_key "questions", "surveys"
   add_foreign_key "responses", "questions"
   add_foreign_key "surveys", "users"
+  add_foreign_key "users", "races"
 end
