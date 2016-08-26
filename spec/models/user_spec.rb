@@ -7,6 +7,7 @@ RSpec.describe User, type: :model do
     it { should have_many :messages }
     it { should have_many :api_keys }
     it { should belong_to :race }
+    it { should belong_to :gender }
   end
 
   describe 'validations' do

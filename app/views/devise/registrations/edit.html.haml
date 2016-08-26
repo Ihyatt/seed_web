@@ -11,6 +11,9 @@
         = f.label :last_name, "Last Name"
         = f.text_field :last_name, class: 'form-control'
       .form-group
+        = f.label :gender
+        = f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class: 'form-control'}) 
+      .form-group
         = f.label :race
         = f.collection_select(:race_id, Race.all, :id, :name, {}, {class: 'form-control'}) 
       %hr
