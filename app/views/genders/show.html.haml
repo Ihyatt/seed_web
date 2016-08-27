@@ -1,0 +1,14 @@
+.container
+  .row.m-t-1
+    .col-sm-12
+
+      %h1
+        = @gender.name
+      %p
+        %strong Position
+        = @gender.position
+
+
+      = link_to 'Edit', edit_gender_path(@gender)
+      \|
+      = link_to 'Back', genders_path

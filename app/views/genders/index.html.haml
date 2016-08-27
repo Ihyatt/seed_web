@@ -1,0 +1,24 @@
+.container
+  .row.m-t-1
+    .col-sm-12
+      %h1 Genders
+
+      %table.table
+        %thead
+          %tr
+            %th Name
+            %th Position
+            %th
+            %th
+
+        %tbody
+          - @genders.each do |gender|
+            %tr
+              %td= link_to gender.name, gender
+              %td= gender.position
+              %td= link_to 'Edit', edit_gender_path(gender)
+              %td= link_to 'Destroy', gender, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+      %br
+
+      = link_to 'New Gender', new_gender_path, class: "btn btn-primary"
