@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160827194032) do
+ActiveRecord::Schema.define(version: 20160827200114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -150,6 +150,7 @@ ActiveRecord::Schema.define(version: 20160827194032) do
     t.string   "timezone"
     t.integer  "race_id"
     t.integer  "gender_id"
+    t.date     "birthday"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["gender_id"], name: "index_users_on_gender_id", using: :btree
