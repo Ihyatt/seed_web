@@ -2,6 +2,8 @@ class Incident < ApplicationRecord
   # Extensions
   extend FriendlyId
   friendly_id :slug
+  geocoded_by :location              # can also be an IP address
+  after_validation :geocode          # auto-fetch coordinates   
 
   # Associations
   belongs_to :user
