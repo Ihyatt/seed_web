@@ -5,8 +5,7 @@ class Gender < ApplicationRecord
   # Associations
   has_many :users, inverse_of: :gender
   
-
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: {case_sensitive: false}
 
   def self.seed
     Gender.where(name: "Male").first_or_create
