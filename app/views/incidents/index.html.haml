@@ -6,7 +6,8 @@
       %tr
         %th User
         %th Location
-        %th Start time
+        %th Start Time
+        %th Rating
         %th
         %th
 
@@ -16,6 +17,7 @@
           %td= link_to incident.user.uid, incident
           %td= link_to incident.location, incident
           %td= link_to incident.start_time, incident
+          %td= incident.rating
           %td= link_to 'Edit', edit_incident_path(incident)
           %td= link_to 'Destroy', incident, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
