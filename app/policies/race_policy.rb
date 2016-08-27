@@ -10,7 +10,7 @@ class RacePolicy < ApplicationPolicy
     user.is_admin
   end
 
-  def new?
+  def create?
     return false if user.nil?
     user.is_admin
   end

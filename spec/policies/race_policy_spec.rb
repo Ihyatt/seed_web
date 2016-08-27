@@ -25,6 +25,7 @@ RSpec.describe RacePolicy do
     let(:user) { FactoryGirl.build(:admin) }
 
     it { should permit_action(:show) }
+    it { should permit_action(:create) }
     it { should permit_action(:update) }
     it { should permit_action(:destroy) }
   end
