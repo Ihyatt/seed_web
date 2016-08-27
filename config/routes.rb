@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   
   mount ActionCable.server => '/cable'
 
+  resources :races
+
   resources :incidents
 
   resources :messages, only: [:create]
