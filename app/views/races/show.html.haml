@@ -1,6 +1,8 @@
 %h1
   = @race.name
-
+%p
+  %strong Position
+  = @race.position
 
 
 = link_to 'Edit', edit_race_path(@race)

@@ -1,4 +1,7 @@
 class Race < ApplicationRecord
+  # Scopes
+  scope :by_position, -> { order('position ASC') }
+  
   # Associations
   has_many :users, inverse_of: :race
   

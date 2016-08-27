@@ -5,7 +5,7 @@ class RacesController < ApplicationController
   # GET /races
   def index
     raise Pundit::NotAuthorizedError if !current_user.is_admin
-    @races = Race.all
+    @races = Race.by_position
   end
 
   # GET /races/1
