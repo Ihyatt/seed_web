@@ -5,7 +5,8 @@ class ReactionsController < ApplicationController
   # GET /reactions
   def index
     raise Pundit::NotAuthorizedError if !current_user.is_admin
-    @reactions = Reaction.by_position
+    @positive_reactions = Reaction.positive.by_position
+    @negative_reactions = Reaction.negative.by_position
   end
 
   # GET /reactions/1

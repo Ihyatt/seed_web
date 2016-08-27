@@ -14,7 +14,14 @@
             %th
 
         %tbody
-          - @reactions.each do |reaction|
+          - @positive_reactions.each do |reaction|
+            %tr
+              %td= link_to reaction.name, reaction
+              %td= reaction.positive
+              %td= reaction.position
+              %td= link_to 'Edit', edit_reaction_path(reaction)
+              %td= link_to 'Destroy', reaction, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          - @negative_reactions.each do |reaction|
             %tr
               %td= link_to reaction.name, reaction
               %td= reaction.positive
