@@ -1,0 +1,16 @@
+.container
+  .row.m-t-1
+    .col-sm-12
+      %p
+        %b Name:
+        = @reaction.name
+      %p
+        %b Positive:
+        = @reaction.positive
+      %p
+        %b Position:
+        = @reaction.position
+
+      = link_to 'Edit', edit_reaction_path(@reaction)
+      \|
+      = link_to 'Back', reactions_path

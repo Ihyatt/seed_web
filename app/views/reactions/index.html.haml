@@ -1,0 +1,27 @@
+.container
+  .row.m-t-1
+    .col-sm-12
+
+      %h1 Reactions
+
+      %table.table
+        %thead
+          %tr
+            %th Name
+            %th Positive
+            %th Position
+            %th
+            %th
+
+        %tbody
+          - @reactions.each do |reaction|
+            %tr
+              %td= link_to reaction.name, reaction
+              %td= reaction.positive
+              %td= reaction.position
+              %td= link_to 'Edit', edit_reaction_path(reaction)
+              %td= link_to 'Destroy', reaction, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+      %br
+
+      = link_to 'New Reaction', new_reaction_path, class: "btn btn-primary"

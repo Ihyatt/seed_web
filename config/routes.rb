@@ -2,12 +2,14 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   
+  
   authenticate :user, lambda { |user| user.is_admin } do
     mount Sidekiq::Web => '/sidekiq'
   end
   
   mount ActionCable.server => '/cable'
 
+  resources :reactions
   resources :genders
   resources :races
 
