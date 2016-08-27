@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe Race, type: :model do
   let(:race) { FactoryGirl.build(:race) }
 
+  subject { race }
+
   describe "associations" do
     it { should have_many :users }
   end

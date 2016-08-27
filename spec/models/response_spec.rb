@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe Response, type: :model do
   let(:response) { FactoryGirl.build(:response)}
 
+  subject { response }
+
   describe "associations" do
     it { should belong_to :question }
   end
