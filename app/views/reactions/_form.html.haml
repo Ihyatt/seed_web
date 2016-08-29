@@ -1,0 +1,19 @@
+= form_for @reaction do |f|
+  - if @reaction.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@reaction.errors.count, "error")} prohibited this reaction from being saved:"
+      %ul
+        - @reaction.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :name
+    = f.text_field :name
+  .form-group
+    = f.label :positive
+    = f.check_box :positive
+  .form-group
+    = f.label :position
+    = f.number_field :position
+  .actions
+  = f.submit 'Save', class: "btn btn-primary"

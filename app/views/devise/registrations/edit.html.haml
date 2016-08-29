@@ -1,12 +1,31 @@
 .row.m-t-3
   .col-sm-6.offset-sm-3.col-lg-4.offset-lg-4
-    %h2
-      Settings
+    
     = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
       = devise_error_messages!
+      %h2 Profile
+      .form-group
+        = f.label :first_name, "First Name"
+        = f.text_field :first_name, class: 'form-control'
+      .form-group
+        = f.label :last_name, "Last Name"
+        = f.text_field :last_name, class: 'form-control'
+      .form-group
+        = f.label :gender
+        = f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class: 'form-control'}) 
+      .form-group
+        = f.label :race
+        = f.collection_select(:race_id, Race.all, :id, :name, {}, {class: 'form-control'}) 
+      .form-group
+        = f.label :birthday, "Birthday"
+        = f.date_select :birthday, class: 'form-control', use_month_numbers: true, start_year: Date.today.year - 100, end_year: Date.today.year, order: [:month, :day, :year], prompt: true
+      %hr
+        
+
+      %h2 Settings
       .form-group
         = f.label :email
-        = f.email_field :email, autofocus: true, class: 'form-control'
+        = f.email_field :email, class: 'form-control'
       - if devise_mapping.confirmable? && resource.pending_reconfirmation?
         %div
           Currently waiting confirmation for: #{resource.unconfirmed_email}

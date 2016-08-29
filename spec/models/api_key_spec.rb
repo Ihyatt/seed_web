@@ -4,6 +4,8 @@ RSpec.describe APIKey, type: :model do
 <<<<<<< Updated upstream
   let(:api_key) { FactoryGirl.build(:api_key) }
 
+  subject { api_key }
+
   describe "associations" do
     it { should belong_to :user }
   end
@@ -12,10 +14,10 @@ RSpec.describe APIKey, type: :model do
     it { should validate_presence_of(:user) }
 
     it { should validate_presence_of(:read_key) }
-    #it { should validate_uniqueness_of(:read_key) }
+    it { should validate_uniqueness_of(:read_key) }
 
     it { should validate_presence_of(:write_key) }
-    #it { should validate_uniqueness_of(:write_key) }
+    it { should validate_uniqueness_of(:write_key) }
 
     it "should create a read key",focus: true do
       api_key = APIKey.new

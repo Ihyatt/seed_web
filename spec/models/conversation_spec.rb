@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe Conversation, type: :model do
   let(:conversation) { FactoryGirl.build(:conversation) }
 
+  subject { conversation }
+
   describe "associations" do
     it { should have_many :messages }
     it { should have_many(:users).through(:messages) }
@@ -11,10 +13,10 @@ RSpec.describe Conversation, type: :model do
 
   describe 'validations' do
     it { should validate_presence_of(:slug) }
-    #it { should validate_uniqueness_of(:slug) }
+    it { should validate_uniqueness_of(:slug) }
 
     it { should validate_presence_of(:customer) }
-    #it { should validate_uniqueness_of(:customer_id) }
+    it { should validate_uniqueness_of(:customer_id) }
   end
 
   describe "users" do

@@ -16,6 +16,11 @@
     = f.label :location
     = f.text_field :location, placeholder: "San Francisco, CA"
   .form-group
+    = f.label :rating
+    = f.number_field :rating, min: 1, max: 5
+    %small.text-muted
+      1 - 5 with 5 being best.
+  .form-group
     = f.label :latitude
     = f.text_field :latitude
   .form-group
