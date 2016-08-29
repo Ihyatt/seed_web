@@ -38,6 +38,7 @@ gem 'kaminari'
 gem 'pundit'
 gem 'cocoon'
 gem 'geocoder'
+gem 'acts-as-taggable-array-on', :github => 'kidbombay/acts-as-taggable-array-on'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

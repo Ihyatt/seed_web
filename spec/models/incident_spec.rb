@@ -19,4 +19,27 @@ RSpec.describe Incident, type: :model do
   end
 
 
+  describe "reactions" do
+    it "should be able to set reactions as array" do
+      incident.reactions = ["safe", "scared"]
+      incident.save
+
+      expect(incident.reactions.count).to eq 2
+      expect(incident.reactions).to include("safe")
+      expect(incident.reactions).to include("scared")
+
+      incidents = Incident.with_any_reactions("safe")
+      expect(incidents.count).to eq(1)
+    end
+
+    it "should be able to set reactions as string" do
+      incident.reactions_list = "safe, scared"
+      incident.save
+
+      expect(incident.reactions.count).to eq 2
+      expect(incident.reactions).to include("safe")
+      expect(incident.reactions).to include("scared")
+    end
+
+  end
 end

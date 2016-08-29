@@ -1,5 +1,7 @@
 class Incident < ApplicationRecord
   # Extensions
+  acts_as_taggable_array_on :reactions
+
   extend FriendlyId
   friendly_id :slug
   geocoded_by :location              # can also be an IP address
@@ -23,5 +25,13 @@ class Incident < ApplicationRecord
         break slug unless Incident.where(slug: slug).exists?
       end
     end
+  end
+
+  def reactions_list=(string)
+    self.reactions = string.split(",").map!(&:strip)
+  end
+
+  def reactions_list
+    self.reactions.join(",")
   end
 end
