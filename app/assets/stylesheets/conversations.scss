@@ -1,0 +1,28 @@
+#messages {
+  padding: 10px 20px;
+  
+}
+.message {
+  text-align: right;
+}
+.message-left {
+  text-align: left;
+  .message-bubble {
+    background: #e3f6fe;
+  }
+}
+.message-bubble {
+  background: #eee;
+  display: inline-block;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 50px;
+}
+
+.input-bar {
+  padding: 10px 10px;
+  background: #F9F9F9;
+  .form-group {
+    margin: 0;
+  }
+}

@@ -47,13 +47,13 @@ class IncidentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_incident
-      @incident = Incident.friendly.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_incident
+    @incident = Incident.friendly.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def incident_params
-      params.require(:incident).permit(:user_id, :slug, :description, :start_time, :location, :latitude, :longitude, :rating)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def incident_params
+    params.require(:incident).permit(:user_id, :slug, :description, :start_time, :location,:reactions_list, :latitude, :longitude, :rating)
+  end
 end
