@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe APIKey, type: :model do
+<<<<<<< Updated upstream
   let(:api_key) { FactoryGirl.build(:api_key) }
 
   subject { api_key }
@@ -25,4 +26,7 @@ RSpec.describe APIKey, type: :model do
       puts api_key.inspect
     end
   end
+=======
+  pending "add some examples to (or delete) #{__FILE__}"
+>>>>>>> Stashed changes
 end
