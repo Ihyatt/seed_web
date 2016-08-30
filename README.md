@@ -65,6 +65,29 @@ rspec
 rake docs:generate
 ```
 
+Contributing
+------------
+
+-   Create a branch with the issue name
+For example if the Issue is 134 Add Views Count To Invites
+
+```
+git checkout -b 134_add_views_count
+```
+
+-   Write a test case to for your issue
+-   Make the minimal amount of code to make your test pass
+-   Refactor
+-   Write comments on any method longer than 5 lines
+-   Favor readability over terse code (Don't be too clever)
+-   Verify all tests pass. Guard should always be running or
+```
+rspec spec
+```
+
+-   Commit your code and do a pull requests. Only when all tests pass will it be accepted
+-   Favor small multiple commits over large ones
+
 * Services (job queues, cache servers, search engines, etc.)
 Sidekiq handles all background jobs and mailers
 
