@@ -7,7 +7,7 @@ class CreateUserService
     end
     user.password = user.password_confirmation = password
     user.save
-
+    
     return user
   end
 
