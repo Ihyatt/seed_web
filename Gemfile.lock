@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/kidbombay/acts-as-taggable-array-on.git
+  revision: 66f5d6c1b0ed2fb2c3039e9fd53dd6a690377c0b
+  specs:
+    acts-as-taggable-array-on (0.3.1)
+      activerecord (>= 4)
+      activesupport (>= 4)
+
+GIT
   remote: git://github.com/sinatra/rack-protection.git
   revision: 7e723a74763bb83989d1249cdceb9cceb2ee6f01
   specs:
@@ -324,6 +332,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
+  acts-as-taggable-array-on!
   apitome
   bootstrap (~> 4.0.0.alpha3.1)
   byebug
