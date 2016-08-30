@@ -1,6 +1,7 @@
 class Incident < ApplicationRecord
   # Extensions
   acts_as_taggable_array_on :reactions
+
   extend FriendlyId
   friendly_id :slug
   geocoded_by :location              # can also be an IP address
@@ -16,6 +17,7 @@ class Incident < ApplicationRecord
 
   # Callbacks
   after_initialize :ensure_slug, on: :create
+  validate :reactions_exist
   
   def ensure_slug
     if slug.blank?
@@ -32,5 +34,13 @@ class Incident < ApplicationRecord
 
   def reactions_list
     self.reactions.join(",")
+  end
+
+  def reactions_exist
+    reactions.each do |name|
+      if Reaction.where('name ilike ?', name).empty?
+        errors.add(:reactions, "#{name} isn't a valid reaction")
+      end
+    end
   end
 end
