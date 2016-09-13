@@ -1,14 +1,14 @@
 {
-  "resource": "Users",
+  "resource": "Incidents",
   "http_method": "GET",
-  "route": "/api/v1/users/:id",
-  "description": "Get A User With Error",
+  "route": "/api/v1/incidents/:id",
+  "description": "Get A Incident With Invalid Write Key",
   "explanation": null,
   "parameters": [
     {
       "required": true,
       "name": "id",
-      "description": "User ID"
+      "description": "Incident ID"
     }
   ],
   "response_fields": [
@@ -17,29 +17,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users/1234?write_key=e7aa3540b91674413146b42c9f540a7e",
+      "request_path": "/api/v1/incidents/1234?write_key=foo",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "e7aa3540b91674413146b42c9f540a7e"
+        "write_key": "foo"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"success\": false,\n  \"status\": 404,\n  \"errors\": [\n    {\n      \"message\": \"Couldn't find User with 'id'=1234\"\n    }\n  ]\n}",
+      "response_body": "{\n  \"success\": false,\n  \"status\": 403,\n  \"errors\": [\n    {\n      \"message\": \"Invalid Write Key\"\n    }\n  ]\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"7d1fcb86a24bbbad8ea5c463d3c94d8d\"",
+        "ETag": "W/\"d76650397b85cfb74f3b340e23669acb\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "695555aa-91e5-4fe0-88af-e2ad5019e619",
-        "X-Runtime": "0.007167",
-        "Content-Length": "89"
+        "X-Request-Id": "8e859fed-4480-46cb-9f11-d7cd31e2c13f",
+        "X-Runtime": "0.006797",
+        "Content-Length": "73"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

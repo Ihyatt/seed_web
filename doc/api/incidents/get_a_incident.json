@@ -1,0 +1,48 @@
+{
+  "resource": "Incidents",
+  "http_method": "GET",
+  "route": "/api/v1/incidents/:id",
+  "description": "Get A Incident",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Incident ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/incidents/2?write_key=e7aa3540b91674413146b42c9f540a7e",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "write_key": "e7aa3540b91674413146b42c9f540a7e"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 2,\n    \"slug\": \"pBPp5Cku\",\n    \"user_id\": 2,\n    \"description\": null,\n    \"start_time\": null,\n    \"location\": null,\n    \"reactions_list\": \"\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"rating\": null,\n    \"created_at\": \"2016-09-13T02:23:46.374Z\",\n    \"updated_at\": \"2016-09-13T02:23:46.374Z\",\n    \"user\": {\n      \"id\": 2,\n      \"uid\": \"5fdfe9e0\",\n      \"created_at\": \"2016-09-13T02:23:46Z\",\n      \"updated_at\": \"2016-09-13T02:23:46Z\"\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"9dc483e37225eabe5505d1dd4c18cc9a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "1b34acc0-e256-4554-8eea-b53abbb9cd89",
+        "X-Runtime": "0.028167",
+        "Content-Length": "374"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

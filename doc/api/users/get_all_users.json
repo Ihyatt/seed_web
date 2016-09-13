@@ -16,28 +16,28 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users?write_key=cd7c291f3a609cc69023161250b0f2f4",
+      "request_path": "/api/v1/users?write_key=e7aa3540b91674413146b42c9f540a7e",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "cd7c291f3a609cc69023161250b0f2f4"
+        "write_key": "e7aa3540b91674413146b42c9f540a7e"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"uid\": \"00ca28f5\",\n      \"created_at\": \"2016-08-15T05:59:58Z\",\n      \"updated_at\": \"2016-08-15T05:59:58Z\"\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 5,\n      \"uid\": \"83cd85bc\",\n      \"created_at\": \"2016-09-13T02:23:46Z\",\n      \"updated_at\": \"2016-09-13T02:23:46Z\"\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"0032bcca7fb0c7f42de95920e8cda141\"",
+        "ETag": "W/\"0d297af08c847f7fca2364a520aa85e6\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "f8d16845-faf0-4cc3-b783-7d508a8cd29d",
-        "X-Runtime": "0.052907",
+        "X-Request-Id": "e3a5c3da-7549-4fe7-b3d6-848ccb2bcc78",
+        "X-Runtime": "0.016036",
         "Content-Length": "180"
       },
       "response_content_type": "application/json; charset=utf-8",

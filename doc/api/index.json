@@ -1,6 +1,39 @@
 {
   "resources": [
     {
+      "name": "Incidents",
+      "examples": [
+        {
+          "description": "Get A Incident",
+          "link": "incidents/get_a_incident.json",
+          "groups": "all",
+          "route": "/api/v1/incidents/:id",
+          "method": "get"
+        },
+        {
+          "description": "Get A Incident With Error",
+          "link": "incidents/get_a_incident_with_error.json",
+          "groups": "all",
+          "route": "/api/v1/incidents/:id",
+          "method": "get"
+        },
+        {
+          "description": "Get A Incident With Invalid Write Key",
+          "link": "incidents/get_a_incident_with_invalid_write_key.json",
+          "groups": "all",
+          "route": "/api/v1/incidents/:id",
+          "method": "get"
+        },
+        {
+          "description": "Get All Incidents",
+          "link": "incidents/get_all_incidents.json",
+          "groups": "all",
+          "route": "/api/v1/incidents",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "Users",
       "examples": [
         {
