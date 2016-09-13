@@ -116,50 +116,64 @@ resource "Incidents" do
       incident = Incident.last
 
       json = JSON.parse(response_body)
-
-      incident_json = json["data"]
-      puts incident_json
       #json.should == ""
 
+      incident_json = json["data"]
+    
       expect(incident_json["id"]).to eq(incident.id)
       expect(incident_json["slug"]).to eq(incident.slug)
-      expect(incident_json["description"]).to eq(incident.description)
-      expect(incident_json["location"]).to eq(incident.location)
+      expect(incident_json["description"]).to eq(description)
+      expect(incident_json["location"]).to eq(location)
       expect(incident_json["reactions_list"]).to eq(incident.reactions_list)
       expect(incident_json["latitude"]).not_to be_nil
       expect(incident_json["longitude"]).not_to be_nil
-      expect(incident_json["rating"]).to eq(incident.rating)
+      expect(incident_json["rating"]).to eq(rating)
 
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil
     end
   end
 
-  # put "/api/v1/incidents/:id.json" do
-  #   parameter :id, "Incident ID", required: true
-  #   parameter :email, "New Email"
-  #   parameter :password, "New Password"
-  #   parameter :first_name, "First Name"
-  #   parameter :last_name, "First Name"
+  put "/api/v1/incidents/:id.json" do
+    parameter :id, "Incident ID", required: true
+    parameter :description, "What happened"
+    parameter :location, "City and State"
+    parameter :reactions_list, "Reactions to incidents from approved Incdents"
+    parameter :latitude, "Float of Latitude"
+    parameter :longitude, "Float of longitude"
+    parameter :rating, "Numeric rating of incident, 1-5"
 
-  #   example "Update A Incident" do
-  #     email = FactoryGirl.generate(:email)
-  #     do_request(id: user.id, email: email, first_name: "Ketan", write_key: api_key.write_key)
+    example "Update A Incident" do
+      email = FactoryGirl.generate(:email)
+      description =  "I was stopped"
+      location = "New York, NY"
+      reactions_list = "#{reaction.name}"
+      rating = 1
+      do_request( id: incident.id,
+                  description: description,
+                  location: location,
+                  reactions_list: reactions_list,
+                  rating: rating,
+                  write_key: api_key.write_key)
 
-  #     expect(status).to eq(200)
+      expect(status).to eq(200)
       
-  #     # reload the user due to update call
-  #     user.reload
-  #     expect(user.unconfirmed_email).to eq(email)
-  #     expect(user.first_name).to eq("Ketan")
+      # reload the user due to update call
+      incident.reload
 
-  #     json = JSON.parse(response_body)
+      json = JSON.parse(response_body)
 
-  #     incident_json = json["data"]
-  #     expect(incident_json["id"]).to eq(incident.id)
-  #     expect(incident_json["uid"]).to eq(incident.uid)
-  #     expect(incident_json["created_at"]).not_to be_nil
-  #     expect(incident_json["updated_at"]).not_to be_nil
-  #   end
-  # end
+      incident_json = json["data"]
+
+      expect(incident_json["description"]).to eq(description)
+      expect(incident_json["location"]).to eq(location)
+      expect(incident_json["reactions_list"]).to eq(incident.reactions_list)
+      expect(incident_json["latitude"]).not_to be_nil
+      expect(incident_json["longitude"]).not_to be_nil
+      expect(incident_json["rating"]).to eq(rating)
+
+      expect(incident_json["created_at"]).not_to be_nil
+      expect(incident_json["updated_at"]).not_to be_nil
+    end
+  end
 end
