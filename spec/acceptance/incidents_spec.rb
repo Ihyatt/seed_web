@@ -5,6 +5,8 @@ resource "Incidents" do
   let!(:user) { FactoryGirl.create(:user) }
   let!(:api_key) { FactoryGirl.create(:api_key, user: user) }
   let!(:incident) { FactoryGirl.create(:incident, user: user) }
+  let(:reaction) { FactoryGirl.create(:reaction) }
+  let(:reaction2) { FactoryGirl.create(:reaction) }
   
   get "/api/v1/incidents" do
     parameter :page, "Page of incidents"
@@ -86,32 +88,52 @@ resource "Incidents" do
     end
   end
 
-  # post "/api/v1/incidents" do
-  #   parameter :email, "Incident Email", required: true
-  #   parameter :password, "Incident Password", required: true
+  post "/api/v1/incidents" do
+    parameter :user_id, "Incident Email", required: true
+    parameter :description, "What happened"
+    parameter :location, "City and State"
+    parameter :reactions_list, "Reactions to incidents from approved Incdents"
+    parameter :latitude, "Float of Latitude"
+    parameter :longitude, "Float of longitude"
+    parameter :rating, "Numeric rating of incident, 1-5"
 
-  #   example "Create A Incident" do
-  #     email = FactoryGirl.generate(:email)
-  #     password = "testtest"
-  #     do_request(email: email, password: password, write_key: api_key.write_key)
 
-  #     expect(status).to eq(200)
+    example "Create A Incident" do
+      description =  "I was arrested"
+      location = "San Francisco, CA"
+      reactions_list = "#{reaction.name}, #{reaction2.name}"
+      rating = 5
+      do_request( user_id: user.id,
+                  description: description,
+                  location: location,
+                  reactions_list: reactions_list,
+                  rating: rating,
+                  write_key: api_key.write_key)
+
+      expect(status).to eq(200)
       
-  #     # get the newly created user
-  #     user = Incident.last
+      # get the newly created incident
+      incident = Incident.last
 
-  #     json = JSON.parse(response_body)
-  #     #json.should == ""
+      json = JSON.parse(response_body)
 
-  #     incident_json = json["data"]
-  #     expect(incident_json["id"]).to eq(incident.id)
-  #     expect(incident_json["uid"]).to eq(incident.uid)
-  #     expect(incident_json["created_at"]).not_to be_nil
-  #     expect(incident_json["updated_at"]).not_to be_nil
-  #   end
+      incident_json = json["data"]
+      puts incident_json
+      #json.should == ""
 
+      expect(incident_json["id"]).to eq(incident.id)
+      expect(incident_json["slug"]).to eq(incident.slug)
+      expect(incident_json["description"]).to eq(incident.description)
+      expect(incident_json["location"]).to eq(incident.location)
+      expect(incident_json["reactions_list"]).to eq(incident.reactions_list)
+      expect(incident_json["latitude"]).not_to be_nil
+      expect(incident_json["longitude"]).not_to be_nil
+      expect(incident_json["rating"]).to eq(incident.rating)
 
-  # end
+      expect(incident_json["created_at"]).not_to be_nil
+      expect(incident_json["updated_at"]).not_to be_nil
+    end
+  end
 
   # put "/api/v1/incidents/:id.json" do
   #   parameter :id, "Incident ID", required: true
