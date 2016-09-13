@@ -4,6 +4,13 @@
       "name": "Incidents",
       "examples": [
         {
+          "description": "Create A Incident",
+          "link": "incidents/create_a_incident.json",
+          "groups": "all",
+          "route": "/api/v1/incidents",
+          "method": "post"
+        },
+        {
           "description": "Get A Incident",
           "link": "incidents/get_a_incident.json",
           "groups": "all",
@@ -30,6 +37,13 @@
           "groups": "all",
           "route": "/api/v1/incidents",
           "method": "get"
+        },
+        {
+          "description": "Update A Incident",
+          "link": "incidents/update_a_incident.json",
+          "groups": "all",
+          "route": "/api/v1/incidents/:id.json",
+          "method": "put"
         }
       ]
     },

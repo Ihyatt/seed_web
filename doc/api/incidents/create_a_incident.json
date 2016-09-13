@@ -1,0 +1,72 @@
+{
+  "resource": "Incidents",
+  "http_method": "POST",
+  "route": "/api/v1/incidents",
+  "description": "Create A Incident",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "user_id",
+      "description": "Incident Email"
+    },
+    {
+      "name": "description",
+      "description": "What happened"
+    },
+    {
+      "name": "location",
+      "description": "City and State"
+    },
+    {
+      "name": "reactions_list",
+      "description": "Reactions to incidents from approved Incdents"
+    },
+    {
+      "name": "latitude",
+      "description": "Float of Latitude"
+    },
+    {
+      "name": "longitude",
+      "description": "Float of longitude"
+    },
+    {
+      "name": "rating",
+      "description": "Numeric rating of incident, 1-5"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/incidents",
+      "request_body": "user_id=5&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Duane+Feil%2C+Ms.+Joyce+Herzog&rating=5&write_key=7bdcc327577c612af064642644d497d9",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 6,\n    \"slug\": \"3AoNMs9A\",\n    \"user_id\": 5,\n    \"description\": \"I was arrested\",\n    \"start_time\": null,\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Duane Feil,Ms. Joyce Herzog\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"rating\": 5,\n    \"created_at\": \"2016-09-13T02:53:29.330Z\",\n    \"updated_at\": \"2016-09-13T02:53:29.330Z\",\n    \"user\": {\n      \"id\": 5,\n      \"uid\": \"e32b56e8\",\n      \"created_at\": \"2016-09-13T02:53:29Z\",\n      \"updated_at\": \"2016-09-13T02:53:29Z\"\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"4f04f33a154353f74fdf37a891d2003a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "a02a8745-eb6f-4ca8-9a43-11b8c2572972",
+        "X-Runtime": "0.244185",
+        "Content-Length": "439"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

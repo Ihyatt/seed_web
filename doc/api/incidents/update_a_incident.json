@@ -1,0 +1,72 @@
+{
+  "resource": "Incidents",
+  "http_method": "PUT",
+  "route": "/api/v1/incidents/:id.json",
+  "description": "Update A Incident",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Incident ID"
+    },
+    {
+      "name": "description",
+      "description": "What happened"
+    },
+    {
+      "name": "location",
+      "description": "City and State"
+    },
+    {
+      "name": "reactions_list",
+      "description": "Reactions to incidents from approved Incdents"
+    },
+    {
+      "name": "latitude",
+      "description": "Float of Latitude"
+    },
+    {
+      "name": "longitude",
+      "description": "Float of longitude"
+    },
+    {
+      "name": "rating",
+      "description": "Numeric rating of incident, 1-5"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/v1/incidents/7.json",
+      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Aurelie+Olson&rating=1&write_key=7bdcc327577c612af064642644d497d9",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"zyJqz23o\",\n    \"user_id\": 6,\n    \"description\": \"I was stopped\",\n    \"start_time\": null,\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Aurelie Olson\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"created_at\": \"2016-09-13T02:53:29.370Z\",\n    \"updated_at\": \"2016-09-13T02:53:29.651Z\",\n    \"user\": {\n      \"id\": 6,\n      \"uid\": \"c16fcbde\",\n      \"created_at\": \"2016-09-13T02:53:29Z\",\n      \"updated_at\": \"2016-09-13T02:53:29Z\"\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"e8b29f9ba0de045259b388591195f197\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "32bd5cac-8ca8-42f9-8a87-9cec56bf1f2f",
+        "X-Runtime": "0.265986",
+        "Content-Length": "418"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
