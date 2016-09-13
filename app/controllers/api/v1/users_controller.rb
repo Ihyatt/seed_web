@@ -1,4 +1,5 @@
 class API::V1::UsersController < API::V1::APIController
+  skip_before_filter :ensure_api_credentials, only: [:create, :generate]
 
   def index
     scope = User.all
@@ -24,6 +25,16 @@ class API::V1::UsersController < API::V1::APIController
   def update
     @user = User.find params[:id]
     if @user.update_attributes(user_params)
+      render_resource(@user)
+    else
+      @errors = @user.errors
+      render_errors(@errors, 400)
+    end
+  end
+
+  def generate
+    @user = User.generate(params[:facebook_id])
+    if @user.save
       render_resource(@user)
     else
       @errors = @user.errors

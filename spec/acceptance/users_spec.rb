@@ -165,4 +165,28 @@ resource "Users" do
       expect(user_json["updated_at"]).not_to be_nil
     end
   end
+
+  post "/api/v1/users/generate" do
+    parameter :facebook_id, "Unique Facebook ID", required: true
+
+    example "Generate A User From Facebook ID" do
+      facebook_id = FactoryGirl.generate(:bitcoin_address)
+      do_request(facebook_id: facebook_id)
+
+      expect(status).to eq(200)
+      
+      json = JSON.parse(response_body)
+      #json.should == ""
+
+      # get the newly created user
+      user = User.last
+
+      user_json = json["data"]
+      expect(user_json["id"]).to eq(user.id)
+      expect(user_json["uid"]).to eq(user.uid)
+      expect(user_json["facebook_id"]).to eq(facebook_id)
+      expect(user_json["created_at"]).not_to be_nil
+      expect(user_json["updated_at"]).not_to be_nil
+    end
+  end
 end
