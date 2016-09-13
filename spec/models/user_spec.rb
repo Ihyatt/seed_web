@@ -19,4 +19,25 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:uid) }
     it { should validate_uniqueness_of(:uid) }
   end
+
+  describe "generate" do
+    it "should generate a user from a facebook_id" do
+      facebook_id = FactoryGirl.generate(:bitcoin_address)
+
+      user = User.generate(facebook_id)
+
+      expect(user).not_to be_nil
+      expect(user).to be_persisted
+      expect(user.facebook_id).to eq(facebook_id)
+    end
+
+    it "should return same user from facebook_id" do
+      facebook_id = FactoryGirl.generate(:bitcoin_address)
+
+      user = User.generate(facebook_id)
+      user2 = User.generate(facebook_id)
+
+      expect(user).to eq(user2)
+    end
+  end
 end

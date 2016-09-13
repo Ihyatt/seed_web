@@ -51,4 +51,15 @@ class User < ApplicationRecord
   def send_devise_notification(notification, *args)
     devise_mailer.send(notification, self, *args).deliver_later
   end
+
+  def self.generate(facebook_id)
+    user = User.where(facebook_id: facebook_id).first_or_initialize
+    if user.new_record?
+      user.email = "#{user.uid}@theseedapp.com"
+      user.password = "#{user.uid}@theseedapp.com"
+      user.save
+    end
+
+    return user
+  end
 end

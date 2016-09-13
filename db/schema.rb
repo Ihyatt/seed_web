@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160829152548) do
+ActiveRecord::Schema.define(version: 20160913170835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -162,8 +162,10 @@ ActiveRecord::Schema.define(version: 20160829152548) do
     t.integer  "race_id"
     t.integer  "gender_id"
     t.date     "birthday"
+    t.string   "facebook_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["facebook_id"], name: "index_users_on_facebook_id", unique: true, using: :btree
     t.index ["gender_id"], name: "index_users_on_gender_id", using: :btree
     t.index ["race_id"], name: "index_users_on_race_id", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
