@@ -1,19 +1,14 @@
 {
   "resource": "Users",
   "http_method": "POST",
-  "route": "/api/v1/users",
-  "description": "Create A User",
+  "route": "/api/v1/users/generate",
+  "description": "Generate A User From Facebook ID",
   "explanation": null,
   "parameters": [
     {
       "required": true,
-      "name": "email",
-      "description": "User Email"
-    },
-    {
-      "required": true,
-      "name": "password",
-      "description": "User Password"
+      "name": "facebook_id",
+      "description": "Unique Facebook ID"
     }
   ],
   "response_fields": [
@@ -22,8 +17,8 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/users",
-      "request_body": "email=terrill_11%40johnstonbradtke.org&password=testtest&write_key=7117688481e68e6fdc71d7c7e5a08df6",
+      "request_path": "/api/v1/users/generate",
+      "request_body": "facebook_id=1ND79nTBs5kg5Lyfrqm7qMxzgvtRfneuE5_1",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -34,17 +29,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 11,\n    \"uid\": \"ceba3463\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-09-13T17:25:31Z\",\n    \"updated_at\": \"2016-09-13T17:25:31Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 16,\n    \"uid\": \"a7b7d4a2\",\n    \"facebook_id\": \"1ND79nTBs5kg5Lyfrqm7qMxzgvtRfneuE5_1\",\n    \"created_at\": \"2016-09-13T17:25:32Z\",\n    \"updated_at\": \"2016-09-13T17:25:32Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"ed5a5e0599a1fb19fc0d4e5b1d7ac6e1\"",
+        "ETag": "W/\"b54971b62d90d3c52fc4581857de90c9\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "1c6d38c0-f5bd-4e4d-be26-15cca08504f0",
-        "X-Runtime": "0.032975",
-        "Content-Length": "148"
+        "X-Request-Id": "62a817f0-de69-47c8-8306-be40173b23f6",
+        "X-Runtime": "0.026570",
+        "Content-Length": "182"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

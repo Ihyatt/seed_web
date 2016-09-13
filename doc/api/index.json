@@ -79,6 +79,13 @@
           "method": "post"
         },
         {
+          "description": "Generate A User From Facebook ID",
+          "link": "users/generate_a_user_from_facebook_id.json",
+          "groups": "all",
+          "route": "/api/v1/users/generate",
+          "method": "post"
+        },
+        {
           "description": "Get A User",
           "link": "users/get_a_user.json",
           "groups": "all",

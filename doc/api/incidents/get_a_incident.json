@@ -17,29 +17,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/incidents/2?write_key=7bdcc327577c612af064642644d497d9",
+      "request_path": "/api/v1/incidents/2?write_key=7117688481e68e6fdc71d7c7e5a08df6",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "7bdcc327577c612af064642644d497d9"
+        "write_key": "7117688481e68e6fdc71d7c7e5a08df6"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 2,\n    \"slug\": \"zfbYzUfY\",\n    \"user_id\": 2,\n    \"description\": null,\n    \"start_time\": null,\n    \"location\": null,\n    \"reactions_list\": \"\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"rating\": null,\n    \"created_at\": \"2016-09-13T02:53:28.832Z\",\n    \"updated_at\": \"2016-09-13T02:53:28.832Z\",\n    \"user\": {\n      \"id\": 2,\n      \"uid\": \"f152c6ff\",\n      \"created_at\": \"2016-09-13T02:53:28Z\",\n      \"updated_at\": \"2016-09-13T02:53:28Z\"\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 2,\n    \"slug\": \"b5Qppzxy\",\n    \"user_id\": 2,\n    \"description\": null,\n    \"start_time\": null,\n    \"location\": null,\n    \"reactions_list\": \"\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"rating\": null,\n    \"created_at\": \"2016-09-13T17:25:30.604Z\",\n    \"updated_at\": \"2016-09-13T17:25:30.604Z\",\n    \"user\": {\n      \"id\": 2,\n      \"uid\": \"152781f2\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-09-13T17:25:30Z\",\n      \"updated_at\": \"2016-09-13T17:25:30Z\"\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"1345f4acd104b2fa47b343008ac8dd08\"",
+        "ETag": "W/\"67d1fb1b560040c46169b72b85ef3398\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "67d2a9f1-fd53-4fb8-ae6c-20abe34162d7",
-        "X-Runtime": "0.021561",
-        "Content-Length": "374"
+        "X-Request-Id": "f719d7ad-aa9c-4929-b6f1-4596490d720b",
+        "X-Runtime": "0.013667",
+        "Content-Length": "393"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
