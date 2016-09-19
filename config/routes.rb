@@ -3,6 +3,7 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   
   
+  mount ForestLiana::Engine => '/forest'
   authenticate :user, lambda { |user| user.is_admin } do
     mount Sidekiq::Web => '/sidekiq'
   end
