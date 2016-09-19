@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913170835) do
+ActiveRecord::Schema.define(version: 20160919080922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,21 @@ ActiveRecord::Schema.define(version: 20160913170835) do
     t.string   "platform",        null: false
     t.index ["conversation_id"], name: "index_messages_on_conversation_id", using: :btree
     t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "slug",       null: false
+    t.string   "short"
+    t.string   "level",      null: false
+    t.integer  "parent_id"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["level"], name: "index_places_on_level", using: :btree
+    t.index ["parent_id"], name: "index_places_on_parent_id", using: :btree
+    t.index ["slug"], name: "index_places_on_slug", unique: true, using: :btree
   end
 
   create_table "questions", force: :cascade do |t|

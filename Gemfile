@@ -39,6 +39,9 @@ gem 'pundit'
 gem 'cocoon'
 gem 'geocoder'
 gem 'acts-as-taggable-array-on', :github => 'kidbombay/acts-as-taggable-array-on'
+gem 'auto_strip_attributes'
+gem 'acts_as_tree', :github => 'amerine/acts_as_tree'
+gem 'fast_seeder', :github => 'kidbombay/fast_seeder'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

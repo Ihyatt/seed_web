@@ -1,10 +1,24 @@
 GIT
+  remote: git://github.com/amerine/acts_as_tree.git
+  revision: 6a5b14c2c606c64b688dd0e56ae925b3e8b95422
+  specs:
+    acts_as_tree (2.5.1)
+      activerecord (>= 3.0.0)
+
+GIT
   remote: git://github.com/kidbombay/acts-as-taggable-array-on.git
   revision: 66f5d6c1b0ed2fb2c3039e9fd53dd6a690377c0b
   specs:
     acts-as-taggable-array-on (0.3.1)
       activerecord (>= 4)
       activesupport (>= 4)
+
+GIT
+  remote: git://github.com/kidbombay/fast_seeder.git
+  revision: 8f481284acfaade1a6fb8918d261b716b9b09c12
+  specs:
+    fast_seeder (0.0.2)
+      rails (>= 3.0)
 
 GIT
   remote: git://github.com/sinatra/rack-protection.git
@@ -74,6 +88,8 @@ GEM
       railties
       rspec_api_documentation
     arel (7.1.1)
+    auto_strip_attributes (2.1.0)
+      activerecord (>= 3.0)
     autoprefixer-rails (6.4.0.1)
       execjs
     bcrypt (3.1.11)
@@ -347,7 +363,9 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   acts-as-taggable-array-on!
+  acts_as_tree!
   apitome
+  auto_strip_attributes
   bootstrap (~> 4.0.0.alpha3.1)
   byebug
   capybara
@@ -359,6 +377,7 @@ DEPENDENCIES
   dotenv-rails
   factory_girl_rails
   faker
+  fast_seeder!
   friendly_id (~> 5.1.0)
   geocoder
   guard
