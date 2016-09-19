@@ -1,51 +1,51 @@
-Maine,ME,US
-New Hampshire,NH,US
-Vermont,VT,US
-Massachusetts,MA,US
-Rhode Island,RI,US
-Connecticut,CT,US
-New York,NY,US
-Pennsylvania,PA,US
-New Jersey,NJ,US
-Wisconsin,WI,US
-Michigan,MI,US
-Illinois,IL,US
-Indiana,IN,US
-Ohio,OH,US
-Missouri,MO,US
-North Dakota,ND,US
-South Dakota,SD,US
-Nebraska,NE,US
-Kansas,KS,US
-Minnesota,MN,US
-Iowa,IA,US
-Delaware,DE,US
-Maryland,MD,US
-District of Columbia,DC,US
-Virginia,VA,US
-West Virginia,WV,US
-North Carolina,NC,US
-South Carolina,SC,US
-Georgia,GA,US
-Florida,FL,US
-Kentucky,KY,US
-Tennessee,TN,US
-Mississippi,MS,US
-Alabama,AL,US
-Oklahoma,OK,US
-Texas,TX,US
-Arkansas,AR,US
-Louisiana,LA,US
-Idaho,ID,US
-Montana,MT,US
-Wyoming,WY,US
-Nevada,NV,US
-Utah,UT,US
-Colorado,CO,US
-Arizona,AZ,US
-New Mexico,NM,US
-Alaska,AK,US
-Washington,WA,US
-Oregon,OR,US
-California,CA,US
-Hawaii,HI,US
+Maine,ME,New England
+New Hampshire,NH,New England
+Vermont,VT,New England
+Massachusetts,MA,New England
+Rhode Island,RI,New England
+Connecticut,CT,New England
+New York,NY,Mid-Atlantic
+Pennsylvania,PA,Mid-Atlantic
+New Jersey,NJ,Mid-Atlantic
+Wisconsin,WI,East North Central
+Michigan,MI,East North Central
+Illinois,IL,East North Central
+Indiana,IN,East North Central
+Ohio,OH,East North Central
+Missouri,MO,West North Central
+North Dakota,ND,West North Central
+South Dakota,SD,West North Central
+Nebraska,NE,West North Central
+Kansas,KS,West North Central
+Minnesota,MN,West North Central
+Iowa,IA,West North Central
+Delaware,DE,South Atlantic
+Maryland,MD,South Atlantic
+District of Columbia,DC,South Atlantic
+Virginia,VA,South Atlantic
+West Virginia,WV,South Atlantic
+North Carolina,NC,South Atlantic
+South Carolina,SC,South Atlantic
+Georgia,GA,South Atlantic
+Florida,FL,South Atlantic
+Kentucky,KY,East South Central
+Tennessee,TN,East South Central
+Mississippi,MS,East South Central
+Alabama,AL,East South Central
+Oklahoma,OK,West South Central
+Texas,TX,West South Central
+Arkansas,AR,West South Central
+Louisiana,LA,West South Central
+Idaho,ID,Mountain
+Montana,MT,Mountain
+Wyoming,WY,Mountain
+Nevada,NV,Mountain
+Utah,UT,Mountain
+Colorado,CO,Mountain
+Arizona,AZ,Mountain
+New Mexico,NM,Mountain
+Alaska,AK,Pacific
+Washington,WA,Pacific
+Oregon,OR,Pacific
+California,CA,Pacific
+Hawaii,HI,Pacific

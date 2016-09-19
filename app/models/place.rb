@@ -1,6 +1,7 @@
 class Place < ApplicationRecord
   COUNTRY = "country"
   REGION = "region"
+  DIVISION = "division"
   STATE = "state"
   CITY = "city"
   NEIGHBORHOOD = "neighborhood"
@@ -8,6 +9,7 @@ class Place < ApplicationRecord
   VALID_LEVELS = [
     COUNTRY,
     REGION,
+    DIVISION,
     STATE,
     CITY,
     NEIGHBORHOOD
@@ -35,7 +37,7 @@ class Place < ApplicationRecord
   def name_and_short
     return name if parent.nil?
     return "#{name}-#{parent.short}" if parent.short
-    return "#{name}-#{parent}.name"
+    return "#{name}-#{parent.name}"
   end
 
   def self.import_countries
@@ -46,16 +48,39 @@ class Place < ApplicationRecord
     end
   end
 
-  def self.import_states
+  def self.import_regions
     self.import_countries
+
+    csv_file = File.join(FastSeeder.seeds_path, 'regions.csv')
+    regions = CSV.read(csv_file)
+    regions.each do |data|
+      country_code = data[1].upcase
+      country = Place.where(short: country_code, level: Place::COUNTRY).first
+      region = Place.find_or_create_by(name: data[0], level: Place::REGION, parent_id: country.id)
+    end
+  end
+
+  def self.import_divisions
+    self.import_regions
+
+    csv_file = File.join(FastSeeder.seeds_path, 'divisions.csv')
+    divisions = CSV.read(csv_file)
+    divisions.each do |data|
+      region_name = data[1]
+      region = Place.where(name: region_name, level: Place::REGION).first
+      division = Place.find_or_create_by(name: data[0], level: Place::DIVISION, parent_id: region.id)
+    end
+  end
+
+  def self.import_states
+    self.import_divisions
 
     csv_file = File.join(FastSeeder.seeds_path, 'states.csv')
     states = CSV.read(csv_file)
     states.each do |data|
-      country_code = data[2].upcase
-      country = Place.where(short: country_code, level: Place::COUNTRY).first
-
-      state = Place.find_or_create_by(name: data[0], short: data[1].upcase, level: Place::STATE, parent_id: country.id)
+      division_name = data[2]
+      division = Place.where(name: division_name, level: Place::DIVISION).first
+      state = Place.find_or_create_by(name: data[0], short: data[1].upcase, level: Place::STATE, parent_id: division.id)
     end
   end
 
@@ -67,10 +92,8 @@ class Place < ApplicationRecord
     cities.each do |data|
       name = data[0]
       state_code = data[1]
-      country_code = data[2]
-      country = Place.where(short: country_code, level: Place::COUNTRY).first
-      state = Place.where(short: state_code, level: Place::STATE, parent_id: country.id).first
-      if country && state
+      state = Place.where(short: state_code, level: Place::STATE).first
+      if state
         city = Place.find_or_create_by(name: name, level: Place::CITY, parent_id: state.id)
       end
     end
