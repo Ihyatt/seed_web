@@ -13,4 +13,8 @@ class IncidentSerializer < ActiveModel::Serializer
               :updated_at
 
   has_one :user
+
+  def start_time
+    object.start_time.utc.iso8601 if object.start_time
+  end
 end

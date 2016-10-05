@@ -142,6 +142,7 @@ resource "Incidents" do
     parameter :latitude, "Float of Latitude"
     parameter :longitude, "Float of longitude"
     parameter :rating, "Numeric rating of incident, 1-5"
+    parameter :start_time, "When the incident occured in Epoch Time (seconds since 1970)"
 
     example "Update A Incident" do
       email = FactoryGirl.generate(:email)
@@ -149,11 +150,14 @@ resource "Incidents" do
       location = "New York, NY"
       reactions_list = "#{reaction.name}"
       rating = 1
+      start_time = DateTime.now
+
       do_request( id: incident.id,
                   description: description,
                   location: location,
                   reactions_list: reactions_list,
                   rating: rating,
+                  start_time: start_time.to_i,
                   write_key: api_key.write_key)
 
       expect(status).to eq(200)
@@ -171,6 +175,7 @@ resource "Incidents" do
       expect(incident_json["latitude"]).not_to be_nil
       expect(incident_json["longitude"]).not_to be_nil
       expect(incident_json["rating"]).to eq(rating)
+      expect(incident_json["start_time"]).not_to be_nil
 
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil

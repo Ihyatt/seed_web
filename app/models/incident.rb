@@ -43,4 +43,8 @@ class Incident < ApplicationRecord
       end
     end
   end
+
+  def start_time=(value)
+    self.write_attribute(:start_time, Time.at(value.to_i))
+  end
 end
