@@ -17,29 +17,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/incidents/2?write_key=4c0231827bf17bd4aaf93d5ea13fad03",
+      "request_path": "/api/v1/incidents/2?write_key=1d050eeaa28d75c8bf79e75f9e8557e3",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "4c0231827bf17bd4aaf93d5ea13fad03"
+        "write_key": "1d050eeaa28d75c8bf79e75f9e8557e3"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 2,\n    \"slug\": \"Ld8XKYFo\",\n    \"user_id\": 2,\n    \"description\": null,\n    \"start_time\": null,\n    \"location\": null,\n    \"reactions_list\": \"\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"rating\": null,\n    \"created_at\": \"2016-10-05T18:22:21.683Z\",\n    \"updated_at\": \"2016-10-05T18:22:21.683Z\",\n    \"user\": {\n      \"id\": 2,\n      \"uid\": \"bf996ce6\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-10-05T18:22:21Z\",\n      \"updated_at\": \"2016-10-05T18:22:21Z\"\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 2,\n    \"slug\": \"BDzRZ8Jy\",\n    \"user_id\": 3,\n    \"description\": null,\n    \"start_time\": null,\n    \"location\": null,\n    \"reactions_list\": \"\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"rating\": null,\n    \"created_at\": \"2016-10-05T18:32:07.404Z\",\n    \"updated_at\": \"2016-10-05T18:32:07.404Z\",\n    \"user\": {\n      \"id\": 3,\n      \"uid\": \"06f03b33\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-10-05T18:32:07Z\",\n      \"updated_at\": \"2016-10-05T18:32:07Z\",\n      \"race_id\": null,\n      \"gender_id\": null\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"428a4a60e57c03c71694e4976a4416e4\"",
+        "ETag": "W/\"2e05b4570a45aba6f663946c39ac8c0e\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "fcff3271-3f20-49f2-9da3-9d176ced2bcc",
-        "X-Runtime": "0.013269",
-        "Content-Length": "393"
+        "X-Request-Id": "bba15d43-c48e-409e-95f1-f05be2512a59",
+        "X-Runtime": "0.015712",
+        "Content-Length": "425"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

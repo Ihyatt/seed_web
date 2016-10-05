@@ -1,6 +1,18 @@
 {
   "resources": [
     {
+      "name": "Genders",
+      "examples": [
+        {
+          "description": "Get All Genders",
+          "link": "genders/get_all_genders.json",
+          "groups": "all",
+          "route": "/api/v1/genders",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "Incidents",
       "examples": [
         {

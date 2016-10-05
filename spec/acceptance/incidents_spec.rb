@@ -45,7 +45,7 @@ resource "Incidents" do
     parameter :id, "Incident ID", required: true
 
     example "Get A Incident" do
-      do_request(id: user.id, write_key: api_key.write_key)
+      do_request(id: incident.id, write_key: api_key.write_key)
 
       expect(status).to eq(200)
       

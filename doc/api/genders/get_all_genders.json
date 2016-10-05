@@ -1,14 +1,13 @@
 {
-  "resource": "Users",
+  "resource": "Genders",
   "http_method": "GET",
-  "route": "/api/v1/users/:id",
-  "description": "Get A User With Invalid Write Key",
+  "route": "/api/v1/genders",
+  "description": "Get All Genders",
   "explanation": null,
   "parameters": [
     {
-      "required": true,
-      "name": "id",
-      "description": "User ID"
+      "name": "page",
+      "description": "Page Number"
     }
   ],
   "response_fields": [
@@ -17,29 +16,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users/1234?write_key=foo",
+      "request_path": "/api/v1/genders?write_key=1d050eeaa28d75c8bf79e75f9e8557e3",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "foo"
+        "write_key": "1d050eeaa28d75c8bf79e75f9e8557e3"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"success\": false,\n  \"status\": 403,\n  \"errors\": [\n    {\n      \"message\": \"Invalid Write Key\"\n    }\n  ]\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Male\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Female\"\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 2\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d76650397b85cfb74f3b340e23669acb\"",
+        "ETag": "W/\"348632fe679289021ffb74a1b546bd06\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "36fc7077-ba49-48e2-a1f6-92af438e6807",
-        "X-Runtime": "0.006180",
-        "Content-Length": "73"
+        "X-Request-Id": "7f8cb30d-0410-4454-b855-1d0762e53bee",
+        "X-Runtime": "0.060111",
+        "Content-Length": "130"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
