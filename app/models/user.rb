@@ -62,4 +62,8 @@ class User < ApplicationRecord
 
     return user
   end
+
+  def birthday=(value)
+    self.write_attribute(:birthday, Time.at(value.to_i))
+  end
 end
