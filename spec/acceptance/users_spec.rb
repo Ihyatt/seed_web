@@ -143,11 +143,15 @@ resource "Users" do
     parameter :email, "New Email"
     parameter :password, "New Password"
     parameter :first_name, "First Name"
-    parameter :last_name, "First Name"
+    parameter :last_name, "Last Name"
+    parameter :race_id, "Race ID"
+    parameter :gender_id, "Gender ID"
 
     example "Update A User" do
+      Race.seed
+      Gender.seed
       email = FactoryGirl.generate(:email)
-      do_request(id: user.id, email: email, first_name: "Ketan", write_key: api_key.write_key)
+      do_request(id: user.id, email: email, first_name: "Ketan", write_key: api_key.write_key, race_id: Race.first.id, gender_id: Gender.first.id)
 
       expect(status).to eq(200)
       
@@ -161,6 +165,8 @@ resource "Users" do
       user_json = json["data"]
       expect(user_json["id"]).to eq(user.id)
       expect(user_json["uid"]).to eq(user.uid)
+      expect(user_json["race_id"]).to eq(Race.first.id)
+      expect(user_json["gender_id"]).to eq(Gender.first.id)
       expect(user_json["created_at"]).not_to be_nil
       expect(user_json["updated_at"]).not_to be_nil
     end
