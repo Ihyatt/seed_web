@@ -33,8 +33,8 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/api/v1/users/15.json",
-      "request_body": "email=roma_17%40fahey.info&first_name=Ketan&write_key=7117688481e68e6fdc71d7c7e5a08df6",
+      "request_path": "/api/v1/users/16.json",
+      "request_body": "email=desmond_18%40mclaughlin.co&first_name=Ketan&write_key=4c0231827bf17bd4aaf93d5ea13fad03",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -45,16 +45,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 15,\n    \"uid\": \"4494aa77\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-09-13T17:25:32Z\",\n    \"updated_at\": \"2016-09-13T17:25:32Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 16,\n    \"uid\": \"86c30475\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-10-05T18:22:22Z\",\n    \"updated_at\": \"2016-10-05T18:22:22Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"11a7cd466c240703fcb4f49d5c0a2292\"",
+        "ETag": "W/\"07729a7d8e8d436088868ffda404ef1f\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "98168d36-04a2-4b35-9c63-f3b3ffe084a2",
-        "X-Runtime": "0.025047",
+        "X-Request-Id": "7359bd2d-0abe-43bd-bf51-ee997296e7c4",
+        "X-Runtime": "0.031919",
         "Content-Length": "148"
       },
       "response_content_type": "application/json; charset=utf-8",

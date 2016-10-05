@@ -42,7 +42,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/incidents/7.json",
-      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Leo+Kirlin&rating=1&write_key=7117688481e68e6fdc71d7c7e5a08df6",
+      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Grady+Price&rating=1&write_key=4c0231827bf17bd4aaf93d5ea13fad03",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -53,17 +53,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"9K9xzSv5\",\n    \"user_id\": 6,\n    \"description\": \"I was stopped\",\n    \"start_time\": null,\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Leo Kirlin\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"created_at\": \"2016-09-13T17:25:31.424Z\",\n    \"updated_at\": \"2016-09-13T17:25:31.505Z\",\n    \"user\": {\n      \"id\": 6,\n      \"uid\": \"ff52a799\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-09-13T17:25:31Z\",\n      \"updated_at\": \"2016-09-13T17:25:31Z\"\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"prMegj2i\",\n    \"user_id\": 6,\n    \"description\": \"I was stopped\",\n    \"start_time\": null,\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Grady Price\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"created_at\": \"2016-10-05T18:22:22.075Z\",\n    \"updated_at\": \"2016-10-05T18:22:22.145Z\",\n    \"user\": {\n      \"id\": 6,\n      \"uid\": \"1b6fc257\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-10-05T18:22:22Z\",\n      \"updated_at\": \"2016-10-05T18:22:22Z\"\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"efeec3c8a6a4b7711a4680e30683e789\"",
+        "ETag": "W/\"8072ba4946bf82048e31629b6601ba29\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "bd1edfc4-a2fe-47be-a438-77334758170b",
-        "X-Runtime": "0.072494",
-        "Content-Length": "434"
+        "X-Request-Id": "5eceb3bf-5b41-4ce4-bf1d-c14ca781a274",
+        "X-Runtime": "0.064118",
+        "Content-Length": "435"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

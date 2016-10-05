@@ -1,14 +1,13 @@
 {
-  "resource": "Incidents",
+  "resource": "Races",
   "http_method": "GET",
-  "route": "/api/v1/incidents/:id",
-  "description": "Get A Incident With Error",
+  "route": "/api/v1/races",
+  "description": "Get All Races",
   "explanation": null,
   "parameters": [
     {
-      "required": true,
-      "name": "id",
-      "description": "Incident ID"
+      "name": "page",
+      "description": "Page Number"
     }
   ],
   "response_fields": [
@@ -17,7 +16,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/incidents/1234?write_key=4c0231827bf17bd4aaf93d5ea13fad03",
+      "request_path": "/api/v1/races?write_key=4c0231827bf17bd4aaf93d5ea13fad03",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
@@ -29,17 +28,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"success\": false,\n  \"status\": 404,\n  \"errors\": [\n    {\n      \"message\": \"Couldn't find Incident with 'id'=1234\"\n    }\n  ]\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"White\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Black\"\n    },\n    {\n      \"id\": 3,\n      \"name\": \"Asian\"\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 3\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"c16b838e8d04e62612ce552c437af7e7\"",
+        "ETag": "W/\"e13f0e98a2ee6af5281a83b9d6047e4a\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "5d0ad17a-3065-4b02-b82a-3fb7bb9a7d17",
-        "X-Runtime": "0.008602",
-        "Content-Length": "93"
+        "X-Request-Id": "b0b783d6-c6fe-41be-8e4e-c4395a6d2934",
+        "X-Runtime": "0.016328",
+        "Content-Length": "154"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

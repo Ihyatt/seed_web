@@ -48,6 +48,18 @@
       ]
     },
     {
+      "name": "Races",
+      "examples": [
+        {
+          "description": "Get All Races",
+          "link": "races/get_all_races.json",
+          "groups": "all",
+          "route": "/api/v1/races",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "Users",
       "examples": [
         {
