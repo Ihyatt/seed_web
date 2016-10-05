@@ -46,7 +46,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/users/17.json",
-      "request_body": "email=zack_19%40kub.com&first_name=Ketan&last_name=Foo&write_key=a21c681619bffdbc3f463a6079557cda&race_id=4&gender_id=3&birthday=1475693742",
+      "request_body": "email=tillman.sipes_19%40wittingzboncak.name&first_name=Ketan&last_name=Foo&write_key=4cbf24ef489d8b79ea28ccae2a570b16&race_id=4&gender_id=3&birthday=1475693918",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -57,16 +57,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 17,\n    \"uid\": \"45333821\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-10-05T18:55:42Z\",\n    \"updated_at\": \"2016-10-05T18:55:42Z\",\n    \"race_id\": 4,\n    \"gender_id\": 3,\n    \"birthday\": \"2016-10-05\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 17,\n    \"uid\": \"655a9945\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-10-05T18:58:38Z\",\n    \"updated_at\": \"2016-10-05T18:58:38Z\",\n    \"race_id\": 4,\n    \"gender_id\": 3,\n    \"birthday\": \"2016-10-05\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"09d830b739c84f3b7152a5f32a4568ea\"",
+        "ETag": "W/\"88fa51f66225ab68455a6775e89c6b65\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "844e3f08-ec40-42b5-ad3f-e105b5e14507",
-        "X-Runtime": "0.016683",
+        "X-Request-Id": "449b5cca-a9b1-4917-be78-01f1f15b0d7e",
+        "X-Runtime": "0.017523",
         "Content-Length": "198"
       },
       "response_content_type": "application/json; charset=utf-8",

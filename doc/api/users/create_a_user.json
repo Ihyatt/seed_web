@@ -23,7 +23,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/users",
-      "request_body": "email=vita_13%40skiles.io&password=testtest&write_key=a21c681619bffdbc3f463a6079557cda",
+      "request_body": "email=frederique_13%40rohan.info&password=testtest&write_key=4cbf24ef489d8b79ea28ccae2a570b16",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -34,16 +34,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 13,\n    \"uid\": \"ea204fea\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-10-05T18:55:42Z\",\n    \"updated_at\": \"2016-10-05T18:55:42Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 13,\n    \"uid\": \"e9d435ca\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-10-05T18:58:37Z\",\n    \"updated_at\": \"2016-10-05T18:58:37Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"0f07401922853d3e4bd46a48ea3b8c77\"",
+        "ETag": "W/\"29c0c55bfdd6612749e0051d0d5aeb47\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "faddc028-53e9-4cd3-81ee-1ed35555d117",
-        "X-Runtime": "0.020197",
+        "X-Request-Id": "db951dea-05e4-494f-8b5a-40106b58e5a4",
+        "X-Runtime": "0.028027",
         "Content-Length": "196"
       },
       "response_content_type": "application/json; charset=utf-8",

@@ -16,28 +16,28 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users?write_key=a21c681619bffdbc3f463a6079557cda",
+      "request_path": "/api/v1/users?write_key=4cbf24ef489d8b79ea28ccae2a570b16",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "a21c681619bffdbc3f463a6079557cda"
+        "write_key": "4cbf24ef489d8b79ea28ccae2a570b16"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 9,\n      \"uid\": \"d1ec6000\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-10-05T18:55:42Z\",\n      \"updated_at\": \"2016-10-05T18:55:42Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"birthday\": null\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 9,\n      \"uid\": \"0dcaa955\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-10-05T18:58:37Z\",\n      \"updated_at\": \"2016-10-05T18:58:37Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"birthday\": null\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"01f8972bb1fabd68290e5190afa46b27\"",
+        "ETag": "W/\"07b3f4432311872c3d18c5bb2ffa6b3e\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "1ab6ee7a-4404-47d7-b1e7-721c9ea39f61",
-        "X-Runtime": "0.015875",
+        "X-Request-Id": "0d9b930b-7f55-4a61-8d23-f95d5795bf38",
+        "X-Runtime": "0.014637",
         "Content-Length": "247"
       },
       "response_content_type": "application/json; charset=utf-8",
