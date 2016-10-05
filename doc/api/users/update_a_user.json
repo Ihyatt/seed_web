@@ -42,7 +42,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/users/17.json",
-      "request_body": "email=efrain_nienow_19%40friesenstanton.io&first_name=Ketan&write_key=1d050eeaa28d75c8bf79e75f9e8557e3&race_id=4&gender_id=3",
+      "request_body": "email=celestino_wisozk_19%40ritchie.net&first_name=Ketan&write_key=2032c528b83f3e7788506f1ec5477a6e&race_id=4&gender_id=3",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -53,16 +53,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 17,\n    \"uid\": \"61f4b8dd\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-10-05T18:32:09Z\",\n    \"updated_at\": \"2016-10-05T18:32:09Z\",\n    \"race_id\": 4,\n    \"gender_id\": 3\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 17,\n    \"uid\": \"f4a61b80\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-10-05T18:48:43Z\",\n    \"updated_at\": \"2016-10-05T18:48:44Z\",\n    \"race_id\": 4,\n    \"gender_id\": 3\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"f2cb9cd967ddfc458789a7871ae6b099\"",
+        "ETag": "W/\"47a66eb54ab81f5154422915629a1c42\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "26d02dc0-e248-4a49-a707-06e83a95983b",
-        "X-Runtime": "0.019003",
+        "X-Request-Id": "5b0d2a1e-a6de-4caa-9305-3d0e57fc0c5b",
+        "X-Runtime": "0.020825",
         "Content-Length": "174"
       },
       "response_content_type": "application/json; charset=utf-8",

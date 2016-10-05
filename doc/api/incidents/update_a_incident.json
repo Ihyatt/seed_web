@@ -33,6 +33,10 @@
     {
       "name": "rating",
       "description": "Numeric rating of incident, 1-5"
+    },
+    {
+      "name": "start_time",
+      "description": "When the incident occured in Epoch Time (seconds since 1970)"
     }
   ],
   "response_fields": [
@@ -42,7 +46,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/incidents/7.json",
-      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Demarco+Hegmann&rating=1&write_key=1d050eeaa28d75c8bf79e75f9e8557e3",
+      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Donna+O%27Conner&rating=1&start_time=1475693322&write_key=2032c528b83f3e7788506f1ec5477a6e",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -53,17 +57,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"fKCkVnKD\",\n    \"user_id\": 7,\n    \"description\": \"I was stopped\",\n    \"start_time\": null,\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Demarco Hegmann\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"created_at\": \"2016-10-05T18:32:08.229Z\",\n    \"updated_at\": \"2016-10-05T18:32:08.366Z\",\n    \"user\": {\n      \"id\": 7,\n      \"uid\": \"f7be3181\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-10-05T18:32:08Z\",\n      \"updated_at\": \"2016-10-05T18:32:08Z\",\n      \"race_id\": null,\n      \"gender_id\": null\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"UBP6bVWz\",\n    \"user_id\": 7,\n    \"description\": \"I was stopped\",\n    \"start_time\": \"2016-10-05T18:48:42Z\",\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Donna O'Conner\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"created_at\": \"2016-10-05T18:48:42.143Z\",\n    \"updated_at\": \"2016-10-05T18:48:43.235Z\",\n    \"user\": {\n      \"id\": 7,\n      \"uid\": \"f73a3c59\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-10-05T18:48:42Z\",\n      \"updated_at\": \"2016-10-05T18:48:42Z\",\n      \"race_id\": null,\n      \"gender_id\": null\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"0ace2a66864538789f156bd857db2707\"",
+        "ETag": "W/\"85643424ce933274dbecf09676806967\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "7e254822-6f86-401d-95b2-76f2e283bae7",
-        "X-Runtime": "0.132000",
-        "Content-Length": "471"
+        "X-Request-Id": "c5d08b64-3379-44f8-a4c9-d5964cc93c58",
+        "X-Runtime": "1.088866",
+        "Content-Length": "488"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
