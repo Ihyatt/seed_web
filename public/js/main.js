@@ -150,10 +150,10 @@ var App = { init: function() { App.HomepageHeight();           // helper script 
             setTimeout(function(){$('.content_anim3').addClass('animated fadeInUp')},400);
             setTimeout(function(){$('.content_anim4').addClass('animated fadeInUp')},600);
             setTimeout(function(){$('.content_anim5').addClass('animated fadeInUp')},800);
+            setTimeout(function(){$('.content_anim6').addClass('animated fadeInUp')},1000);
         }, { offset: '50%' });    
     
     	$('#features').waypoint(function() {
-            setTimeout(function(){$('.content_anim6').addClass('animated fadeInUp')},0);
             setTimeout(function(){$('.content_anim7').addClass('animated fadeInUp')},200);
             setTimeout(function(){$('.content_anim8').addClass('animated fadeInUp')},400);
             setTimeout(function(){$('.content_anim9').addClass('animated fadeInUp')},600);
