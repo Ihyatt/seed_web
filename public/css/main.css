@@ -1533,7 +1533,7 @@ video, object {
 .button-icon-with-border {
 	border-left: 1px solid #ffa267; 
 	padding: 20px;
-	margin-left: 15px;
+	margin-left: 25px;
 }
 
 .more_info_mockup {
@@ -1719,4 +1719,32 @@ h2 {
     letter-spacing: -0.13rem;
     font-size: 2.6rem;
     line-height: 3rem;
+}
+
+.text-black {
+	color: #222 !important
+}
+
+.center {
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.btn-large.btn-block {
+	width: 100%;
+	letter-spacing: 0;
+	font-weight: 400;
+	font-size: 28px;
+	text-shadow: 0 -1px 0 #888;
+}
+
+.btn-large {
+	letter-spacing: 0;
+	font-weight: 400;
+	text-shadow: 0 -1px 0 #888;
+	font-family: 'Roboto';
+	font-size: 26px;
+	text-transform: capitalize;
+	padding:;
 }
