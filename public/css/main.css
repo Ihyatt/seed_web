@@ -1507,8 +1507,8 @@ h3 {
     opacity: .85;
     font-weight: 400;
     letter-spacing: -0.10rem;
-    font-size: 2.42rem;
-    line-height: 2.86rem;
+    font-size: 2.2rem;
+    line-height: 2.66rem;
     margin: 1.72rem 0px 1.14rem 0px;
 }
 
@@ -1567,12 +1567,20 @@ h5.smaller {
     line-height: 1.6rem;
 }
 
-.super-title {
+.super-title.header {
 	font-size: 1.8rem;
 	margin-top: 35px;
 	margin-bottom: 20px;
-	color: #ff6500;
+	color: #ffa267;"
 	font-family: 'Bevan', cursive;
+}
+
+.super-title {
+    font-size: 1.8rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #ff6500;
+    font-family: 'Bevan', cursive;
 }
 
 
@@ -1701,4 +1709,14 @@ h2 {
 
 .text-muted.text-muted  {
 	color: #666 !important;
+}
+
+#reviews h3 {
+color: #222;
+}
+
+h2 {
+    letter-spacing: -0.13rem;
+    font-size: 2.6rem;
+    line-height: 3rem;
 }

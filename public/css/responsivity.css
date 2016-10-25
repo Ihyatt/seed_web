@@ -140,3 +140,11 @@ Responsiveness Fixes
 	.home_mockup_image { top:-20rem }	
 
 }
+
+
+@media (max-width: 479px) {
+.content_container h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+}
