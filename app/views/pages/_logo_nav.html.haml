@@ -1,0 +1,23 @@
+.container.top_bar
+  .row
+    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+      .logo
+        %img.logo{:alt => "logo", :src => "images/logo_light.png"}/
+        %span.logo Raheem
+      %nav.navigation_desktop
+        %ul
+          %li
+            %a.visible-lg.visible-md.go_to_overview{:href => "#features"} Meet Raheem
+          %li
+            %a.visible-lg.visible-md{:href => "#more_info"} Join the Beta
+          %li
+            %a.visible-lg.visible-md{:href => "#features_video"} Product Roadamp
+          %li
+            %a.visible-lg.visible-md{:href => "#team"} Team
+          / <li><a href="#screenshots" class="visible-lg visible-md">Screenshots</a></li>
+          %li
+            %a.visible-lg.visible-md{:href => "#contact"} Contact
+          %li
+            .mobile_nav_open_button.hidden-lg.hidden-md
+              %a#showRight_1{:href => ""}
+                .button_icon.close_icon{"data-icon" => ""}

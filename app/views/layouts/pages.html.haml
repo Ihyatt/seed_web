@@ -1,0 +1,23 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Seed
+    = csrf_meta_tags
+    = stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload'
+
+    / Included Google Fonts
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100", :rel => "stylesheet", :type => "text/css"}/
+    
+    %link{:href => "https://fonts.googleapis.com/css?family=Aldrich|Alfa+Slab+One|Anton|Bevan|Shanti", :rel => "stylesheet"}/
+
+    = javascript_include_tag 'pages', 'data-turbolinks-track': 'reload'
+
+  %body
+    = render 'shared/nav'
+    = render 'shared/flash'
+    
+    = yield

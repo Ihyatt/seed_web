@@ -1,0 +1,11 @@
+/ Show message after newsletter form submit
+:javascript
+  $('document').ready(function()
+    {
+    $('#subscribe-form').ajaxForm( {
+        target: '#preview',
+        success: function() {       
+        $('#preview').addClass( "show_message" );
+      }
+    });
+  });

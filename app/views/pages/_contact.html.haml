@@ -1,0 +1,41 @@
+%section#contact.subsection.background_grey
+  .container
+    %h6.super-title Contact Us
+    .row
+      .col-xs-12.col-sm-5.col-md-5.col-lg-5.content_anim29
+        %h3 We're always looking for new partners.
+        %p Interested in supporting Raheem? We're currently looking for collaborators, partners, and investors.
+        %ul.icon_list
+          %li
+            .icon_small.float-left{"data-icon" => ""}
+            %h6
+              Washington, DC
+              %br>/
+              United States
+          %li
+            .icon_small.float-left{"data-icon" => ""}
+            %h6 (555) 555-5555
+          %li
+            .icon_small.float-left{"data-icon" => ""}
+            %h6 hello@raheem.ai
+      .col-xs-12.col-sm-5.col-md-5.col-lg-5.col-sm-offset-2.col-md-offset-2.col-lg-offset-2.content_anim30
+        %h3 Have feedback? Shoot us a quick note. We're all ears.
+        %p Use the form below to shoot us a note. Someone from our team will get back to you asap.
+        / Contact Form
+        %form#contact-form{:action => "php/contactform.php", :method => "post"}
+          .contact_form
+            .input-field
+              %input#first_name{:name => "contact-name", :type => "email"}/
+              %label{:for => "first_name"} Your Name
+            .input-field
+              %input#contact_email{:name => "contact-email", :type => "email"}/
+              %label{:for => "contact_email"} Last Name
+            .input-field
+              %textarea.materialize-textarea{:name => "contact-message"}
+              %label Message
+          %button.btn.waves-effect.waves-light{:name => "action", :type => "submit"} Send
+        / //Contact Form
+        #message
+          #alert
+        / Message container
+/ //More info

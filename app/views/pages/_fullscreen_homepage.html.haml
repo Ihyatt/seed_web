@@ -1,0 +1,60 @@
+/ Fullscreen homepage
+%section.hero_fullscreen.background_slider.background_solid.menu_bar-waypoint{"data-animate-down" => "menu_bar-hide", "data-animate-up" => "menu_bar-hide"}
+  / Logo and navigation
+  .container.top_bar
+    .row
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+        .logo
+          %img.logo{:alt => "logo", :src => "images/logo_light.png"}/
+          %span.logo Raheem
+        %nav.navigation_desktop
+          %ul
+            %li
+              %a.visible-lg.visible-md.go_to_overview{:href => "#features"} Meet Raheem
+            %li
+              %a.visible-lg.visible-md{:href => "#more_info"} Join the Beta
+            %li
+              %a.visible-lg.visible-md{:href => "#features_video"} Product Roadamp
+            %li
+              %a.visible-lg.visible-md{:href => "#team"} Team
+            %li
+              %a.visible-lg.visible-md{:href => "#contact"} Contact
+            %li
+              .mobile_nav_open_button.hidden-lg.hidden-md
+                %a#showRight_1{:href => ""}
+                  .button_icon.close_icon{"data-icon" => ""}
+  / //Logo and navigation
+  / Main content
+  #main_content.container.align-center
+    .content_container.row
+      .col-xs-12.col-sm-12.col-lg-8.col-lg-offset-2.home_content
+        %h6.super-title{:style => "color: #ffa267;"}
+          %img.logo-header{:alt => "logo", :src => "images/assets/raheem-avatar@3x.png"}/
+          %br/
+          = succeed "Meet" do
+            %br/
+          %sup.beta-font Beta
+        %h2.slogan
+          Raheem tracks and rates your experience with police officers.
+        / CTA Buttons
+        .cta_button_area
+          %div
+            %button.btn-large.bold.btn.waves-effect.waves-light.subscribe-submit
+              Talk to Raheem
+              %span.button-icon-with-border
+                %img{:height => "40", :src => "images/assets/messenger-icon@2x.png"}/
+        / //CTA Buttons
+      / Mockups
+      .col-xs-12.col-sm-12.col-md-6.col-lg-6.home_mockup
+        %img.mockup-animation1.home_mockup_image{:alt => "", :src => "images/mockups/1/back.png"}/
+      / //Mockups
+  / //Main content
+  / Slider Background
+  #maximage_slider
+    / <img src="http://trueblueline.net/wp-content/uploads/2015/05/o-POLICE-LIGHTS-facebook.jpg" alt=""/>
+  / //Slider Background
+  / Single Image Background
+  #maximage_single
+    %img{:alt => "", :src => "images/home_background_01.jpg"}/
+  / //Single Image Background
+/ //Homepage

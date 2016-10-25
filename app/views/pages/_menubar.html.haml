@@ -1,0 +1,32 @@
+%body
+  %header#menu_bar.menu_bar
+    .container
+      %a.go_to_home.logo_dark{:href => ""}
+        %img.logo{:alt => "logo", :src => "images/logo_light.png"}/
+        %span.logo Raheem
+      %a.go_to_home.logo_light{:href => ""}
+        %img.logo{:alt => "logo", :src => "images/logo_light.png"}/
+        %span.logo Raheem
+      %nav.menu_bar_navigation
+        %ul
+          %li.visible-lg.visible-md
+            %a.go_to_overview{:href => "#features"} Meet Raheem
+          %li.visible-lg.visible-md
+            %a{:href => "#more_info"} Join the Beta
+          %li.visible-lg.visible-md
+            %a{:href => "#features_video"} Product Roadmap
+          %li.visible-lg.visible-md
+            %a{:href => "#team"} Team
+          / <li class="visible-lg visible-md"><a href="#screenshots" >Screenshots</a></li>
+          %li.visible-lg.visible-md
+            %a{:href => "#contact"} Contact
+          %li.visible-lg.visible-md.last-item
+            %button.btn.waves-effect.waves-light.subscribe-submit
+              Help Test Raheem
+              %span.button-icon-with-border
+                %img{:src => "images/assets/messenger-icon.png"}/
+          %li.hidden-lg.hidden-md
+            .mobile_nav_open_button
+              %a#showRight_2{:href => ""}
+                .button_icon.close_icon{"data-icon" => ""}
+  / // Menu bar
