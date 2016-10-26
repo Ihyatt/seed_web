@@ -1758,3 +1758,32 @@ p a {
 	font-weight: normal;
 	opacity: 1;
 }
+
+
+.more_info_mockup {
+	width: 100%;
+	display: relative;
+}
+
+
+.chat-bubbles {
+	height: 600px;
+	padding-top: 240px;
+}
+
+
+.padding-20 {
+	padding: 20px;
+}
+
+.bubble {
+	margin-bottom: 25px;
+}
+
+
+.chat-bubbles {
+	height: 575px;
+	padding-top: 200;
+	padding-left: 5%;
+	padding-right: 5%;
+}

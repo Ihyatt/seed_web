@@ -84,6 +84,23 @@ Responsiveness Fixes
 	.mockup_container img.mockup_front {position: relative;}
 	.play a {margin:7rem auto}
 	.home_mockup_image {top:0rem;}
+
+	.chat-bubbles {
+		height: 350px;
+		padding-top: 150px;
+		padding-left: 1.5%;
+		padding-right: 1.5%;
+	}
+
+	.bubble {
+		margin-bottom: 15px;
+	}
+
+	h2.slogan {
+		letter-spacing: -0.13rem;
+    font-size: 2rem;
+    line-height: 3rem;
+	}
 	
 }
 
@@ -124,6 +141,10 @@ Responsiveness Fixes
 	
 	.navigation_desktop ul li, .menu_bar_navigation ul li { float:right; }	
 	.mockup_container img.mockup_front {position: relative;}
+
+
+
+	
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -144,19 +165,13 @@ Responsiveness Fixes
 
 @media (max-width: 479px) {
 .content_container h2 {
-    font-size: 2.6rem;
-    line-height: 3rem;
-}
-}
-
-
-@media (max-width: 479px) {
-	section {
-	    margin: 5%;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    margin: 0 5%;
 	}
 
-	section ul {
-		text-align: left;
+	h3, h6, p, ul, button {
+		padding: 0 5%;
 	}
 
 }
