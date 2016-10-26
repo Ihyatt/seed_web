@@ -5,8 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-
-		<!-- Included Google Fonts -->
+	  	<!-- Included Google Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100' rel='stylesheet' type='text/css'>
 
 		<link href="https://fonts.googleapis.com/css?family=Aldrich|Alfa+Slab+One|Anton|Bevan|Shanti|Montserrat" rel="stylesheet">
@@ -28,6 +27,7 @@
 	  <link href="css/owl.carousel.css" rel="stylesheet" media="screen">                           <!-- Owl - Carousel -->
 	  <link href="css/owl.theme.css" rel="stylesheet" media="screen">                      		 		 <!-- Owl - Carousel -->
 	  <link href="css/owl.transitions.css" rel="stylesheet" media="screen">                        <!-- Owl - Carousel -->
+
 
 		<!-- Modernizer and IE specyfic files -->
 		<script src="js/modernizr.custom.js"></script>
@@ -231,12 +231,34 @@
 					<div class="row">
 						
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-							<img src="images/assets/animation/raheem.gif" alt="" class="img_responsive mockup_back content_anim7  pull-right" />	
+							<img src="images/assets/animation/when.gif" alt="" class="img_responsive mockup_back content_anim7 img-responsive pull-right" />	
+
+							<!-- <div id="tabs-container">
+						    <ul class="tabs-menu">
+					        <li class="current"><a href="#tab-1">Officer Information</a></li>
+					        <li><a href="#tab-2">What Happened</a></li>
+					        <li><a href="#tab-3">Time and Place</a></li>
+						    </ul>
+
+						    <div class="tab">
+					        <div id="tab-1" class="tab-content fade">
+					          <img src="images/assets/animation/officer.gif" alt="" class="img_responsive mockup_back content_anim7 img-responsive pull-right" />	
+					        </div>
+					        <div id="tab-2" class="tab-content fade">
+					          <img src="images/assets/animation/what.gif" alt="" class="img_responsive mockup_back content_anim7 img-responsive pull-right" />	
+					        </div>
+					        <div id="tab-3" class="tab-content fade">
+					          <img src="images/assets/animation/when.gif" alt="" class="img_responsive mockup_back content_anim7 img-responsive pull-right" />	
+					        </div>
+					    	</div>
+							</div> -->
 						</div>
+
+
 						<div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
 							<br/><br/><br/><br/><br/>
 							<div class="intro pull-left">
-								<h6 class="super-title"> <!-- <img src="images/logo_light.png" alt="logo" class="logo"/> -->Tell Raheem<sup class="text-muted beta-font">Beta</sup></H6>
+								<h6 class="super-title"> <!-- <img src="images/logo_light.png" alt="logo" class="logo"/> -->Share with Raheem<sup class="text-muted beta-font">Beta</sup></H6>
 								<h3>
 									You can improve police performance by sharing your experiences with Raheem.
 								</h3>
@@ -649,6 +671,19 @@
 			}
 		 } );
 	} );
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+	    $(".tabs-menu a").click(function(event) {
+	        event.preventDefault();
+	        $(this).parent().addClass("current");
+	        $(this).parent().siblings().removeClass("current");
+	        var tab = $(this).attr("href");
+	        $(".tab-content").not(tab).css("display", "none");
+	        $(tab).fadeIn();
+	    });
+	});
 	</script>
 
 
