@@ -1806,3 +1806,7 @@ p a {
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+
+.block {
+	display: block !important;
+}
