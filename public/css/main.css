@@ -1459,10 +1459,6 @@ h2, h4 {
   border-radius: 6px;
 }
 
-.logo {
-  margin-top:
-}
-
 img.logo {
 	height: 40px;
 
@@ -1675,7 +1671,7 @@ h2 {
 }
 
 .subsection.background_blue {
-	background-color: #1565c0; 
+	background-color: #1565c0 !important; 
 }
 
 .subsection.background_blue h3 {
@@ -1711,10 +1707,6 @@ h2 {
 	color: #666 !important;
 }
 
-#reviews h3 {
-color: #222;
-}
-
 h2 {
     letter-spacing: -0.13rem;
     font-size: 2.6rem;
@@ -1747,4 +1739,22 @@ h2 {
 	font-size: 26px;
 	text-transform: capitalize;
 	padding:;
+}
+
+.logo {
+  margin-top: -4px;
+}
+
+#reviews {
+	background: #1565c0;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+p a {
+	color: #1565c0 !important;
+	font-weight: normal;
+	opacity: 1;
 }
