@@ -215,6 +215,14 @@ Responsiveness Fixes
   	margin-bottom: 40px;
   }
 
+  .hero_fullscreen {
+  	padding-bottom: 100px;
+  }
+
+  #meet-raheem {
+  	padding-top: 50px;
+  }
+
   .button-icon-with-border {
     margin-left: 15px;
     float: right;
