@@ -1481,6 +1481,7 @@ span.logo {
 	float: left;
 	display: inline-block;
 	letter-spacing: .25px;
+	opacity: .5;
 
 	font-family: 'Anton', sans-serif;
 	font-family: 'Alfa Slab One', cursive;
@@ -1742,7 +1743,7 @@ h2 {
 }
 
 .logo {
-  margin-top: -3px;
+  margin-top: -5px;
 }
 
 #reviews {
