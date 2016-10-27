@@ -1816,3 +1816,5 @@ p a {
 }
 
 h5 {letter-spacing: 0;}
+
+a.text-white {color: #fff !important; font-weight: bold;}
