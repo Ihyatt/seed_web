@@ -242,6 +242,11 @@ Responsiveness Fixes
     letter-spacing: 0rem;
     line-height: 2rem;
     margin: .7rem 0px 1.92rem 0px;
-}
+	}
+
+	.top_bar .logo {
+		display: none;
+		visibility: hidden;
+	}
 
 }
