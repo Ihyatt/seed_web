@@ -1810,3 +1810,9 @@ p a {
 .block {
 	display: block !important;
 }
+
+.icon_list {
+	margin-top: 30px;
+}
+
+h5 {letter-spacing: 0;}

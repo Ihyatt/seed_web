@@ -176,4 +176,64 @@ Responsiveness Fixes
 
 	.gif-demo {margin-top: 0;}
 
+	.intro {padding: 20px 0 0 0;}
+
+	.subsection {
+    padding-top: 0;
+	}
+
+	
+	ul.icon_list li {
+		margin-bottom: 20px
+	}
+
+	ul.icon_list h6 {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.7rem;
+    opacity: .6;
+  }
+
+  #community-impact p {
+   	margin-bottom: 0;
+   }
+
+  #gif-demo a,
+  #join-beta .cta a {
+   	display: table;
+   	margin-right: auto;
+   	margin-left: auto;
+   	margin-bottom: 40px;
+   }
+
+  .cta h5 {
+  	text-align: center;
+  	font-size: 1.8rem;
+  }
+
+  #team h3 {
+  	margin-bottom: 40px;
+  }
+
+  .button-icon-with-border {
+    margin-left: 15px;
+    float: right;
+    padding: 7px 20px 7px 10px;
+    line-height: 50px;
+	}
+
+	.iconbox h6 {
+		font-size: 1.2rem;
+		line-height: 1.8rem
+	}
+
+	.iconbox p {
+    opacity: 0.75;
+    font-weight: 300;
+    font-size: 1.6rem;
+    letter-spacing: 0rem;
+    line-height: 2rem;
+    margin: .7rem 0px 1.92rem 0px;
+}
+
 }
