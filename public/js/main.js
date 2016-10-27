@@ -144,50 +144,37 @@ var App = { init: function() { App.HomepageHeight();           // helper script 
     
     // Elements Animation
     Elements_animation: function() {
-		$('#more_info').waypoint(function() {
-            setTimeout(function(){$('.content_anim1').addClass('animated fadeInUp')},0);
-            setTimeout(function(){$('.content_anim2').addClass('animated fadeInUp')},200);
-            setTimeout(function(){$('.content_anim3').addClass('animated fadeInUp')},400);
-            setTimeout(function(){$('.content_anim4').addClass('animated fadeInUp')},600);
-            setTimeout(function(){$('.content_anim5').addClass('animated fadeInUp')},800);
-            setTimeout(function(){$('.content_anim6').addClass('animated fadeInUp')},1000);
-        }, { offset: '50%' });    
-    
-    	$('#features').waypoint(function() {
-            setTimeout(function(){$('.content_anim7').addClass('animated fadeInUp')},200);
-            setTimeout(function(){$('.content_anim8').addClass('animated fadeInUp')},400);
-            setTimeout(function(){$('.content_anim9').addClass('animated fadeInUp')},600);
-            setTimeout(function(){$('.content_anim10').addClass('animated fadeInUp')},800);
-        }, { offset: '50%' });
-        
-        $('#features_video').waypoint(function() {
-            setTimeout(function(){$('.content_anim11').addClass('animated fadeInUp')},0);
-            setTimeout(function(){$('.content_anim12').addClass('animated fadeInUp')},200);
-            setTimeout(function(){$('.content_anim13').addClass('animated fadeInUp')},400);
-            setTimeout(function(){$('.content_anim14').addClass('animated fadeInUp')},600);
-            setTimeout(function(){$('.content_anim15').addClass('animated fadeInUp')},800);
-            setTimeout(function(){$('.content_anim16').addClass('animated fadeInUp')},1000);
-        }, { offset: '50%' });
-        
-        $('#reviews').waypoint(function() {
-            setTimeout(function(){$('.content_anim17').addClass('animated fadeInUp')},300);
-            setTimeout(function(){$('.content_anim18').addClass('animated fadeInUp')},600);
-            setTimeout(function(){$('.content_anim19').addClass('animated fadeInUp')},900);
+		$('#meet-raheem').waypoint(function() {
+            setTimeout(function(){$('.content_anim1').addClass('animated fadeInUp')},300);
+            setTimeout(function(){$('.content_anim2').addClass('animated fadeInUp')},600);
+            setTimeout(function(){$('.content_anim3').addClass('animated fadeInUp')},900);
         }, { offset: '70%' });
 
-        $('#screenshots').waypoint(function() {
-            setTimeout(function(){$('.content_anim25').addClass('animated fadeInUp')},0);
-            setTimeout(function(){$('.content_anim26').addClass('animated fadeInUp')},200);
+        $('#gif-demo').waypoint(function() {
+            setTimeout(function(){$('.content_anim4').addClass('animated fadeInUp')},200);
         }, { offset: '50%' });
         
-        $('#newsletter').waypoint(function() {
-            setTimeout(function(){$('.content_anim27').addClass('animated fadeInUp')},0);
-            setTimeout(function(){$('.content_anim28').addClass('animated fadeInUp')},200);
-        }, { offset: '50%' }); 
+
+        $('#join-beta').waypoint(function() {
+            setTimeout(function(){$('.content_anim5').addClass('animated fadeInUp')},600);
+            setTimeout(function(){$('.content_anim6').addClass('animated fadeInUp')},800);
+            setTimeout(function(){$('.content_anim7').addClass('animated fadeInUp')},1000);
+        }, { offset: '50%' });    
+    
+    	
+        $('#community-impact').waypoint(function() {
+            setTimeout(function(){$('.content_anim8').addClass('animated fadeInUp')},0);
+            setTimeout(function(){$('.content_anim9').addClass('animated fadeInUp')},200);
+            setTimeout(function(){$('.content_anim10').addClass('animated fadeInUp')},400);
+            setTimeout(function(){$('.content_anim11').addClass('animated fadeInUp')},600);
+        }, { offset: '50%' });
+        
+        $('#team').waypoint(function() {
+            setTimeout(function(){$('.content_anim12').addClass('animated fadeInUp')},0);
+        }, { offset: '50%' });
         
         $('#contact').waypoint(function() {
-            setTimeout(function(){$('.content_anim29').addClass('animated fadeInUp')},0);
-            setTimeout(function(){$('.content_anim30').addClass('animated fadeInUp')},200);
+            setTimeout(function(){$('.content_anim13').addClass('animated fadeInUp')},0);
         }, { offset: '50%' });          
         
     },
