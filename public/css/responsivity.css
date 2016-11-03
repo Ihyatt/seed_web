@@ -250,3 +250,64 @@ Responsiveness Fixes
 	}
 
 }
+
+
+@media (max-width: 320px) {
+	
+	.content_container h2 {
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+    margin: 0 5%;
+	}
+
+	.super-title.header {
+    font-size: 1.8rem;
+    margin-top: 85px;
+    margin-bottom: 20px;
+    color: #ffa267;
+	}
+}
+
+@media (max-width: 372px) {
+	
+	.content_container h2 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin: 0 10%;
+    letter-spacing: 0;
+	}
+
+	.hero_fullscreen .cta_button_area {
+    margin-top: 1rem;
+	}
+
+	.super-title.header {
+    font-size: 1.8rem;
+    margin-top: 105px;
+    margin-bottom: 5px;
+    color: #ffa267;
+	}
+
+	img.logo-header {
+    height: 80px;
+    /* margin-right: 10px; */
+    margin-bottom: -10px;
+	}
+
+	.btn-large {
+    height: 44px;
+    line-height: 44px;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+	}
+
+	.button-icon-with-border img {
+		height: 30px !important;
+	}
+
+	.btn-large .button-icon-with-border {
+    padding: 5px 0 0 18px;
+	}
+
+}
