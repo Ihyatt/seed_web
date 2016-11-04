@@ -16,7 +16,7 @@
       - @incidents.each do |incident|
         %tr
           %td= link_to incident.user.uid, incident
-          %td= link_to incident.location, incident
+          %td= link_to incident.location, incident if incident.location
           %td= link_to incident.start_time.strftime("%D %l:%M %p"), incident if incident.start_time
           %td= incident.rating
           %td= incident.reactions_list
