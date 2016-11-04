@@ -6,6 +6,16 @@
         %b User:
         = @incident.user.uid
       %p
+        %b Race:
+        = @incident.user.race.try(:name)
+      %p
+        %b Gender:
+        = @incident.user.gender.try(:name)
+      %p
+        %b Birthday:
+        = "Present" if @incident.user.birthday
+
+      %p
         %b Description:
         = @incident.description
       %p
