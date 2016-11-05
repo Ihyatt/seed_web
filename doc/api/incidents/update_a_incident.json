@@ -46,7 +46,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/incidents/7.json",
-      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Claudia+Stiedemann+PhD&rating=1&start_time=1475693917&write_key=4cbf24ef489d8b79ea28ccae2a570b16",
+      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Collin+Rutherford&rating=1&start_time=1478304463&write_key=5a841e9aeea4ba0585bf84e5bf89425c",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -57,17 +57,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"xBMYjzU9\",\n    \"user_id\": 7,\n    \"description\": \"I was stopped\",\n    \"start_time\": \"2016-10-05T18:58:37Z\",\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Claudia Stiedemann PhD\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"created_at\": \"2016-10-05T18:58:37.071Z\",\n    \"updated_at\": \"2016-10-05T18:58:37.623Z\",\n    \"user\": {\n      \"id\": 7,\n      \"uid\": \"ace9e426\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-10-05T18:58:37Z\",\n      \"updated_at\": \"2016-10-05T18:58:37Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"birthday\": null\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"bn9h5zyp\",\n    \"user_id\": 7,\n    \"description\": \"I was stopped\",\n    \"start_time\": \"2016-11-05T00:07:43Z\",\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Collin Rutherford\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"completed\": false,\n    \"created_at\": \"2016-11-05T00:07:43.514Z\",\n    \"updated_at\": \"2016-11-05T00:07:43.564Z\",\n    \"user\": {\n      \"id\": 7,\n      \"uid\": \"01debfb8\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-11-05T00:07:43Z\",\n      \"updated_at\": \"2016-11-05T00:07:43Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"birthday\": null\n    }\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d05d61ba0b9f65ac46bdd7884e25a50c\"",
+        "ETag": "W/\"01a20c62c08d5d96f1b7c032a95b3623\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "8b23c12c-e04d-44d2-b7b1-c8cd5e0fc3a7",
-        "X-Runtime": "0.547703",
-        "Content-Length": "512"
+        "X-Request-Id": "f9c4d9b9-fcfc-4a1c-a01a-9f3102f6b36d",
+        "X-Runtime": "0.049609",
+        "Content-Length": "525"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
