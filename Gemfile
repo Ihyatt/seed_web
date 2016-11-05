@@ -43,7 +43,6 @@ gem 'auto_strip_attributes'
 gem 'acts_as_tree', :github => 'amerine/acts_as_tree'
 gem 'fast_seeder', :github => 'kidbombay/fast_seeder'
 gem 'rails_admin', '~> 1.0'
-gem "rails_admin_pundit", :github => "sudosu/rails_admin_pundit"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

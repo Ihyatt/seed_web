@@ -37,14 +37,6 @@ GIT
       rack-protection (~> 2.0)
       tilt (~> 2.0)
 
-GIT
-  remote: git://github.com/sudosu/rails_admin_pundit.git
-  revision: 2b793c1d83cdfe2385e1e23254ee2dde4503009b
-  specs:
-    rails_admin_pundit (0.0.1)
-      pundit (>= 0.2.3)
-      rails_admin (>= 0.6.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -425,7 +417,6 @@ DEPENDENCIES
   rack-protection!
   rails (~> 5.0.0, >= 5.0.0.1)
   rails_admin (~> 1.0)
-  rails_admin_pundit!
   redis (~> 3.2)
   rolify
   rspec-rails
