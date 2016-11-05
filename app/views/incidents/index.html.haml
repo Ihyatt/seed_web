@@ -9,6 +9,7 @@
         %th Start Time
         %th Rating
         %th Reactions
+        %th Completed
         %th
         %th
 
@@ -20,8 +21,9 @@
           %td= link_to incident.start_time.strftime("%D %l:%M %p"), incident if incident.start_time
           %td= incident.rating
           %td= incident.reactions_list
-          %td= link_to 'Edit', edit_incident_path(incident)
-          %td= link_to 'Destroy', incident, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          %td= incident.completed
+          / %td= link_to 'Edit', edit_incident_path(incident)
+          / %td= link_to 'Destroy', incident, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
   %br
 

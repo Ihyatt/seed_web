@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160919080922) do
+ActiveRecord::Schema.define(version: 20161105000110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,17 +55,19 @@ ActiveRecord::Schema.define(version: 20160919080922) do
   end
 
   create_table "incidents", force: :cascade do |t|
-    t.integer  "user_id",                  null: false
-    t.string   "slug",                     null: false
+    t.integer  "user_id",                     null: false
+    t.string   "slug",                        null: false
     t.text     "description"
     t.datetime "start_time"
     t.string   "location"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "rating"
-    t.string   "reactions",   default: [],              array: true
+    t.string   "reactions",   default: [],                 array: true
+    t.boolean  "completed",   default: false, null: false
+    t.index ["completed"], name: "index_incidents_on_completed", using: :btree
     t.index ["reactions"], name: "index_incidents_on_reactions", using: :gin
     t.index ["slug"], name: "index_incidents_on_slug", unique: true, using: :btree
     t.index ["user_id"], name: "index_incidents_on_user_id", using: :btree

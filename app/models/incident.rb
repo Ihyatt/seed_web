@@ -7,6 +7,10 @@ class Incident < ApplicationRecord
   geocoded_by :location              # can also be an IP address
   after_validation :geocode          # auto-fetch coordinates   
 
+  # Scopes
+  scope :completed, ->  { where(completed: true) }
+  scope :incomplete, -> { where(completed: false) }
+
   # Associations
   belongs_to :user
 
@@ -47,4 +51,13 @@ class Incident < ApplicationRecord
   def start_time=(value)
     self.write_attribute(:start_time, Time.at(value.to_i))
   end
+
+  rails_admin do      
+    weight -100
+
+    list do
+      scopes [nil, :completed, :incomplete]
+    end
+  end
+
 end

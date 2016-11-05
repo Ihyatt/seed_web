@@ -33,6 +33,6 @@ class API::V1::IncidentsController < API::V1::APIController
 
   private
   def incident_params
-    params.permit(:user_id, :slug, :description, :start_time, :location,:reactions_list, :latitude, :longitude, :rating)
+    params.permit(:user_id, :slug, :description, :start_time, :location,:reactions_list, :latitude, :longitude, :rating, :completed)
   end
 end

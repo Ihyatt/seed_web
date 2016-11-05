@@ -9,6 +9,7 @@ class IncidentSerializer < ActiveModel::Serializer
               :latitude, 
               :longitude, 
               :rating, 
+              :completed,
               :created_at, 
               :updated_at
 

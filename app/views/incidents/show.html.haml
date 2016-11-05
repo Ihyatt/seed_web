@@ -6,6 +6,9 @@
         %b User:
         = @incident.user.uid
       %p
+        %b Completed:
+        = @incident.completed
+      %p
         %b Race:
         = @incident.user.race.try(:name)
       %p
