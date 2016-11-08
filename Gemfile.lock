@@ -221,6 +221,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    multi_json (1.12.1)
     mustache (1.0.3)
     mustermann (0.4.0)
       tool (~> 0.2)
@@ -297,6 +298,8 @@ GEM
     responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
     rolify (5.1.0)
+    rollbar (2.13.3)
+      multi_json
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -419,6 +422,7 @@ DEPENDENCIES
   rails_admin (~> 1.0)
   redis (~> 3.2)
   rolify
+  rollbar
   rspec-rails
   rspec_api_documentation
   sass-rails (~> 5.0)
