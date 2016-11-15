@@ -16,28 +16,28 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/incidents?write_key=d6590679d0501f72d2a1110d5815e7c8",
+      "request_path": "/api/v1/incidents?write_key=224fcc645f82007e6d12247b3fa1bb17",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "d6590679d0501f72d2a1110d5815e7c8"
+        "write_key": "224fcc645f82007e6d12247b3fa1bb17"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"slug\": \"Pzx5vFgs\",\n      \"user_id\": 2,\n      \"description\": null,\n      \"start_time\": null,\n      \"location\": null,\n      \"reactions_list\": \"\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": null,\n      \"completed\": false,\n      \"created_at\": \"2016-11-15T13:28:12Z\",\n      \"updated_at\": \"2016-11-15T13:28:12Z\",\n      \"user\": {\n        \"id\": 2,\n        \"uid\": \"c0ada4e2\",\n        \"facebook_id\": null,\n        \"created_at\": \"2016-11-15T13:28:12Z\",\n        \"updated_at\": \"2016-11-15T13:28:12Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n        {\n          \"id\": 1,\n          \"incident_id\": 1,\n          \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTYvMTEvMTUvNTZjcmt4aGdlNl9pbWFnZS5wbmciXV0/image.png?sha=6b36bb5dd470c631\",\n          \"asset_name\": \"image.png\",\n          \"asset_width\": 640,\n          \"asset_height\": 640,\n          \"created_at\": \"2016-11-15T13:28:12Z\",\n          \"updated_at\": \"2016-11-15T13:28:12Z\"\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 2,\n      \"slug\": \"oHXxz7vs\",\n      \"user_id\": 3,\n      \"description\": null,\n      \"start_time\": null,\n      \"location\": null,\n      \"reactions_list\": \"\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": null,\n      \"completed\": false,\n      \"created_at\": \"2016-11-15T13:58:03Z\",\n      \"updated_at\": \"2016-11-15T13:58:03Z\",\n      \"user\": {\n        \"id\": 3,\n        \"uid\": \"3075b0cb\",\n        \"facebook_id\": null,\n        \"created_at\": \"2016-11-15T13:58:03Z\",\n        \"updated_at\": \"2016-11-15T13:58:03Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n        {\n          \"id\": 2,\n          \"incident_id\": 2,\n          \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTYvMTEvMTUvMjQ2eGpieDlkYV9pbWFnZS5wbmciXV0/image.png?sha=95f3e3b2f237b1f1\",\n          \"asset_name\": \"image.png\",\n          \"asset_width\": 640,\n          \"asset_height\": 640,\n          \"created_at\": \"2016-11-15T13:58:03Z\",\n          \"updated_at\": \"2016-11-15T13:58:03Z\"\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"69d4c0b3d414eb43500bffdb0e24939e\"",
+        "ETag": "W/\"e2ba1b9f4dc616cad260de81917efcb2\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "de0ea9b8-3413-4810-a842-9aa2a29c0c24",
-        "X-Runtime": "0.040164",
+        "X-Request-Id": "b2c4651e-56ff-4144-b403-e628eebc106e",
+        "X-Runtime": "0.038605",
         "Content-Length": "816"
       },
       "response_content_type": "application/json; charset=utf-8",

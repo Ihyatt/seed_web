@@ -1,0 +1,52 @@
+{
+  "resource": "Attachments",
+  "http_method": "POST",
+  "route": "/api/v1/attachments",
+  "description": "Create An Attachment",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "attachment_id",
+      "description": "Incident ID"
+    },
+    {
+      "name": "asset",
+      "description": "Asset upload"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/attachments",
+      "request_body": "incident_id=1&asset=%23%3CFile%3A0x007fb55aafa930%3E&write_key=224fcc645f82007e6d12247b3fa1bb17",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 1,\n    \"incident_id\": 1,\n    \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTYvMTEvMTUvNGRmYzJsbGs0OV9maWxlIl1d?sha=676ff190d61e83b8\",\n    \"asset_name\": null,\n    \"asset_width\": null,\n    \"asset_height\": null,\n    \"created_at\": \"2016-11-15T13:58:03Z\",\n    \"updated_at\": \"2016-11-15T13:58:03Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"fbf1887aabb0e9dcc56f77cc67d87c25\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "a39a4f8a-13ec-4726-be1f-61e422e1bf65",
+        "X-Runtime": "0.127266",
+        "Content-Length": "305"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

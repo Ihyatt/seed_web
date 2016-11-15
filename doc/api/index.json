@@ -1,6 +1,18 @@
 {
   "resources": [
     {
+      "name": "Attachments",
+      "examples": [
+        {
+          "description": "Create An Attachment",
+          "link": "attachments/create_an_attachment.json",
+          "groups": "all",
+          "route": "/api/v1/attachments",
+          "method": "post"
+        }
+      ]
+    },
+    {
       "name": "Genders",
       "examples": [
         {
