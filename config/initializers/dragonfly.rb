@@ -8,6 +8,7 @@ Dragonfly.app.configure do
   secret "33e65be86796185a3cd6928ae1a85a587d52e7012c18dac9f0a5599b0cf7d11c"
 
   url_format "/media/:job/:name"
+  url_host Rails.application.secrets.domain_name
 
   if Rails.env.test?
     datastore :file,
