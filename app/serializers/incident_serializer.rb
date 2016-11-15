@@ -1,4 +1,4 @@
-class IncidentSerializer < ActiveModel::Serializer
+class IncidentSerializer < BaseSerializer
   attributes  :id, 
               :slug, 
               :user_id, 
@@ -14,6 +14,7 @@ class IncidentSerializer < ActiveModel::Serializer
               :updated_at
 
   has_one :user
+  has_many :attachments
 
   def start_time
     object.start_time.utc.iso8601 if object.start_time
