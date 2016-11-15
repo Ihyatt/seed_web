@@ -42,6 +42,12 @@
         ,
         %b Longitude:
         = @incident.longitude
+      %p
+        %b Attachments
+        %ul.list-unstyled
+          - @incident.attachments.each do |attachment|
+            %li
+              = link_to(image_tag(attachment.asset.url(:thumb)), attachment)
 
       = link_to 'Edit', edit_incident_path(@incident)
       \|
