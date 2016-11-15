@@ -1,0 +1,10 @@
+.container
+  .row.m-t-1
+    .col-sm-12
+
+      %p
+        %b Incident:
+        = link_to @attachment.incident.slug, @attachment.incident
+      %p
+        %b Asset:
+        = image_tag @attachment.asset.url 

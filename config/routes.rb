@@ -2,7 +2,6 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   authenticate :user, lambda { |user| user.is_admin } do
     mount Sidekiq::Web => '/sidekiq'
@@ -14,6 +13,7 @@ Rails.application.routes.draw do
   resources :genders
   resources :races
 
+  resources :attachments, except: [:edit, :update]
   resources :incidents
 
   resources :messages, only: [:create]
@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   end
 
   resources :conversations
+  
   get 'about' => 'pages#about', as: :about
 
   devise_for :users,

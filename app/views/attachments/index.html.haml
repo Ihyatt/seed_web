@@ -1,0 +1,22 @@
+.container.m-t-1
+  %h1 Attachments
+
+  %table.table
+    %thead
+      %tr
+        %th Incident
+        %th Asset
+        %th
+        %th
+
+    %tbody
+      - @attachments.each do |attachment|
+        %tr
+          %td= link_to attachment.incident.slug, attachment.incident
+          %td= link_to(image_tag(attachment.asset.url(:thumb)), attachment)
+          / %td= link_to 'Edit', edit_incident_path(incident)
+          / %td= link_to 'Destroy', incident, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+  %br
+
+  = link_to 'New Attachment', new_attachment_path, class: "btn btn-primary"

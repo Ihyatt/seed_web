@@ -1,6 +1,6 @@
 class Attachment < ApplicationRecord
   # Extensions
-  has_attached_file :asset
+  has_attached_file :asset, styles: { thumb: "100x100>" }
 
   # Associations
   belongs_to :incident
