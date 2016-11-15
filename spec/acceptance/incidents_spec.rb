@@ -6,6 +6,7 @@ resource "Incidents" do
   let!(:api_key) { FactoryGirl.create(:api_key, user: user) }
   let!(:incident) { FactoryGirl.create(:incident, user: user) }
   let!(:attachment) { FactoryGirl.create(:attachment, incident: incident) }
+  let!(:officer) { FactoryGirl.create(:officer, incident: incident) }
   let(:reaction) { FactoryGirl.create(:reaction) }
   let(:reaction2) { FactoryGirl.create(:reaction) }
   
@@ -72,6 +73,13 @@ resource "Incidents" do
       expect(attachment_json["id"]).to eq(attachment.id)
       expect(attachment_json["incident_id"]).to eq(incident.id)
       expect(attachment_json["asset_original_url"]).not_to be_nil
+
+      officers_json = incident_json["officers"]
+      expect(officers_json.count).to eq(1)
+
+      officer_json = officers_json[0]
+      expect(officer_json["id"]).to eq(officer.id)
+      expect(officer_json["incident_id"]).to eq(incident.id)
     end
 
     example "Get A Incident With Error" do

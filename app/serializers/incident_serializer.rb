@@ -15,6 +15,7 @@ class IncidentSerializer < BaseSerializer
 
   has_one :user
   has_many :attachments
+  has_many :officers
 
   def start_time
     object.start_time.utc.iso8601 if object.start_time

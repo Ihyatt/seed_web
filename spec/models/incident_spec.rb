@@ -10,6 +10,7 @@ RSpec.describe Incident, type: :model do
   describe "associations" do
     it { should belong_to(:user) }
     it { should have_many(:attachments).dependent(:destroy) }
+    it { should have_many(:officers).dependent(:destroy) }
   end
 
   describe 'validations' do
