@@ -5,6 +5,7 @@ resource "Incidents" do
   let!(:user) { FactoryGirl.create(:user) }
   let!(:api_key) { FactoryGirl.create(:api_key, user: user) }
   let!(:incident) { FactoryGirl.create(:incident, user: user) }
+  let!(:attachment) { FactoryGirl.create(:attachment, incident: incident) }
   let(:reaction) { FactoryGirl.create(:reaction) }
   let(:reaction2) { FactoryGirl.create(:reaction) }
   
@@ -37,7 +38,6 @@ resource "Incidents" do
       expect(pagination["page"]).to eq(1)
       expect(pagination["total_pages"]).to eq(1)
       expect(pagination["count"]).to eq(Incident.all.size)
-
     end
   end
 
@@ -65,6 +65,13 @@ resource "Incidents" do
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil
 
+      attachments_json = incident_json["attachments"]
+      expect(attachments_json.count).to eq(1)
+
+      attachment_json = attachments_json[0]
+      expect(attachment_json["id"]).to eq(attachment.id)
+      expect(attachment_json["incident_id"]).to eq(incident.id)
+      expect(attachment_json["asset_original_url"]).not_to be_nil
     end
 
     example "Get A Incident With Error" do
