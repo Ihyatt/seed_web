@@ -72,6 +72,25 @@
       ]
     },
     {
+      "name": "Officers",
+      "examples": [
+        {
+          "description": "Add Officer to Incident",
+          "link": "officers/add_officer_to_incident.json",
+          "groups": "all",
+          "route": "/api/v1/officers",
+          "method": "post"
+        },
+        {
+          "description": "Update Officer",
+          "link": "officers/update_officer.json",
+          "groups": "all",
+          "route": "/api/v1/officers/:id.json",
+          "method": "put"
+        }
+      ]
+    },
+    {
       "name": "Races",
       "examples": [
         {

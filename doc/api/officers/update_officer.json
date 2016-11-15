@@ -1,0 +1,68 @@
+{
+  "resource": "Officers",
+  "http_method": "PUT",
+  "route": "/api/v1/officers/:id.json",
+  "description": "Update Officer",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "officer_id",
+      "description": "Officer ID"
+    },
+    {
+      "name": "name",
+      "description": "Officer's name"
+    },
+    {
+      "name": "description",
+      "description": "Description"
+    },
+    {
+      "name": "badge_number",
+      "description": "Badge Number"
+    },
+    {
+      "name": "race_id",
+      "description": "Race ID"
+    },
+    {
+      "name": "gender_id",
+      "description": "Gender ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/v1/officers/8.json",
+      "request_body": "name=Officer+Pig&badge_number=123&description=not+nice&race_id=1&gender_id=3&write_key=5c196f0779e7580b84dbaf79fee90366",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": 8,\n    \"incident_id\": 10,\n    \"race_id\": 1,\n    \"gender_id\": 3,\n    \"name\": \"Officer Pig\",\n    \"badge_number\": \"123\",\n    \"description\": \"not nice\",\n    \"created_at\": \"2016-11-15T15:22:33Z\",\n    \"updated_at\": \"2016-11-15T15:22:33Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"74592bd9b5ea3fe2e7430917e83475e7\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "fb1f974d-446a-490f-a31e-3d63940b33bf",
+        "X-Runtime": "0.016132",
+        "Content-Length": "221"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
