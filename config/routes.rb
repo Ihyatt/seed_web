@@ -37,6 +37,7 @@ Rails.application.routes.draw do
       resources :genders, only: [:index]
       resources :races, only: [:index]
 
+      resources :attachments, only: [:create]
       resources :incidents
       resources :users do
         collection do
