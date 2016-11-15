@@ -1,3 +1,3 @@
-class GenderSerializer < ActiveModel::Serializer
+class GenderSerializer < BaseSerializer
   attributes :id, :name
 end

@@ -1,4 +1,4 @@
-class QuestionSerializer < ActiveModel::Serializer
+class QuestionSerializer < BaseSerializer
   attributes :id, :title
   has_one :survey
 end
