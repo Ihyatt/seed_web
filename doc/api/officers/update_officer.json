@@ -38,7 +38,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/officers/8.json",
-      "request_body": "name=Officer+Pig&badge_number=123&description=not+nice&race_id=1&gender_id=3&write_key=5c196f0779e7580b84dbaf79fee90366",
+      "request_body": "name=Officer+Bob&badge_number=123&description=not+nice&race_id=1&gender_id=3&write_key=27ba6e017b30715dc754b39f379ffd58",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -49,16 +49,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 8,\n    \"incident_id\": 10,\n    \"race_id\": 1,\n    \"gender_id\": 3,\n    \"name\": \"Officer Pig\",\n    \"badge_number\": \"123\",\n    \"description\": \"not nice\",\n    \"created_at\": \"2016-11-15T15:22:33Z\",\n    \"updated_at\": \"2016-11-15T15:22:33Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 8,\n    \"incident_id\": 10,\n    \"race_id\": 1,\n    \"gender_id\": 3,\n    \"name\": \"Officer Bob\",\n    \"badge_number\": \"123\",\n    \"description\": \"not nice\",\n    \"created_at\": \"2016-11-15T15:31:48Z\",\n    \"updated_at\": \"2016-11-15T15:31:48Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"74592bd9b5ea3fe2e7430917e83475e7\"",
+        "ETag": "W/\"a0421bd085b25144f37497b48a1cb4cb\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "fb1f974d-446a-490f-a31e-3d63940b33bf",
-        "X-Runtime": "0.016132",
+        "X-Request-Id": "2ccad37f-19c6-48b5-ad09-b12f1ef60416",
+        "X-Runtime": "0.015742",
         "Content-Length": "221"
       },
       "response_content_type": "application/json; charset=utf-8",

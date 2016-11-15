@@ -17,28 +17,28 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users/14?write_key=5c196f0779e7580b84dbaf79fee90366",
+      "request_path": "/api/v1/users/14?write_key=27ba6e017b30715dc754b39f379ffd58",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "5c196f0779e7580b84dbaf79fee90366"
+        "write_key": "27ba6e017b30715dc754b39f379ffd58"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 14,\n    \"uid\": \"5c48b0b2\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-11-15T15:22:34Z\",\n    \"updated_at\": \"2016-11-15T15:22:34Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"religion_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 14,\n    \"uid\": \"84e7a558\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-11-15T15:31:48Z\",\n    \"updated_at\": \"2016-11-15T15:31:48Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"religion_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"9480b688d3afff6b927d18b4dd61fc9a\"",
+        "ETag": "W/\"940e18dfbc2a376fe597359be36317a6\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "e50853b2-150a-4998-83b8-f7ec204fa17f",
-        "X-Runtime": "0.006678",
+        "X-Request-Id": "248aa9c7-43df-411c-97fe-23b6d2acf3e1",
+        "X-Runtime": "0.007133",
         "Content-Length": "215"
       },
       "response_content_type": "application/json; charset=utf-8",

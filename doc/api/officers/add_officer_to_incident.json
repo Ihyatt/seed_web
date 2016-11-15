@@ -38,7 +38,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/officers",
-      "request_body": "incident_id=9&name=Officer+Pig&badge_number=123&description=not+nice&race_id=1&gender_id=3&write_key=5c196f0779e7580b84dbaf79fee90366",
+      "request_body": "incident_id=9&name=Officer+Pig&badge_number=123&description=not+nice&race_id=1&gender_id=3&write_key=27ba6e017b30715dc754b39f379ffd58",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -49,16 +49,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"incident_id\": 9,\n    \"race_id\": 1,\n    \"gender_id\": 3,\n    \"name\": \"Officer Pig\",\n    \"badge_number\": \"123\",\n    \"description\": \"not nice\",\n    \"created_at\": \"2016-11-15T15:22:33Z\",\n    \"updated_at\": \"2016-11-15T15:22:33Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"incident_id\": 9,\n    \"race_id\": 1,\n    \"gender_id\": 3,\n    \"name\": \"Officer Pig\",\n    \"badge_number\": \"123\",\n    \"description\": \"not nice\",\n    \"created_at\": \"2016-11-15T15:31:48Z\",\n    \"updated_at\": \"2016-11-15T15:31:48Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"7bcce81b6b8d169f11b329c08fe09063\"",
+        "ETag": "W/\"a5ae34e333f5bba2dc384f2e875c465b\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "1f468fe4-2710-4f0f-bf8f-b621b453de57",
-        "X-Runtime": "0.008548",
+        "X-Request-Id": "d4d0305d-bd9b-4452-b767-73cd10197ac0",
+        "X-Runtime": "0.010424",
         "Content-Length": "220"
       },
       "response_content_type": "application/json; charset=utf-8",

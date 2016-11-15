@@ -17,28 +17,28 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/incidents/3?write_key=5c196f0779e7580b84dbaf79fee90366",
+      "request_path": "/api/v1/incidents/3?write_key=27ba6e017b30715dc754b39f379ffd58",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "5c196f0779e7580b84dbaf79fee90366"
+        "write_key": "27ba6e017b30715dc754b39f379ffd58"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 3,\n    \"slug\": \"nA6wnYF8\",\n    \"user_id\": 4,\n    \"description\": null,\n    \"start_time\": null,\n    \"location\": null,\n    \"reactions_list\": \"\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"rating\": null,\n    \"completed\": false,\n    \"created_at\": \"2016-11-15T15:22:33Z\",\n    \"updated_at\": \"2016-11-15T15:22:33Z\",\n    \"user\": {\n      \"id\": 4,\n      \"uid\": \"1b81587f\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-11-15T15:22:33Z\",\n      \"updated_at\": \"2016-11-15T15:22:33Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 3,\n        \"incident_id\": 3,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTYvMTEvMTUvNGthNXo4YzhnZF9pbWFnZS5wbmciXV0/image.png?sha=52b94de82d6e58b1\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2016-11-15T15:22:33Z\",\n        \"updated_at\": \"2016-11-15T15:22:33Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 2,\n        \"incident_id\": 3,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"created_at\": \"2016-11-15T15:22:33Z\",\n        \"updated_at\": \"2016-11-15T15:22:33Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 3,\n    \"slug\": \"tZWyxB5u\",\n    \"user_id\": 4,\n    \"description\": null,\n    \"start_time\": null,\n    \"location\": null,\n    \"reactions_list\": \"\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"rating\": null,\n    \"completed\": false,\n    \"created_at\": \"2016-11-15T15:31:47Z\",\n    \"updated_at\": \"2016-11-15T15:31:47Z\",\n    \"user\": {\n      \"id\": 4,\n      \"uid\": \"a6bbe02a\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-11-15T15:31:47Z\",\n      \"updated_at\": \"2016-11-15T15:31:47Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 3,\n        \"incident_id\": 3,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTYvMTEvMTUvOHh2NDZxczU0OV9pbWFnZS5wbmciXV0/image.png?sha=5e8fa94fbafcec2d\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2016-11-15T15:31:47Z\",\n        \"updated_at\": \"2016-11-15T15:31:47Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 2,\n        \"incident_id\": 3,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"created_at\": \"2016-11-15T15:31:47Z\",\n        \"updated_at\": \"2016-11-15T15:31:47Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"45b4ae26dc5e19a97c4806c4337b2011\"",
+        "ETag": "W/\"92f6f073a7aed39f63d1cc43d09f2d51\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "e68acbbf-f721-44ae-8759-57ed0e0248f7",
-        "X-Runtime": "0.022386",
+        "X-Request-Id": "7827f1a5-4a9a-43e5-9e32-8d47c7358a8e",
+        "X-Runtime": "0.020994",
         "Content-Length": "976"
       },
       "response_content_type": "application/json; charset=utf-8",
