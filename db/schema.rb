@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115013940) do
+ActiveRecord::Schema.define(version: 20161115140232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -136,6 +136,15 @@ ActiveRecord::Schema.define(version: 20161115013940) do
     t.index ["name"], name: "index_reactions_on_name", unique: true, using: :btree
   end
 
+  create_table "religions", force: :cascade do |t|
+    t.string   "name",                   null: false
+    t.string   "slug",                   null: false
+    t.integer  "position",   default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["slug"], name: "index_religions_on_slug", unique: true, using: :btree
+  end
+
   create_table "responses", force: :cascade do |t|
     t.integer  "question_id",             null: false
     t.string   "kind",                    null: false
@@ -191,11 +200,13 @@ ActiveRecord::Schema.define(version: 20161115013940) do
     t.integer  "gender_id"
     t.date     "birthday"
     t.string   "facebook_id"
+    t.integer  "religion_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["facebook_id"], name: "index_users_on_facebook_id", unique: true, using: :btree
     t.index ["gender_id"], name: "index_users_on_gender_id", using: :btree
     t.index ["race_id"], name: "index_users_on_race_id", using: :btree
+    t.index ["religion_id"], name: "index_users_on_religion_id", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["uid"], name: "index_users_on_uid", unique: true, using: :btree
   end
@@ -216,4 +227,5 @@ ActiveRecord::Schema.define(version: 20161115013940) do
   add_foreign_key "surveys", "users"
   add_foreign_key "users", "genders"
   add_foreign_key "users", "races"
+  add_foreign_key "users", "religions"
 end

@@ -146,11 +146,13 @@ resource "Users" do
     parameter :last_name, "Last Name"
     parameter :race_id, "Race ID"
     parameter :gender_id, "Gender ID"
+    parameter :religion, "Religion ID"
     parameter :birthday, "Birthday in Epoch Time (seconds since 1970)"
 
     example "Update A User" do
       Race.seed
       Gender.seed
+      Religion.seed
       email = FactoryGirl.generate(:email)
       birthday = DateTime.now
       do_request(id: user.id, 
@@ -160,6 +162,7 @@ resource "Users" do
                   write_key: api_key.write_key, 
                   race_id: Race.first.id, 
                   gender_id: Gender.first.id, 
+                  religion_id: Religion.first.id, 
                   birthday: birthday.to_i)
 
       expect(status).to eq(200)
@@ -176,6 +179,7 @@ resource "Users" do
       expect(user_json["uid"]).to eq(user.uid)
       expect(user_json["race_id"]).to eq(Race.first.id)
       expect(user_json["gender_id"]).to eq(Gender.first.id)
+      expect(user_json["religion_id"]).to eq(Religion.first.id)
       expect(user_json["birthday"]).not_to be_nil
       expect(user_json["created_at"]).not_to be_nil
       expect(user_json["updated_at"]).not_to be_nil

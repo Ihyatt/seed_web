@@ -11,6 +11,7 @@ RSpec.describe User, type: :model do
     it { should have_many :incidents }
     it { should belong_to :race }
     it { should belong_to :gender }
+    it { should belong_to :religion }
   end
 
   describe 'validations' do

@@ -6,6 +6,7 @@ class User < ApplicationRecord
   
   belongs_to :race
   belongs_to :gender
+  belongs_to :religion
 
   # Extensions
   rolify
