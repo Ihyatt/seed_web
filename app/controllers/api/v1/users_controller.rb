@@ -1,5 +1,5 @@
 class API::V1::UsersController < API::V1::APIController
-  skip_before_filter :ensure_api_credentials, only: [:create, :generate]
+  skip_before_action :ensure_api_credentials, only: [:create, :generate]
 
   def index
     scope = User.all
