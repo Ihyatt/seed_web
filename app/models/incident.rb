@@ -13,6 +13,7 @@ class Incident < ApplicationRecord
 
   # Associations
   belongs_to :user
+  has_many :attachments, dependent: :destroy, inverse_of: :incident
 
   # Validations
   validates :slug, :uniqueness => true, :presence => true

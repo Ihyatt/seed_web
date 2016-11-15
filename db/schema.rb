@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161105000110) do
+ActiveRecord::Schema.define(version: 20161115013940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 20161105000110) do
     t.index ["read_key"], name: "index_api_keys_on_read_key", unique: true, using: :btree
     t.index ["user_id"], name: "index_api_keys_on_user_id", using: :btree
     t.index ["write_key"], name: "index_api_keys_on_write_key", unique: true, using: :btree
+  end
+
+  create_table "attachments", force: :cascade do |t|
+    t.integer  "incident_id", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["incident_id"], name: "index_attachments_on_incident_id", using: :btree
   end
 
   create_table "conversations", force: :cascade do |t|
@@ -196,6 +203,7 @@ ActiveRecord::Schema.define(version: 20161105000110) do
   end
 
   add_foreign_key "api_keys", "users"
+  add_foreign_key "attachments", "incidents"
   add_foreign_key "incidents", "users"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
