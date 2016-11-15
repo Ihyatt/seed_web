@@ -35,6 +35,10 @@
       "description": "Gender ID"
     },
     {
+      "name": "religion",
+      "description": "Religion ID"
+    },
+    {
       "name": "birthday",
       "description": "Birthday in Epoch Time (seconds since 1970)"
     }
@@ -45,8 +49,8 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/api/v1/users/18.json",
-      "request_body": "email=lacy_20%40pagac.name&first_name=Ketan&last_name=Foo&write_key=224fcc645f82007e6d12247b3fa1bb17&race_id=4&gender_id=3&birthday=1479218284",
+      "request_path": "/api/v1/users/19.json",
+      "request_body": "email=adolph.brakus_21%40pagac.net&first_name=Ketan&last_name=Foo&write_key=27e113d83179cfc250aae56ffb4fa0aa&race_id=4&gender_id=3&religion_id=11&birthday=1479220775",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -57,17 +61,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 18,\n    \"uid\": \"90dc639a\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-11-15T13:58:04Z\",\n    \"updated_at\": \"2016-11-15T13:58:04Z\",\n    \"race_id\": 4,\n    \"gender_id\": 3,\n    \"birthday\": \"2016-11-15\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 19,\n    \"uid\": \"5a9983ea\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-11-15T14:39:35Z\",\n    \"updated_at\": \"2016-11-15T14:39:35Z\",\n    \"race_id\": 4,\n    \"gender_id\": 3,\n    \"religion_id\": 11,\n    \"birthday\": \"2016-11-15\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"b442aed95447d60193944bd82b74e1c0\"",
+        "ETag": "W/\"1662488a4e6f4a5a776b89c1d324ec30\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "730f7ef4-d030-4c24-86e7-8b3f87c30424",
-        "X-Runtime": "0.012726",
-        "Content-Length": "198"
+        "X-Request-Id": "d1c38b8e-6a7b-4096-b67b-58a10fe913b1",
+        "X-Runtime": "0.016101",
+        "Content-Length": "215"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

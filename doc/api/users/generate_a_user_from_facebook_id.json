@@ -18,7 +18,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/users/generate",
-      "request_body": "facebook_id=14UeixaYjHaopDgr95X5s71PiJ11FcBdZM_1",
+      "request_body": "facebook_id=1DN5xgiRcGirRNNXqyiNFvkWZXNdsbD7Rn_1",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -29,17 +29,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 19,\n    \"uid\": \"a23e216e\",\n    \"facebook_id\": \"14UeixaYjHaopDgr95X5s71PiJ11FcBdZM_1\",\n    \"created_at\": \"2016-11-15T13:58:04Z\",\n    \"updated_at\": \"2016-11-15T13:58:04Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 20,\n    \"uid\": \"78f3e043\",\n    \"facebook_id\": \"1DN5xgiRcGirRNNXqyiNFvkWZXNdsbD7Rn_1\",\n    \"created_at\": \"2016-11-15T14:39:35Z\",\n    \"updated_at\": \"2016-11-15T14:39:35Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"religion_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"c96a9f7966cc9ce47c03cf0ed380f2fd\"",
+        "ETag": "W/\"1290c0a245712f4590b253d6aeb3114d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "ffe75514-7d0a-4527-ace3-c51006cf3eb6",
-        "X-Runtime": "0.019441",
-        "Content-Length": "230"
+        "X-Request-Id": "233d5088-fd06-4f00-aa10-cc6de399a640",
+        "X-Runtime": "0.020041",
+        "Content-Length": "249"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

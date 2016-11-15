@@ -84,6 +84,18 @@
       ]
     },
     {
+      "name": "Religions",
+      "examples": [
+        {
+          "description": "Get All Religions",
+          "link": "religions/get_all_religions.json",
+          "groups": "all",
+          "route": "/api/v1/religions",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "Users",
       "examples": [
         {

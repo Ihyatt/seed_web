@@ -1,0 +1,47 @@
+{
+  "resource": "Religions",
+  "http_method": "GET",
+  "route": "/api/v1/religions",
+  "description": "Get All Religions",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "page",
+      "description": "Page Number"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/religions?write_key=27e113d83179cfc250aae56ffb4fa0aa",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "write_key": "27e113d83179cfc250aae56ffb4fa0aa"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Other\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Agnostic\"\n    },\n    {\n      \"id\": 3,\n      \"name\": \"Atheist\"\n    },\n    {\n      \"id\": 4,\n      \"name\": \"Christian\"\n    },\n    {\n      \"id\": 5,\n      \"name\": \"Jewish\"\n    },\n    {\n      \"id\": 6,\n      \"name\": \"Catholic\"\n    },\n    {\n      \"id\": 7,\n      \"name\": \"Muslim\"\n    },\n    {\n      \"id\": 8,\n      \"name\": \"Hindu\"\n    },\n    {\n      \"id\": 9,\n      \"name\": \"Buddhist\"\n    },\n    {\n      \"id\": 10,\n      \"name\": \"Sikh\"\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 10\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"8a46bf572b8c5987e3c7dc31a68c09a8\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "56adfa24-6c8e-4817-8a34-3bd444791925",
+        "X-Runtime": "0.007595",
+        "Content-Length": "340"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -17,29 +17,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users/11?write_key=224fcc645f82007e6d12247b3fa1bb17",
+      "request_path": "/api/v1/users/12?write_key=27e113d83179cfc250aae56ffb4fa0aa",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "224fcc645f82007e6d12247b3fa1bb17"
+        "write_key": "27e113d83179cfc250aae56ffb4fa0aa"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 11,\n    \"uid\": \"804391fa\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-11-15T13:58:04Z\",\n    \"updated_at\": \"2016-11-15T13:58:04Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 12,\n    \"uid\": \"8bfc15e5\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-11-15T14:39:34Z\",\n    \"updated_at\": \"2016-11-15T14:39:34Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"religion_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"208b2747aabfec7566d6f09daedf1c44\"",
+        "ETag": "W/\"a7630ef6dc2ea7654feb6599f487fa27\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "dad2476d-a667-4f19-841b-a2cc18ff58bc",
-        "X-Runtime": "0.005947",
-        "Content-Length": "196"
+        "X-Request-Id": "40d9f409-f430-41d0-84f1-41006df495f6",
+        "X-Runtime": "0.007750",
+        "Content-Length": "215"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
