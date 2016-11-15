@@ -1,4 +1,6 @@
 RailsAdmin.config do |config|
+  config.main_app_name = ["Raheem", "Admin"]
+
   # http://stackoverflow.com/questions/40377340/rails-admin-and-pundit-undefined-method-policy-for-railsadminmaincontroll
   config.parent_controller = '::ApplicationController'
 
