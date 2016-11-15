@@ -8,6 +8,7 @@ RSpec.describe User, type: :model do
   describe "associations" do
     it { should have_many :messages }
     it { should have_many :api_keys }
+    it { should have_many :incidents }
     it { should belong_to :race }
     it { should belong_to :gender }
   end
