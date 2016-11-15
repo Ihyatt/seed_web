@@ -46,7 +46,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/users/17.json",
-      "request_body": "email=christop_green_19%40hartmanngusikowski.io&first_name=Ketan&last_name=Foo&write_key=5a841e9aeea4ba0585bf84e5bf89425c&race_id=4&gender_id=3&birthday=1478304464",
+      "request_body": "email=nicklaus.wunsch_19%40stehrschmeler.io&first_name=Ketan&last_name=Foo&write_key=d6590679d0501f72d2a1110d5815e7c8&race_id=4&gender_id=3&birthday=1479216493",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -57,16 +57,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 17,\n    \"uid\": \"43928b8d\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-11-05T00:07:44Z\",\n    \"updated_at\": \"2016-11-05T00:07:44Z\",\n    \"race_id\": 4,\n    \"gender_id\": 3,\n    \"birthday\": \"2016-11-04\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 17,\n    \"uid\": \"afde1446\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-11-15T13:28:13Z\",\n    \"updated_at\": \"2016-11-15T13:28:13Z\",\n    \"race_id\": 4,\n    \"gender_id\": 3,\n    \"birthday\": \"2016-11-15\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d4b06a303b500d3fb1e69dcccd5c95e4\"",
+        "ETag": "W/\"326572c8187378060cece518f39e13db\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "584bc3c3-18b6-4092-9bab-24bd34cf4355",
-        "X-Runtime": "0.019289",
+        "X-Request-Id": "8a192944-ab2b-48a1-9df1-0c747d850dd4",
+        "X-Runtime": "0.017255",
         "Content-Length": "198"
       },
       "response_content_type": "application/json; charset=utf-8",

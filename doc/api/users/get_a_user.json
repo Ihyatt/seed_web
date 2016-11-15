@@ -17,28 +17,28 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/users/10?write_key=5a841e9aeea4ba0585bf84e5bf89425c",
+      "request_path": "/api/v1/users/10?write_key=d6590679d0501f72d2a1110d5815e7c8",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "5a841e9aeea4ba0585bf84e5bf89425c"
+        "write_key": "d6590679d0501f72d2a1110d5815e7c8"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 10,\n    \"uid\": \"0000aa5b\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-11-05T00:07:43Z\",\n    \"updated_at\": \"2016-11-05T00:07:43Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 10,\n    \"uid\": \"8325af04\",\n    \"facebook_id\": null,\n    \"created_at\": \"2016-11-15T13:28:13Z\",\n    \"updated_at\": \"2016-11-15T13:28:13Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"45fa486ff53f0799edf069e7575db978\"",
+        "ETag": "W/\"92cf794b38df0bae040ec09626e05f7c\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "148a81dd-b70b-48c6-9cb3-ad656efaf3fa",
-        "X-Runtime": "0.017482",
+        "X-Request-Id": "c58fb6c1-8119-4003-8c87-602686c7f0c5",
+        "X-Runtime": "0.006671",
         "Content-Length": "196"
       },
       "response_content_type": "application/json; charset=utf-8",
