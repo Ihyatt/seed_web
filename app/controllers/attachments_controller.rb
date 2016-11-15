@@ -27,6 +27,6 @@ class AttachmentsController < ApplicationController
 
   private
   def attachment_params
-    params.require(:attachment).permit(:incident_id, :asset)
+    params.require(:attachment).permit(:incident_id, :asset, :retained_asset)
   end
 end

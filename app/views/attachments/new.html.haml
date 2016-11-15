@@ -7,10 +7,11 @@
         .form-group
           = f.label :incident
           = f.collection_select :incident_id, @incidents, :id, :slug
-          
+
         .form-group
           = f.label :asset
           = f.file_field :asset
+          = f.hidden_field :retained_asset
 
         %hr
         = f.submit 'Save', class: "btn btn-primary"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115014733) do
+ActiveRecord::Schema.define(version: 20161115013940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,13 +27,13 @@ ActiveRecord::Schema.define(version: 20161115014733) do
   end
 
   create_table "attachments", force: :cascade do |t|
-    t.integer  "incident_id",        null: false
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "asset_file_name"
-    t.string   "asset_content_type"
-    t.integer  "asset_file_size"
-    t.datetime "asset_updated_at"
+    t.integer  "incident_id",  null: false
+    t.string   "asset_uid"
+    t.string   "asset_name"
+    t.integer  "asset_width"
+    t.integer  "asset_height"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["incident_id"], name: "index_attachments_on_incident_id", using: :btree
   end
 

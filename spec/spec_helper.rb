@@ -99,6 +99,6 @@ RSpec.configure do |config|
   
   # For removing paperclip files
   config.after(:suite) do
-    FileUtils.rm_rf(Dir["#{Rails.root}/spec/test_files/"])
+    FileUtils.rm_rf(Dir["#{Rails.root}/public/system/dragonfly/test"])
   end
 end

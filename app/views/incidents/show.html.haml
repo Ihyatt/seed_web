@@ -47,7 +47,7 @@
         %ul.list-unstyled
           - @incident.attachments.each do |attachment|
             %li
-              = link_to(image_tag(attachment.asset.url(:thumb)), attachment)
+              = link_to(image_tag(attachment.asset.thumb('100x100#').url), attachment) if attachment.asset_stored?
 
       = link_to 'Edit', edit_incident_path(@incident)
       \|
