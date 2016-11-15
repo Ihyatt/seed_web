@@ -170,7 +170,7 @@ resource "Users" do
       expect(user.first_name).to eq("Ketan")
 
       json = JSON.parse(response_body)
-      puts json
+      
       user_json = json["data"]
       expect(user_json["id"]).to eq(user.id)
       expect(user_json["uid"]).to eq(user.uid)

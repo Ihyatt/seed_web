@@ -21,8 +21,6 @@ RSpec.describe APIKey, type: :model do
     it "should create a read key",focus: true do
       api_key = APIKey.new
       expect(api_key.read_key).not_to be_nil
-
-      puts api_key.inspect
     end
   end
 end
