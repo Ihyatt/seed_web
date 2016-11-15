@@ -70,7 +70,7 @@ resource "Officers" do
     example "Update Officer" do
       officer = FactoryGirl.create(:officer, incident: incident)
 
-      name = "Officer Pig"
+      name = "Officer Bob"
       badge_number = "123"
       description = "not nice"
       race_id = Race.first.id
