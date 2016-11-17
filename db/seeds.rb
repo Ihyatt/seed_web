@@ -3,5 +3,6 @@ user = CreateUserService.create_admin_user('brandon@theswatapp.co', 'testtest')
 
 Race.seed
 Gender.seed
+Religion.seed
 
 Place.import_cities
