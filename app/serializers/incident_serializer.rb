@@ -2,6 +2,7 @@ class IncidentSerializer < BaseSerializer
   attributes  :id, 
               :slug, 
               :user_id, 
+              :incident_type_id,
               :description, 
               :start_time, 
               :location, 

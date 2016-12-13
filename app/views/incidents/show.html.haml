@@ -19,6 +19,10 @@
         = "Present" if @incident.user.birthday
 
       %p
+        %b Type:
+        = @incident.incident_type.try(:name)
+
+      %p
         %b Description:
         = @incident.description
       %p

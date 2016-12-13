@@ -7,6 +7,10 @@
           %li= msg
 
   .form-group
+    = f.label "Type"
+    = f.collection_select :incident_type_id, IncidentType.by_position, :id, :name, prompt: true
+
+  .form-group
     = f.label :description
     = f.text_area :description, placeholder: "What happened?"
   / .form-group

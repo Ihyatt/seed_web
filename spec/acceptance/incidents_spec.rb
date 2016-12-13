@@ -2,13 +2,14 @@ require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
 resource "Incidents" do
-  let!(:user) { FactoryGirl.create(:user) }
-  let!(:api_key) { FactoryGirl.create(:api_key, user: user) }
-  let!(:incident) { FactoryGirl.create(:incident, user: user) }
-  let!(:attachment) { FactoryGirl.create(:attachment, incident: incident) }
-  let!(:officer) { FactoryGirl.create(:officer, incident: incident) }
-  let(:reaction) { FactoryGirl.create(:reaction) }
-  let(:reaction2) { FactoryGirl.create(:reaction) }
+  let!(:user)          { FactoryGirl.create(:user) }
+  let!(:api_key)       { FactoryGirl.create(:api_key, user: user) }
+  let!(:incident_type) { FactoryGirl.create(:incident_type) }
+  let!(:incident)      { FactoryGirl.create(:incident, user: user, incident_type: incident_type) }
+  let!(:attachment)    { FactoryGirl.create(:attachment, incident: incident) }
+  let!(:officer)       { FactoryGirl.create(:officer, incident: incident) }
+  let(:reaction)       { FactoryGirl.create(:reaction) }
+  let(:reaction2)      { FactoryGirl.create(:reaction) }
   
   get "/api/v1/incidents" do
     parameter :page, "Page of incidents"
@@ -31,6 +32,7 @@ resource "Incidents" do
       expect(incident_json["latitude"]).to eq(incident.latitude)
       expect(incident_json["longitude"]).to eq(incident.longitude)
       expect(incident_json["rating"]).to eq(incident.rating)
+      expect(incident_json["incident_type_id"]).to eq(incident.incident_type_id)
 
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil
@@ -105,6 +107,7 @@ resource "Incidents" do
 
   post "/api/v1/incidents" do
     parameter :user_id, "Incident Email", required: true
+    parameter :incident_type_id, "Incident Type"
     parameter :description, "What happened"
     parameter :location, "City and State"
     parameter :reactions_list, "Reactions to incidents from approved Incdents"
@@ -126,6 +129,7 @@ resource "Incidents" do
                   reactions_list: reactions_list,
                   rating: rating,
                   start_time: start_time.to_i,
+                  incident_type_id: incident_type.id,
                   write_key: api_key.write_key)
 
       expect(status).to eq(200)
@@ -147,6 +151,7 @@ resource "Incidents" do
       expect(incident_json["longitude"]).not_to be_nil
       expect(incident_json["rating"]).to eq(rating)
       expect(incident_json["start_time"]).not_to be_nil
+      expect(incident_json["incident_type_id"]).to eq(incident_type.id)
 
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil
@@ -155,6 +160,7 @@ resource "Incidents" do
 
   put "/api/v1/incidents/:id.json" do
     parameter :id, "Incident ID", required: true
+    parameter :incident_type_id, "Incident Type"
     parameter :description, "What happened"
     parameter :location, "City and State"
     parameter :reactions_list, "Reactions to incidents from approved Incdents"
@@ -177,6 +183,7 @@ resource "Incidents" do
                   reactions_list: reactions_list,
                   rating: rating,
                   start_time: start_time.to_i,
+                  incident_type_id: incident_type.id,
                   write_key: api_key.write_key)
 
       expect(status).to eq(200)
@@ -195,6 +202,7 @@ resource "Incidents" do
       expect(incident_json["longitude"]).not_to be_nil
       expect(incident_json["rating"]).to eq(rating)
       expect(incident_json["start_time"]).not_to be_nil
+      expect(incident_json["incident_type_id"]).to eq(incident_type.id)
 
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil

@@ -13,6 +13,7 @@ class Incident < ApplicationRecord
 
   # Associations
   belongs_to :user
+  belongs_to :incident_type
   has_many :attachments, dependent: :destroy, inverse_of: :incident
   has_many :officers, dependent: :destroy, inverse_of: :incident
 

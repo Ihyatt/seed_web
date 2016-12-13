@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115150046) do
+ActiveRecord::Schema.define(version: 20161213211311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,20 +65,30 @@ ActiveRecord::Schema.define(version: 20161115150046) do
     t.integer  "position",   default: 0, null: false
   end
 
+  create_table "incident_types", force: :cascade do |t|
+    t.string   "name",                   null: false
+    t.integer  "position",   default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["position"], name: "index_incident_types_on_position", using: :btree
+  end
+
   create_table "incidents", force: :cascade do |t|
-    t.integer  "user_id",                     null: false
-    t.string   "slug",                        null: false
+    t.integer  "user_id",                          null: false
+    t.string   "slug",                             null: false
     t.text     "description"
     t.datetime "start_time"
     t.string   "location"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.integer  "rating"
-    t.string   "reactions",   default: [],                 array: true
-    t.boolean  "completed",   default: false, null: false
+    t.string   "reactions",        default: [],                 array: true
+    t.boolean  "completed",        default: false, null: false
+    t.integer  "incident_type_id"
     t.index ["completed"], name: "index_incidents_on_completed", using: :btree
+    t.index ["incident_type_id"], name: "index_incidents_on_incident_type_id", using: :btree
     t.index ["reactions"], name: "index_incidents_on_reactions", using: :gin
     t.index ["slug"], name: "index_incidents_on_slug", unique: true, using: :btree
     t.index ["user_id"], name: "index_incidents_on_user_id", using: :btree
@@ -233,6 +243,7 @@ ActiveRecord::Schema.define(version: 20161115150046) do
 
   add_foreign_key "api_keys", "users"
   add_foreign_key "attachments", "incidents"
+  add_foreign_key "incidents", "incident_types"
   add_foreign_key "incidents", "users"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
