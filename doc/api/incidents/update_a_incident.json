@@ -50,7 +50,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/incidents/8.json",
-      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Dr.+Geoffrey+Ferry&rating=1&start_time=1481667017&incident_type_id=6&write_key=2764f88b41de928b317dd8e161f0daae",
+      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Larue+MacGyver&rating=1&start_time=1481673958&incident_type_id=7&write_key=8a0178be2e696495f21d934c8f6493ba",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -61,17 +61,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 8,\n    \"slug\": \"PxvWXhBn\",\n    \"user_id\": 8,\n    \"incident_type_id\": 6,\n    \"description\": \"I was stopped\",\n    \"start_time\": \"2016-12-13T22:10:17Z\",\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Dr. Geoffrey Ferry\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"completed\": false,\n    \"created_at\": \"2016-12-13T22:10:17Z\",\n    \"updated_at\": \"2016-12-13T22:10:17Z\",\n    \"user\": {\n      \"id\": 8,\n      \"uid\": \"efa0d439\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-12-13T22:10:17Z\",\n      \"updated_at\": \"2016-12-13T22:10:17Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 7,\n        \"incident_id\": 8,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTYvMTIvMTMvOHRkc2E2Y2FhZF9pbWFnZS5wbmciXV0/image.png?sha=0773b6d780d1e739\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2016-12-13T22:10:17Z\",\n        \"updated_at\": \"2016-12-13T22:10:17Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 6,\n        \"incident_id\": 8,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"created_at\": \"2016-12-13T22:10:17Z\",\n        \"updated_at\": \"2016-12-13T22:10:17Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 8,\n    \"slug\": \"z2FHZbSz\",\n    \"user_id\": 9,\n    \"incident_type_id\": 7,\n    \"description\": \"I was stopped\",\n    \"start_time\": \"2016-12-14T00:05:58Z\",\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Larue MacGyver\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"completed\": false,\n    \"created_at\": \"2016-12-14T00:05:58Z\",\n    \"updated_at\": \"2016-12-14T00:05:58Z\",\n    \"user\": {\n      \"id\": 9,\n      \"uid\": \"10726eb6\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-12-14T00:05:58Z\",\n      \"updated_at\": \"2016-12-14T00:05:58Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 7,\n        \"incident_id\": 8,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTYvMTIvMTMvN2RzZmJmaXg4bV9pbWFnZS5wbmciXV0/image.png?sha=a683824948290dfd\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2016-12-14T00:05:58Z\",\n        \"updated_at\": \"2016-12-14T00:05:58Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 6,\n        \"incident_id\": 8,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"created_at\": \"2016-12-14T00:05:58Z\",\n        \"updated_at\": \"2016-12-14T00:05:58Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"845c50ac8d0fafd7aecf82efbdce7b1c\"",
+        "ETag": "W/\"4b47347bd95c9e3aa3f2b24b1ed1e2ef\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "0d25132b-9804-4fa9-8e2e-8c886e20b0c3",
-        "X-Runtime": "0.055060",
-        "Content-Length": "1064"
+        "X-Request-Id": "2461bce9-eded-49d0-ba58-0adc084e17ae",
+        "X-Runtime": "0.050678",
+        "Content-Length": "1060"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

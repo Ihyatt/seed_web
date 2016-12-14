@@ -16,14 +16,14 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/religions?write_key=2764f88b41de928b317dd8e161f0daae",
+      "request_path": "/api/v1/religions?write_key=8a0178be2e696495f21d934c8f6493ba",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "2764f88b41de928b317dd8e161f0daae"
+        "write_key": "8a0178be2e696495f21d934c8f6493ba"
       },
       "request_content_type": null,
       "response_status": 200,
@@ -36,8 +36,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"8a46bf572b8c5987e3c7dc31a68c09a8\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "c6cc14c1-7421-475e-aefc-e430203fdaef",
-        "X-Runtime": "0.012251",
+        "X-Request-Id": "bc9c6ea4-e196-404b-bf86-19a14b561364",
+        "X-Runtime": "0.011350",
         "Content-Length": "340"
       },
       "response_content_type": "application/json; charset=utf-8",

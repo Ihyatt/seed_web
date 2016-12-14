@@ -16,28 +16,28 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/incidents?write_key=2764f88b41de928b317dd8e161f0daae",
+      "request_path": "/api/v1/incidents?write_key=8a0178be2e696495f21d934c8f6493ba",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "2764f88b41de928b317dd8e161f0daae"
+        "write_key": "8a0178be2e696495f21d934c8f6493ba"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 2,\n      \"slug\": \"7pLzCBeh\",\n      \"user_id\": 3,\n      \"incident_type_id\": 1,\n      \"description\": null,\n      \"start_time\": null,\n      \"location\": null,\n      \"reactions_list\": \"\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": null,\n      \"completed\": false,\n      \"created_at\": \"2016-12-13T22:10:16Z\",\n      \"updated_at\": \"2016-12-13T22:10:16Z\",\n      \"user\": {\n        \"id\": 3,\n        \"uid\": \"d8225e79\",\n        \"facebook_id\": null,\n        \"created_at\": \"2016-12-13T22:10:16Z\",\n        \"updated_at\": \"2016-12-13T22:10:16Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"religion_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n        {\n          \"id\": 2,\n          \"incident_id\": 2,\n          \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTYvMTIvMTMvN3dodzFjbmVyZl9pbWFnZS5wbmciXV0/image.png?sha=bdcb22ceb62d4fac\",\n          \"asset_name\": \"image.png\",\n          \"asset_width\": 640,\n          \"asset_height\": 640,\n          \"created_at\": \"2016-12-13T22:10:16Z\",\n          \"updated_at\": \"2016-12-13T22:10:16Z\"\n        }\n      ],\n      \"officers\": [\n        {\n          \"id\": 1,\n          \"incident_id\": 2,\n          \"race_id\": null,\n          \"gender_id\": null,\n          \"name\": null,\n          \"badge_number\": null,\n          \"description\": null,\n          \"created_at\": \"2016-12-13T22:10:16Z\",\n          \"updated_at\": \"2016-12-13T22:10:16Z\"\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 2,\n      \"slug\": \"Ft5Pfx7p\",\n      \"user_id\": 4,\n      \"incident_type_id\": 2,\n      \"description\": null,\n      \"start_time\": null,\n      \"location\": null,\n      \"reactions_list\": \"\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": null,\n      \"completed\": false,\n      \"created_at\": \"2016-12-14T00:05:57Z\",\n      \"updated_at\": \"2016-12-14T00:05:57Z\",\n      \"user\": {\n        \"id\": 4,\n        \"uid\": \"dde94713\",\n        \"facebook_id\": null,\n        \"created_at\": \"2016-12-14T00:05:57Z\",\n        \"updated_at\": \"2016-12-14T00:05:57Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"religion_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n        {\n          \"id\": 2,\n          \"incident_id\": 2,\n          \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTYvMTIvMTMvMnp1MTk5cTNma19pbWFnZS5wbmciXV0/image.png?sha=ee363e1ac39f4657\",\n          \"asset_name\": \"image.png\",\n          \"asset_width\": 640,\n          \"asset_height\": 640,\n          \"created_at\": \"2016-12-14T00:05:57Z\",\n          \"updated_at\": \"2016-12-14T00:05:57Z\"\n        }\n      ],\n      \"officers\": [\n        {\n          \"id\": 1,\n          \"incident_id\": 2,\n          \"race_id\": null,\n          \"gender_id\": null,\n          \"name\": null,\n          \"badge_number\": null,\n          \"description\": null,\n          \"created_at\": \"2016-12-14T00:05:57Z\",\n          \"updated_at\": \"2016-12-14T00:05:57Z\"\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"3eba2fcc4f8bd6a0a8c4d0bf14140763\"",
+        "ETag": "W/\"7011f1cf8353467a0cd577d070baebfd\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "7829019a-1984-4222-bfd6-a6c592ca89e7",
-        "X-Runtime": "0.043421",
+        "X-Request-Id": "4830e08d-7435-4474-bba4-ae09b9ad0aab",
+        "X-Runtime": "0.073683",
         "Content-Length": "1049"
       },
       "response_content_type": "application/json; charset=utf-8",

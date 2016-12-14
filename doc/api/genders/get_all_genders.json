@@ -16,14 +16,14 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/genders?write_key=2764f88b41de928b317dd8e161f0daae",
+      "request_path": "/api/v1/genders?write_key=8a0178be2e696495f21d934c8f6493ba",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "2764f88b41de928b317dd8e161f0daae"
+        "write_key": "8a0178be2e696495f21d934c8f6493ba"
       },
       "request_content_type": null,
       "response_status": 200,
@@ -36,8 +36,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"348632fe679289021ffb74a1b546bd06\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "3113d320-d364-49be-a557-188cbcdc8dc2",
-        "X-Runtime": "0.016613",
+        "X-Request-Id": "ddb0b79c-5858-4334-add5-4e183f572e0d",
+        "X-Runtime": "0.016892",
         "Content-Length": "130"
       },
       "response_content_type": "application/json; charset=utf-8",

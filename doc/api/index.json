@@ -25,6 +25,18 @@
       ]
     },
     {
+      "name": "IncidentTypes",
+      "examples": [
+        {
+          "description": "Get All Incident Types",
+          "link": "incidenttypes/get_all_incident_types.json",
+          "groups": "all",
+          "route": "/api/v1/incident_types",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "Incidents",
       "examples": [
         {

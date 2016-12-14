@@ -50,7 +50,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/incidents",
-      "request_body": "user_id=7&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Carter+Champlin%2C+Walter+McCullough&rating=5&start_time=1481667017&incident_type_id=5&write_key=2764f88b41de928b317dd8e161f0daae",
+      "request_body": "user_id=8&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Reed+Weimann%2C+Francisca+Kovacek&rating=5&start_time=1481673958&incident_type_id=6&write_key=8a0178be2e696495f21d934c8f6493ba",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -61,17 +61,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"t7FPx8pw\",\n    \"user_id\": 7,\n    \"incident_type_id\": 5,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2016-12-13T22:10:17Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Carter Champlin,Walter McCullough\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"rating\": 5,\n    \"completed\": false,\n    \"created_at\": \"2016-12-13T22:10:17Z\",\n    \"updated_at\": \"2016-12-13T22:10:17Z\",\n    \"user\": {\n      \"id\": 7,\n      \"uid\": \"5d4a9097\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-12-13T22:10:17Z\",\n      \"updated_at\": \"2016-12-13T22:10:17Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"Hbwzsvf6\",\n    \"user_id\": 8,\n    \"incident_type_id\": 6,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2016-12-14T00:05:58Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Reed Weimann,Francisca Kovacek\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"rating\": 5,\n    \"completed\": false,\n    \"created_at\": \"2016-12-14T00:05:58Z\",\n    \"updated_at\": \"2016-12-14T00:05:58Z\",\n    \"user\": {\n      \"id\": 8,\n      \"uid\": \"66809866\",\n      \"facebook_id\": null,\n      \"created_at\": \"2016-12-14T00:05:58Z\",\n      \"updated_at\": \"2016-12-14T00:05:58Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d62784b9294866449cb453a54bb4d4c6\"",
+        "ETag": "W/\"82ae76d8dd80627235bada6677cc076c\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "c0a4e666-e978-49d6-95c9-347c78ab196d",
-        "X-Runtime": "0.058190",
-        "Content-Length": "611"
+        "X-Request-Id": "fbcd9b57-0777-4fe7-8fb2-59cc65b0baeb",
+        "X-Runtime": "0.069378",
+        "Content-Length": "608"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
