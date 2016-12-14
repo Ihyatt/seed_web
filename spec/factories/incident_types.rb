@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :incident_type do
-    name "MyString"
+    name "Incident Type"
   end
 end

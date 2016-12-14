@@ -36,6 +36,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :officers, only: [:create, :update]
 
+      resources :incident_types, only: [:index]
       resources :religions, only: [:index]
       resources :genders, only: [:index]
       resources :races, only: [:index]

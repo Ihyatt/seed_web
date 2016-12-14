@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :race do
-    name "MyString"
+    name "Race"
   end
 end
