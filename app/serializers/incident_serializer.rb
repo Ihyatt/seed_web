@@ -11,6 +11,7 @@ class IncidentSerializer < BaseSerializer
               :longitude, 
               :rating, 
               :completed,
+              :metadata,
               :created_at, 
               :updated_at
 

@@ -34,6 +34,8 @@ resource "Incidents" do
       expect(incident_json["rating"]).to eq(incident.rating)
       expect(incident_json["incident_type_id"]).to eq(incident.incident_type_id)
 
+      expect(incident_json["metadata"]).to eq({})
+
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil
 
@@ -64,6 +66,8 @@ resource "Incidents" do
       expect(incident_json["latitude"]).to eq(incident.latitude)
       expect(incident_json["longitude"]).to eq(incident.longitude)
       expect(incident_json["rating"]).to eq(incident.rating)
+
+      expect(incident_json["metadata"]).to eq({})
 
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil
@@ -115,6 +119,7 @@ resource "Incidents" do
     parameter :longitude, "Float of longitude"
     parameter :rating, "Numeric rating of incident, 1-5"
     parameter :start_time, "When the incident occured in Epoch Time (seconds since 1970)"
+    parameter :metadata, "JSON String"
 
 
     example "Create A Incident" do
@@ -123,6 +128,7 @@ resource "Incidents" do
       reactions_list = "#{reaction.name}, #{reaction2.name}"
       rating = 5
       start_time = DateTime.now
+      metadata = '{"one":"two","key":"value"}'
       do_request( user_id: user.id,
                   description: description,
                   location: location,
@@ -130,6 +136,7 @@ resource "Incidents" do
                   rating: rating,
                   start_time: start_time.to_i,
                   incident_type_id: incident_type.id,
+                  metadata: metadata,
                   write_key: api_key.write_key)
 
       expect(status).to eq(200)
@@ -153,6 +160,8 @@ resource "Incidents" do
       expect(incident_json["start_time"]).not_to be_nil
       expect(incident_json["incident_type_id"]).to eq(incident_type.id)
 
+      expect(incident_json["metadata"]).to eq("{\"one\":\"two\",\"key\":\"value\"}")
+
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil
     end
@@ -168,6 +177,7 @@ resource "Incidents" do
     parameter :longitude, "Float of longitude"
     parameter :rating, "Numeric rating of incident, 1-5"
     parameter :start_time, "When the incident occured in Epoch Time (seconds since 1970)"
+    parameter :metadata, "JSON String"
 
     example "Update A Incident" do
       email = FactoryGirl.generate(:email)
@@ -176,6 +186,7 @@ resource "Incidents" do
       reactions_list = "#{reaction.name}"
       rating = 1
       start_time = DateTime.now
+      metadata = '{"one":"two","key":"value"}'
 
       do_request( id: incident.id,
                   description: description,
@@ -184,6 +195,7 @@ resource "Incidents" do
                   rating: rating,
                   start_time: start_time.to_i,
                   incident_type_id: incident_type.id,
+                  metadata: metadata,
                   write_key: api_key.write_key)
 
       expect(status).to eq(200)
@@ -203,6 +215,8 @@ resource "Incidents" do
       expect(incident_json["rating"]).to eq(rating)
       expect(incident_json["start_time"]).not_to be_nil
       expect(incident_json["incident_type_id"]).to eq(incident_type.id)
+
+      expect(incident_json["metadata"]).to eq("{\"one\":\"two\",\"key\":\"value\"}")
 
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil
