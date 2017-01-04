@@ -22,7 +22,7 @@ RSpec.describe Incident, type: :model do
     it { should validate_numericality_of(:rating).is_greater_than_or_equal_to(1).allow_nil }
     it { should validate_numericality_of(:rating).is_less_than_or_equal_to(5).allow_nil }
 
-    it "should be valid only with approved reactions",focus: true do
+    it "should be valid only with approved reactions" do
       incident.reactions = [reaction.name, reaction2.name]
       incident.save
 
@@ -59,5 +59,18 @@ RSpec.describe Incident, type: :model do
       expect(incident.reactions).to include(reaction2.name)
     end
 
+  end
+
+
+  describe "search",focus: true do
+    let!(:user)     { FactoryGirl.create(:user) }
+    let!(:incident) { FactoryGirl.create(:incident, user: user) }
+
+    it "should search incidents by user" do
+      incident2 = FactoryGirl.create(:incident)
+
+      incidents = Incident.search_by(user: user)
+      expect(incidents.count).to eq(1)
+    end
   end
 end

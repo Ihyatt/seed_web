@@ -10,7 +10,8 @@ class Incident < ApplicationRecord
   # Scopes
   scope :completed, ->  { where(completed: true) }
   scope :incomplete, -> { where(completed: false) }
-
+  scope :by_user, ->    (user) { where(user: user) }
+  
   # Associations
   belongs_to :user
   belongs_to :incident_type
@@ -53,6 +54,16 @@ class Incident < ApplicationRecord
 
   def start_time=(value)
     self.write_attribute(:start_time, Time.at(value.to_i))
+  end
+
+  def self.search_by(user: nil)
+    scope = Incident.all
+
+    if user
+      scope = Incident.by_user(user)
+    end
+
+    return scope
   end
 
   rails_admin do      
