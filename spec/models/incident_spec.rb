@@ -64,7 +64,8 @@ RSpec.describe Incident, type: :model do
 
   describe "search",focus: true do
     let!(:user)     { FactoryGirl.create(:user) }
-    let!(:incident) { FactoryGirl.create(:incident, user: user) }
+    let!(:incident_type) { FactoryGirl.create(:incident_type) }
+    let!(:incident) { FactoryGirl.create(:incident, user: user, reactions: [reaction.name], incident_type: incident_type) }
     let!(:completed_incident) { FactoryGirl.create(:incident, completed: true) }
 
     it "should search incidents by user" do
@@ -93,6 +94,20 @@ RSpec.describe Incident, type: :model do
     it "should search incomplete or complete incidents" do
       incidents = Incident.search_by(completed: nil)
       expect(incidents.count).to eq(2)
+    end
+
+    it "should search by reactions" do
+      incidents = Incident.search_by(reactions: reaction.name)
+      expect(incidents.count).to eq(1)
+
+      expect(incidents.first).to eq(incident)
+    end
+
+    it "should search by incident_type" do
+      incidents = Incident.search_by(incident_type: incident_type)
+      expect(incidents.count).to eq(1)
+
+      expect(incidents.first).to eq(incident)
     end
   end
 end

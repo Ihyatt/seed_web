@@ -8,9 +8,10 @@ class Incident < ApplicationRecord
   after_validation :geocode          # auto-fetch coordinates   
 
   # Scopes
-  scope :completed, ->  { where(completed: true) }
-  scope :incomplete, -> { where(completed: false) }
-  scope :by_user, ->    (user) { where(user: user) }
+  scope :completed, ->        { where(completed: true) }
+  scope :incomplete, ->       { where(completed: false) }
+  scope :by_user, ->          (user) { where(user: user) }
+  scope :by_incident_type, -> (incident_type) { where(incident_type: incident_type) }
   
   # Associations
   belongs_to :user
@@ -56,7 +57,7 @@ class Incident < ApplicationRecord
     self.write_attribute(:start_time, Time.at(value.to_i))
   end
 
-  def self.search_by(user: nil, completed: nil)
+  def self.search_by(user: nil, completed: nil, reactions: nil, incident_type: nil)
     scope = Incident.all
 
     if user
@@ -69,6 +70,14 @@ class Incident < ApplicationRecord
       else
         scope = scope.incomplete
       end
+    end
+
+    if reactions
+      scope = scope.where("'#{reactions}' = ANY (reactions)")
+    end
+
+    if incident_type
+      scope = scope.by_incident_type(incident_type)
     end
 
     return scope
