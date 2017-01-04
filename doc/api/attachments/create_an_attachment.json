@@ -22,7 +22,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/attachments",
-      "request_body": "incident_id=1&asset=%23%3CFile%3A0x007fc1fd333738%3E&write_key=8a0178be2e696495f21d934c8f6493ba",
+      "request_body": "incident_id=1&asset=%23%3CFile%3A0x007f89f9349998%3E&write_key=d1a42656f53819c41f28e496b750283a",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -33,16 +33,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 1,\n    \"incident_id\": 1,\n    \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTYvMTIvMTMvOXFzd24wODVvcF9maWxlIl1d?sha=f5ab24ead16864f5\",\n    \"asset_name\": null,\n    \"asset_width\": null,\n    \"asset_height\": null,\n    \"created_at\": \"2016-12-14T00:05:57Z\",\n    \"updated_at\": \"2016-12-14T00:05:57Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 1,\n    \"incident_id\": 1,\n    \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDEvMDQvNmhlcGt1bnVocl9maWxlIl1d?sha=57b6e4d0078d3765\",\n    \"asset_name\": null,\n    \"asset_width\": null,\n    \"asset_height\": null,\n    \"created_at\": \"2017-01-04T15:48:04Z\",\n    \"updated_at\": \"2017-01-04T15:48:04Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"f7dc7e6129a3df38db230750b8214927\"",
+        "ETag": "W/\"21fff2050812de0caa044ad3e8c9aa7b\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "3b03bb22-e8bb-4703-bf09-c3f9323674af",
-        "X-Runtime": "0.208376",
+        "X-Request-Id": "0b9bcaaa-3114-4312-832a-22171b6c8908",
+        "X-Runtime": "0.573424",
         "Content-Length": "305"
       },
       "response_content_type": "application/json; charset=utf-8",
