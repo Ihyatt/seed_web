@@ -53,7 +53,7 @@ RSpec.describe Place, type: :model do
       expect(west.slug).to eq("west-us")
     end
 
-    it "should import divisions",focus: true do
+    it "should import divisions" do
       Place.import_divisions
 
       divisions = Place.where(level: Place::DIVISION)

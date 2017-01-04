@@ -18,7 +18,7 @@ RSpec.describe APIKey, type: :model do
     it { should validate_presence_of(:write_key) }
     it { should validate_uniqueness_of(:write_key) }
 
-    it "should create a read key",focus: true do
+    it "should create a read key" do
       api_key = APIKey.new
       expect(api_key.read_key).not_to be_nil
     end
