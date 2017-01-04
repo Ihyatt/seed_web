@@ -97,7 +97,7 @@ RSpec.describe Incident, type: :model do
     end
 
     it "should search by reactions" do
-      incidents = Incident.search_by(reactions: reaction.name)
+      incidents = Incident.search_by(reactions: "#{reaction.name},foo")
       expect(incidents.count).to eq(1)
 
       expect(incidents.first).to eq(incident)

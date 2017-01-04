@@ -73,7 +73,8 @@ class Incident < ApplicationRecord
     end
 
     if reactions
-      scope = scope.where("'#{reactions}' = ANY (reactions)")
+      array = reactions.split(",").map!(&:strip)
+      scope = scope.with_any_reactions(array)
     end
 
     if incident_type

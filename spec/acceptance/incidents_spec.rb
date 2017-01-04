@@ -13,6 +13,11 @@ resource "Incidents" do
   
   get "/api/v1/incidents" do
     parameter :page, "Page of incidents"
+    parameter :completed,  "If nil, all incidents are returned. If true only completed incidents. If false only incomplete incidents"
+    parameter :user_id,  "Incidents only by a specific user"
+    parameter :reactions,  "Comma delimited list of reactions to match with ANY search"
+    parameter :incident_type_id,  "Any Incidents matching the incident type"
+    
 
     example "Get All Incidents" do
       do_request(write_key: api_key.write_key)
