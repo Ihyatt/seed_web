@@ -56,11 +56,19 @@ class Incident < ApplicationRecord
     self.write_attribute(:start_time, Time.at(value.to_i))
   end
 
-  def self.search_by(user: nil)
+  def self.search_by(user: nil, completed: nil)
     scope = Incident.all
 
     if user
-      scope = Incident.by_user(user)
+      scope = scope.by_user(user)
+    end
+
+    unless completed.nil?
+      if completed == true
+        scope = scope.completed
+      else
+        scope = scope.incomplete
+      end
     end
 
     return scope
