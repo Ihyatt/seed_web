@@ -22,6 +22,6 @@ class API::V1::OfficersController < API::V1::APIController
 
   private
   def officer_params
-    params.permit(:incident_id, :name, :description, :badge_number, :race_id, :gender_id)
+    params.permit(:incident_id, :name, :description, :badge_number, :race_id, :gender_id, :age_estimate)
   end
 end

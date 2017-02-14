@@ -18,6 +18,7 @@ resource "Officers" do
     parameter :badge_number, "Badge Number"
     parameter :race_id, "Race ID"
     parameter :gender_id, "Gender ID"
+    parameter :age_estimate, "Estimate of Age"
 
     
     example "Add Officer to Incident" do
@@ -27,6 +28,7 @@ resource "Officers" do
       description = "not nice"
       race_id = Race.first.id
       gender_id = Gender.first.id
+      age_estimate = "20-30"
 
       do_request( incident_id: incident.id,
                   name: name,
@@ -34,6 +36,7 @@ resource "Officers" do
                   description: description,
                   race_id: race_id,
                   gender_id: gender_id,
+                  age_estimate: age_estimate,
                   write_key: api_key.write_key)
 
       expect(status).to eq(200)
@@ -50,6 +53,7 @@ resource "Officers" do
       expect(officer_json["incident_id"]).to eq(incident.id)
       expect(officer_json["name"]).to eq(name)
       expect(officer_json["badge_number"]).to eq(badge_number)
+      expect(officer_json["age_estimate"]).to eq(age_estimate)
       expect(officer_json["description"]).to eq(description)
       expect(officer_json["race_id"]).to eq(race_id)
       expect(officer_json["gender_id"]).to eq(gender_id)

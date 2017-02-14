@@ -5,7 +5,8 @@ class OfficerSerializer < BaseSerializer
               :gender_id, 
               :name, 
               :badge_number,
-              :description, 
+              :description,
+              :age_estimate,
               :created_at, 
               :updated_at
 
