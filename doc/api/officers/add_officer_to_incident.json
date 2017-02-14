@@ -29,6 +29,10 @@
     {
       "name": "gender_id",
       "description": "Gender ID"
+    },
+    {
+      "name": "age_estimate",
+      "description": "Estimate of Age"
     }
   ],
   "response_fields": [
@@ -38,7 +42,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/officers",
-      "request_body": "incident_id=9&name=Officer+Pig&badge_number=123&description=not+nice&race_id=1&gender_id=3&write_key=d1a42656f53819c41f28e496b750283a",
+      "request_body": "incident_id=9&name=Officer+Pig&badge_number=123&description=not+nice&race_id=1&gender_id=3&age_estimate=20-30&write_key=6dabfca3d26b2f6175a4ccb28f45d7b9",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -49,17 +53,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"incident_id\": 9,\n    \"race_id\": 1,\n    \"gender_id\": 3,\n    \"name\": \"Officer Pig\",\n    \"badge_number\": \"123\",\n    \"description\": \"not nice\",\n    \"created_at\": \"2017-01-04T15:48:06Z\",\n    \"updated_at\": \"2017-01-04T15:48:06Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"incident_id\": 9,\n    \"race_id\": 1,\n    \"gender_id\": 3,\n    \"name\": \"Officer Pig\",\n    \"badge_number\": \"123\",\n    \"description\": \"not nice\",\n    \"age_estimate\": \"20-30\",\n    \"created_at\": \"2017-02-14T02:32:23Z\",\n    \"updated_at\": \"2017-02-14T02:32:23Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"dc395bb84887c9931afc38a21cb5a974\"",
+        "ETag": "W/\"d377326a8f4289617405ee2d5f015ac2\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "52ba37ee-c54a-434a-8675-a6a800aee117",
-        "X-Runtime": "0.021435",
-        "Content-Length": "220"
+        "X-Request-Id": "6d162938-1a5b-4a0e-a061-ce11ffc71750",
+        "X-Runtime": "0.018115",
+        "Content-Length": "243"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

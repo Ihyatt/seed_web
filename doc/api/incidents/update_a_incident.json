@@ -54,7 +54,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/incidents/8.json",
-      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Ila+Hackett+III&rating=1&start_time=1483544886&incident_type_id=7&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=d1a42656f53819c41f28e496b750283a",
+      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Enid+Schaefer&rating=1&start_time=1487039543&incident_type_id=7&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=6dabfca3d26b2f6175a4ccb28f45d7b9",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -65,17 +65,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 8,\n    \"slug\": \"iqdhMTJ9\",\n    \"user_id\": 9,\n    \"incident_type_id\": 7,\n    \"description\": \"I was stopped\",\n    \"start_time\": \"2017-01-04T15:48:06Z\",\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Ila Hackett III\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-01-04T15:48:06Z\",\n    \"updated_at\": \"2017-01-04T15:48:06Z\",\n    \"user\": {\n      \"id\": 9,\n      \"uid\": \"9344ab5a\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-01-04T15:48:06Z\",\n      \"updated_at\": \"2017-01-04T15:48:06Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 7,\n        \"incident_id\": 8,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDEvMDQvNzc0d242Mmk4Z19pbWFnZS5wbmciXV0/image.png?sha=d94b0edadd940d66\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2017-01-04T15:48:06Z\",\n        \"updated_at\": \"2017-01-04T15:48:06Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 6,\n        \"incident_id\": 8,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"created_at\": \"2017-01-04T15:48:06Z\",\n        \"updated_at\": \"2017-01-04T15:48:06Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 8,\n    \"slug\": \"setdztLE\",\n    \"user_id\": 9,\n    \"incident_type_id\": 7,\n    \"description\": \"I was stopped\",\n    \"start_time\": \"2017-02-14T02:32:23Z\",\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Enid Schaefer\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-02-14T02:32:23Z\",\n    \"updated_at\": \"2017-02-14T02:32:23Z\",\n    \"user\": {\n      \"id\": 9,\n      \"uid\": \"2e992146\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-02-14T02:32:23Z\",\n      \"updated_at\": \"2017-02-14T02:32:23Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 7,\n        \"incident_id\": 8,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDIvMTMvODI0N3g2N2JlcV9pbWFnZS5wbmciXV0/image.png?sha=6d1c198c29e2813a\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2017-02-14T02:32:23Z\",\n        \"updated_at\": \"2017-02-14T02:32:23Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 6,\n        \"incident_id\": 8,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"age_estimate\": null,\n        \"created_at\": \"2017-02-14T02:32:23Z\",\n        \"updated_at\": \"2017-02-14T02:32:23Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"ec711c910dd92a78ac7217b22edab352\"",
+        "ETag": "W/\"f1b23dcfc31456cfeca6368d2f16dfa7\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "0e712be8-c9fe-4afb-acb4-0e4034ae1d06",
-        "X-Runtime": "0.104606",
-        "Content-Length": "1110"
+        "X-Request-Id": "7d0af180-f19a-4ee5-ad34-3fd49c8898e5",
+        "X-Runtime": "0.628539",
+        "Content-Length": "1128"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
