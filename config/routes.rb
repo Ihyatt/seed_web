@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   resources :conversations
   
   get 'about' => 'pages#about', as: :about
+  get 'privacy-policy' => 'pages#privacy_policy', as: :privacy
+  get 'terms-of-use' => 'pages#terms_of_use', as: :terms
 
   devise_for :users,
     path:        '',
