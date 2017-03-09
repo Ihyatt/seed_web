@@ -27,6 +27,10 @@
       "description": "Reactions to incidents from approved Incdents"
     },
     {
+      "name": "tags_list",
+      "description": "Tags"
+    },
+    {
       "name": "latitude",
       "description": "Float of Latitude"
     },
@@ -54,7 +58,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/incidents",
-      "request_body": "user_id=8&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Alf+Nicolas%2C+Sharon+Block&rating=5&start_time=1487039542&incident_type_id=6&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=6dabfca3d26b2f6175a4ccb28f45d7b9",
+      "request_body": "user_id=8&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Lorena+Stehr%2C+Alverta+Wyman&tags_list=Morton+Bechtelar%2C+Marilyne+Greenfelder&rating=5&start_time=1489035863&incident_type_id=6&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=e7b824211f79aca4208233d69e86dec1",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -65,17 +69,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"cocvqmfH\",\n    \"user_id\": 8,\n    \"incident_type_id\": 6,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2017-02-14T02:32:22Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Alf Nicolas,Sharon Block\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"rating\": 5,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-02-14T02:32:23Z\",\n    \"updated_at\": \"2017-02-14T02:32:23Z\",\n    \"user\": {\n      \"id\": 8,\n      \"uid\": \"fb15b55e\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-02-14T02:32:22Z\",\n      \"updated_at\": \"2017-02-14T02:32:22Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"BjxfcxFz\",\n    \"user_id\": 8,\n    \"incident_type_id\": 6,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2017-03-09T05:04:23Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Lorena Stehr,Alverta Wyman\",\n    \"tags_list\": \"Morton Bechtelar,Marilyne Greenfelder\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"rating\": 5,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-09T05:04:23Z\",\n    \"updated_at\": \"2017-03-09T05:04:23Z\",\n    \"user\": {\n      \"id\": 8,\n      \"uid\": \"ab558f57\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-09T05:04:23Z\",\n      \"updated_at\": \"2017-03-09T05:04:23Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"01fd6ddbcb62abb6c873b700ff2efa8f\"",
+        "ETag": "W/\"bc317f6a4de27c2b955033605c84b332\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "4b876209-ddef-467b-ab4a-c9f48e3680c1",
-        "X-Runtime": "0.101061",
-        "Content-Length": "651"
+        "X-Request-Id": "5e31b95b-82bb-4ce5-b653-455a17847de4",
+        "X-Runtime": "0.088126",
+        "Content-Length": "705"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
