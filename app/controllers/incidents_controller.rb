@@ -3,7 +3,7 @@ class IncidentsController < ApplicationController
 
   # GET /incidents
   def index
-    @incidents = Incident.all
+    @incidents = Incident.page(params[:page])
   end
 
   # GET /incidents/1
