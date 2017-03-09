@@ -10,6 +10,8 @@ resource "Incidents" do
   let!(:officer)       { FactoryGirl.create(:officer, incident: incident) }
   let(:reaction)       { FactoryGirl.create(:reaction) }
   let(:reaction2)      { FactoryGirl.create(:reaction) }
+  let(:tag)            { FactoryGirl.create(:tag) }
+  let(:tag2)           { FactoryGirl.create(:tag) }
   
   get "/api/v1/incidents" do
     parameter :page, "Page of incidents"
@@ -68,6 +70,7 @@ resource "Incidents" do
       expect(incident_json["description"]).to eq(incident.description)
       expect(incident_json["location"]).to eq(incident.location)
       expect(incident_json["reactions_list"]).to eq(incident.reactions_list)
+      expect(incident_json["tags_list"]).to eq(incident.tags_list)
       expect(incident_json["latitude"]).to eq(incident.latitude)
       expect(incident_json["longitude"]).to eq(incident.longitude)
       expect(incident_json["rating"]).to eq(incident.rating)
@@ -120,6 +123,7 @@ resource "Incidents" do
     parameter :description, "What happened"
     parameter :location, "City and State"
     parameter :reactions_list, "Reactions to incidents from approved Incdents"
+    parameter :tags_list, "Tags"
     parameter :latitude, "Float of Latitude"
     parameter :longitude, "Float of longitude"
     parameter :rating, "Numeric rating of incident, 1-5"
@@ -131,6 +135,7 @@ resource "Incidents" do
       description =  "I was arrested"
       location = "San Francisco, CA"
       reactions_list = "#{reaction.name}, #{reaction2.name}"
+      tags_list = "#{tag.name}, #{tag2.name}"
       rating = 5
       start_time = DateTime.now
       metadata = '{"one":"two","key":"value"}'
@@ -138,6 +143,7 @@ resource "Incidents" do
                   description: description,
                   location: location,
                   reactions_list: reactions_list,
+                  tags_list: tags_list,
                   rating: rating,
                   start_time: start_time.to_i,
                   incident_type_id: incident_type.id,
@@ -178,6 +184,7 @@ resource "Incidents" do
     parameter :description, "What happened"
     parameter :location, "City and State"
     parameter :reactions_list, "Reactions to incidents from approved Incdents"
+    parameter :tags_list, "Tags"
     parameter :latitude, "Float of Latitude"
     parameter :longitude, "Float of longitude"
     parameter :rating, "Numeric rating of incident, 1-5"
@@ -189,6 +196,7 @@ resource "Incidents" do
       description =  "I was stopped"
       location = "New York, NY"
       reactions_list = "#{reaction.name}"
+      tags_list = "#{tag.name}"
       rating = 1
       start_time = DateTime.now
       metadata = '{"one":"two","key":"value"}'
@@ -197,6 +205,7 @@ resource "Incidents" do
                   description: description,
                   location: location,
                   reactions_list: reactions_list,
+                  tags_list: tags_list,
                   rating: rating,
                   start_time: start_time.to_i,
                   incident_type_id: incident_type.id,
@@ -215,6 +224,7 @@ resource "Incidents" do
       expect(incident_json["description"]).to eq(description)
       expect(incident_json["location"]).to eq(location)
       expect(incident_json["reactions_list"]).to eq(incident.reactions_list)
+      expect(incident_json["tags_list"]).to eq(incident.tags_list)
       expect(incident_json["latitude"]).not_to be_nil
       expect(incident_json["longitude"]).not_to be_nil
       expect(incident_json["rating"]).to eq(rating)
