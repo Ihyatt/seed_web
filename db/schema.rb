@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309044159) do
+ActiveRecord::Schema.define(version: 20170309044504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,10 +88,12 @@ ActiveRecord::Schema.define(version: 20170309044159) do
     t.boolean  "completed",        default: false, null: false
     t.integer  "incident_type_id"
     t.jsonb    "metadata",         default: {}
+    t.string   "tags",             default: [],                 array: true
     t.index ["completed"], name: "index_incidents_on_completed", using: :btree
     t.index ["incident_type_id"], name: "index_incidents_on_incident_type_id", using: :btree
     t.index ["reactions"], name: "index_incidents_on_reactions", using: :gin
     t.index ["slug"], name: "index_incidents_on_slug", unique: true, using: :btree
+    t.index ["tags"], name: "index_incidents_on_tags", using: :gin
     t.index ["user_id"], name: "index_incidents_on_user_id", using: :btree
   end
 

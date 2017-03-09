@@ -25,6 +25,11 @@
     %small.form-text.text-muted
       Seperate reactions by comma
   .form-group
+    = f.label :tags_list
+    = f.text_field :tags_list, placeholder: "Arrest, Citation, Shooting"
+    %small.form-text.text-muted
+      Seperate tags by comma
+  .form-group
     = f.label :rating
     = f.number_field :rating, min: 1, max: 5
     %small.text-muted

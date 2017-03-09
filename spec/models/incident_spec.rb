@@ -5,6 +5,9 @@ RSpec.describe Incident, type: :model do
   let(:reaction) { FactoryGirl.create(:reaction) }
   let(:reaction2) { FactoryGirl.create(:reaction) }
 
+  let(:tag) { FactoryGirl.create(:tag) }
+  let(:tag2) { FactoryGirl.create(:tag) }
+
   subject { incident }
 
   describe "associations" do
@@ -34,6 +37,19 @@ RSpec.describe Incident, type: :model do
       incident.reactions_list = "bar, dog"
       expect(incident).not_to be_valid
     end
+
+    it "should be valid only with approved tags" do
+      incident.tags = [tag.name, tag2.name]
+      incident.save
+
+      expect(incident).to be_valid
+
+      incident.tags = ["foo"]
+      expect(incident).not_to be_valid
+
+      incident.tags_list = "bar, dog"
+      expect(incident).not_to be_valid
+    end
   end
 
 
@@ -61,8 +77,32 @@ RSpec.describe Incident, type: :model do
 
   end
 
+  describe "tags" do
+    it "should be able to set tags as array" do
+      incident.tags = [tag.name, tag2.name]
+      incident.save
 
-  describe "search",focus: true do
+      expect(incident.tags.count).to eq 2
+      expect(incident.tags).to include(tag.name)
+      expect(incident.tags).to include(tag2.name)
+
+      incidents = Incident.with_any_tags(tag.name)
+      expect(incidents.count).to eq(1)
+    end
+
+    it "should be able to set tags as string" do
+      incident.tags_list = "#{tag.name}, #{tag2.name}"
+      incident.save
+
+      expect(incident.tags.count).to eq 2
+      expect(incident.tags).to include(tag.name)
+      expect(incident.tags).to include(tag2.name)
+    end
+
+  end
+
+
+  describe "search" do
     let!(:user)     { FactoryGirl.create(:user) }
     let!(:incident_type) { FactoryGirl.create(:incident_type) }
     let!(:incident) { FactoryGirl.create(:incident, user: user, reactions: [reaction.name], incident_type: incident_type) }

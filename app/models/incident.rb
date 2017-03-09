@@ -1,6 +1,7 @@
 class Incident < ApplicationRecord
   # Extensions
   acts_as_taggable_array_on :reactions
+  acts_as_taggable_array_on :tags
 
   extend FriendlyId
   friendly_id :slug
@@ -27,6 +28,7 @@ class Incident < ApplicationRecord
   # Callbacks
   after_initialize :ensure_slug, on: :create
   validate :reactions_exist
+  validate :tags_exist
   
   def ensure_slug
     if slug.blank?
@@ -49,6 +51,23 @@ class Incident < ApplicationRecord
     reactions.each do |name|
       if Reaction.where('name ilike ?', name).empty?
         errors.add(:reactions, "#{name} isn't a valid reaction")
+      end
+    end
+  end
+
+
+  def tags_list=(string)
+    self.tags = string.split(",").map!(&:strip)
+  end
+
+  def tags_list
+    self.tags.join(",")
+  end
+
+  def tags_exist
+    tags.each do |name|
+      if Tag.where('name ilike ?', name).empty?
+        errors.add(:tags, "#{name} isn't a valid tag")
       end
     end
   end
