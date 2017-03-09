@@ -93,5 +93,12 @@ Sidekiq handles all background jobs and mailers
 
 
 * Deployment instructions
+```
 git push production master && heroku run rake db:migrate -r production
+```
+
+* Push Branch
+```
+git push production +HEAD:master && heroku run rake db:migrate -r production
+```
 
