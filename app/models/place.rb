@@ -26,6 +26,9 @@ class Place < ApplicationRecord
   auto_strip_attributes :slug, :squish => true
   auto_strip_attributes :level, :squish => true
 
+  # Scopes
+  scope :with_level, -> (level) { where(level: level) }
+
   # Validations
   validates_presence_of :name, :slug
   validates_uniqueness_of :name, scope: [:parent_id], case_sensitive: false
@@ -38,6 +41,10 @@ class Place < ApplicationRecord
     return name if parent.nil?
     return "#{name}-#{parent.short}" if parent.short
     return "#{name}-#{parent.name}"
+  end
+
+  def self.search_by_name(query)
+    where("#{self.table_name}.name ILIKE ?", "%#{query}%")
   end
 
   def self.import_countries
