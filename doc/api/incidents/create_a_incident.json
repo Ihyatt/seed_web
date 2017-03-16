@@ -58,7 +58,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/incidents",
-      "request_body": "user_id=24&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Nathan+Farrell%2C+Kenneth+Leannon&tags_list=Mrs.+Aletha+Nitzsche%2C+Berry+O%27Hara+DDS&rating=5&start_time=1489677016&incident_type_id=12&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=842fca87ae52efb34feeab1c399b9767",
+      "request_body": "user_id=24&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Freddie+Champlin+V%2C+Marguerite+Smitham&tags_list=Golden+Runte%2C+Darion+Cronin&rating=5&start_time=1489690656&incident_type_id=12&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=9304ba7a37cf0fd8ddae2ffee359eaf4",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -69,17 +69,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 24,\n    \"slug\": \"qTuyyXDZ\",\n    \"user_id\": 24,\n    \"incident_type_id\": 12,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2017-03-16T15:10:16Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Nathan Farrell,Kenneth Leannon\",\n    \"tags_list\": \"Mrs. Aletha Nitzsche,Berry O'Hara DDS\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"rating\": 5,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-16T15:10:17Z\",\n    \"updated_at\": \"2017-03-16T15:10:17Z\",\n    \"user\": {\n      \"id\": 24,\n      \"uid\": \"85688476\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-16T15:10:16Z\",\n      \"updated_at\": \"2017-03-16T15:10:16Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 24,\n    \"slug\": \"sHrmzLCx\",\n    \"user_id\": 24,\n    \"incident_type_id\": 12,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2017-03-16T18:57:36Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Freddie Champlin V,Marguerite Smitham\",\n    \"tags_list\": \"Golden Runte,Darion Cronin\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"rating\": 5,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-16T18:57:36Z\",\n    \"updated_at\": \"2017-03-16T18:57:36Z\",\n    \"user\": {\n      \"id\": 24,\n      \"uid\": \"943c1fc9\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-16T18:57:36Z\",\n      \"updated_at\": \"2017-03-16T18:57:36Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"f85ef44d47abf39ff4274e9e0f39779b\"",
+        "ETag": "W/\"fd78320f5b4ba4abbc9268fcd4035a4b\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "270f70f5-c862-4ac6-82d4-0d7563735ae3",
-        "X-Runtime": "0.166788",
-        "Content-Length": "713"
+        "X-Request-Id": "8a3a3484-ec48-4ac9-b2ad-b489097b0869",
+        "X-Runtime": "0.065106",
+        "Content-Length": "709"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

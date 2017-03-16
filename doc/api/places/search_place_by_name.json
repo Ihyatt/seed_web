@@ -1,0 +1,56 @@
+{
+  "resource": "Places",
+  "http_method": "GET",
+  "route": "/api/v1/places",
+  "description": "Search place by name",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "page",
+      "description": "Page Number"
+    },
+    {
+      "name": "name",
+      "description": "Search place by name"
+    },
+    {
+      "name": "level",
+      "description": "Search place by level"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/places?write_key=9304ba7a37cf0fd8ddae2ffee359eaf4&name=San+Francisco",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "write_key": "9304ba7a37cf0fd8ddae2ffee359eaf4",
+        "name": "San Francisco"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 240,\n      \"name\": \"San Francisco\",\n      \"slug\": \"san-francisco-ca\",\n      \"short\": null,\n      \"level\": \"city\",\n      \"parent_id\": 207,\n      \"latitude\": null,\n      \"longitude\": null,\n      \"created_at\": \"2017-03-16T18:57:38Z\",\n      \"updated_at\": \"2017-03-16T18:57:38Z\"\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"cce64081ac99dbdf292f835620fbbf37\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "aaeaae3d-204f-4990-895e-fb13dfc7d515",
+        "X-Runtime": "0.007355",
+        "Content-Length": "291"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

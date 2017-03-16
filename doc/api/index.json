@@ -145,6 +145,32 @@
       ]
     },
     {
+      "name": "Places",
+      "examples": [
+        {
+          "description": "Get All Places",
+          "link": "places/get_all_places.json",
+          "groups": "all",
+          "route": "/api/v1/places",
+          "method": "get"
+        },
+        {
+          "description": "Search place by level",
+          "link": "places/search_place_by_level.json",
+          "groups": "all",
+          "route": "/api/v1/places",
+          "method": "get"
+        },
+        {
+          "description": "Search place by name",
+          "link": "places/search_place_by_name.json",
+          "groups": "all",
+          "route": "/api/v1/places",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "Races",
       "examples": [
         {
