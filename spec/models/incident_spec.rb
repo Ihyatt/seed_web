@@ -13,6 +13,7 @@ RSpec.describe Incident, type: :model do
   describe "associations" do
     it { should belong_to(:user) }
     it { should belong_to(:incident_type) }
+    it { should belong_to(:place) }
     it { should have_many(:attachments).dependent(:destroy) }
     it { should have_many(:officers).dependent(:destroy) }
   end
@@ -105,84 +106,97 @@ RSpec.describe Incident, type: :model do
   describe "search" do
     let!(:user)     { FactoryGirl.create(:user) }
     let!(:incident_type) { FactoryGirl.create(:incident_type) }
-    let!(:incident) { FactoryGirl.create(:incident, user: user, reactions: [reaction.name], tags: [tag.name], incident_type: incident_type, start_time: Time.zone.now + 4.hours, rating: 1) }
+    let!(:neighborhood) { FactoryGirl.create(:place, level: Place::NEIGHBORHOOD, name: "Noe Valley") }
+    let!(:incident) { FactoryGirl.create(:incident, user: user, reactions: [reaction.name], 
+                      tags: [tag.name], incident_type: incident_type, 
+                      start_time: Time.zone.now + 4.hours, rating: 1,
+                      place: neighborhood) }
+
     let!(:completed_incident) { FactoryGirl.create(:incident, completed: true, rating: 5) }
 
     it "should search incidents by user" do
       incident2 = FactoryGirl.create(:incident)
 
       incidents = Incident.search_by(user: user)
-      expect(incidents.count).to eq(1)
 
+      expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
     end
 
     it "should search completed incidents" do
       incidents = Incident.search_by(completed: true)
-      expect(incidents.count).to eq(1)
 
+      expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(completed_incident)
     end
 
     it "should search incomplete incidents" do
       incidents = Incident.search_by(completed: false)
-      expect(incidents.count).to eq(1)
 
+      expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
     end
 
     it "should search incomplete or complete incidents" do
       incidents = Incident.search_by(completed: nil)
+
       expect(incidents.count).to eq(2)
     end
 
     it "should search by reactions" do
       incidents = Incident.search_by(reactions: "#{reaction.name},foo")
-      expect(incidents.count).to eq(1)
 
+      expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
     end
 
     it "should search by tags" do
       incidents = Incident.search_by(tags: "#{tag.name},foo")
-      expect(incidents.count).to eq(1)
 
+      expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
     end
 
     it "should search by incident_type" do
       incidents = Incident.search_by(incident_type: incident_type)
-      expect(incidents.count).to eq(1)
 
+      expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
     end
 
     it "should search by single rating" do
       incidents = Incident.search_by(ratings: "1")
-      expect(incidents.count).to eq(1)
 
+      expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
     end
 
     it "should search by multiple rating" do
       incidents = Incident.search_by(ratings: "1,5")
-      expect(incidents.count).to eq(2)
 
+      expect(incidents.count).to eq(2)
       expect(incidents.first).to eq(incident)
       expect(incidents.last).to eq(completed_incident)
     end
 
     it "should search between start time and end_time" do
       incidents = Incident.search_by(start_time:Time.zone.now, end_time: Time.zone.now + 1.day)
-      expect(incidents.count).to eq(1)
 
+      expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
     end
 
     it "should search after start time" do
       incidents = Incident.search_by(start_time:Time.zone.now)
-      expect(incidents.count).to eq(1)
 
+      expect(incidents.count).to eq(1)
+      expect(incidents.first).to eq(incident)
+    end
+
+    it "should search by place" do
+      incidents = Incident.search_by(place: neighborhood)
+
+      expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
     end
 

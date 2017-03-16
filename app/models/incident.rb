@@ -19,6 +19,7 @@ class Incident < ApplicationRecord
   # Associations
   belongs_to :user
   belongs_to :incident_type
+  belongs_to :place
   has_many :attachments, dependent: :destroy, inverse_of: :incident
   has_many :officers, dependent: :destroy, inverse_of: :incident
 
@@ -80,7 +81,7 @@ class Incident < ApplicationRecord
 
   def self.search_by( user: nil, completed: nil, 
                       reactions: nil, tags: nil, ratings: nil,
-                      incident_type: nil, 
+                      incident_type: nil, place: nil,
                       start_time: nil, end_time: nil
                       )
 
@@ -120,6 +121,10 @@ class Incident < ApplicationRecord
 
     if incident_type
       scope = scope.by_incident_type(incident_type)
+    end
+
+    if place
+      scope = scope.where(place: place)
     end
 
     return scope

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309044504) do
+ActiveRecord::Schema.define(version: 20170316134826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,8 +89,10 @@ ActiveRecord::Schema.define(version: 20170309044504) do
     t.integer  "incident_type_id"
     t.jsonb    "metadata",         default: {}
     t.string   "tags",             default: [],                 array: true
+    t.integer  "place_id"
     t.index ["completed"], name: "index_incidents_on_completed", using: :btree
     t.index ["incident_type_id"], name: "index_incidents_on_incident_type_id", using: :btree
+    t.index ["place_id"], name: "index_incidents_on_place_id", using: :btree
     t.index ["reactions"], name: "index_incidents_on_reactions", using: :gin
     t.index ["slug"], name: "index_incidents_on_slug", unique: true, using: :btree
     t.index ["tags"], name: "index_incidents_on_tags", using: :gin
@@ -255,6 +257,7 @@ ActiveRecord::Schema.define(version: 20170309044504) do
   add_foreign_key "api_keys", "users"
   add_foreign_key "attachments", "incidents"
   add_foreign_key "incidents", "incident_types"
+  add_foreign_key "incidents", "places"
   add_foreign_key "incidents", "users"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
