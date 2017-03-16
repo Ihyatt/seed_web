@@ -5,20 +5,32 @@ resource "Incidents" do
   let!(:user)          { FactoryGirl.create(:user) }
   let!(:api_key)       { FactoryGirl.create(:api_key, user: user) }
   let!(:incident_type) { FactoryGirl.create(:incident_type) }
-  let!(:incident)      { FactoryGirl.create(:incident, user: user, incident_type: incident_type) }
-  let!(:attachment)    { FactoryGirl.create(:attachment, incident: incident) }
-  let!(:officer)       { FactoryGirl.create(:officer, incident: incident) }
   let(:reaction)       { FactoryGirl.create(:reaction) }
   let(:reaction2)      { FactoryGirl.create(:reaction) }
   let(:tag)            { FactoryGirl.create(:tag) }
   let(:tag2)           { FactoryGirl.create(:tag) }
+  let!(:state) { FactoryGirl.create(:place, level: Place::STATE, name: "California") }
+  let!(:city) { FactoryGirl.create(:place, level: Place::CITY, name: "San Francisco", parent: state) }
+  let!(:neighborhood) { FactoryGirl.create(:place, level: Place::NEIGHBORHOOD, name: "Noe Valley", parent: city) }
+  let!(:incident) { FactoryGirl.create(:incident, user: user, reactions: [reaction.name], 
+                      tags: [tag.name], incident_type: incident_type, 
+                      start_time: Time.zone.now + 4.hours, rating: 1,
+                      place: neighborhood) }
+  let!(:attachment)    { FactoryGirl.create(:attachment, incident: incident) }
+  let!(:officer)       { FactoryGirl.create(:officer, incident: incident) }
+  let!(:completed_incident) { FactoryGirl.create(:incident, completed: true, rating: 5) }
+  
+
   
   get "/api/v1/incidents" do
     parameter :page, "Page of incidents"
     parameter :completed,  "If nil, all incidents are returned. If true only completed incidents. If false only incomplete incidents"
     parameter :user_id,  "Incidents only by a specific user"
     parameter :reactions,  "Comma delimited list of reactions to match with ANY search"
+    parameter :tags,  "Comma delimited list of tags to match with ANY search"
+    parameter :ratings,  "Comma delimited list of ratings to match with ANY search"
     parameter :incident_type_id,  "Any Incidents matching the incident type"
+    parameter :place_id,  "Any Incidents matching the place or place's descendents. Searching for California place, matches SF places"
     
 
     example "Get All Incidents" do
@@ -28,7 +40,7 @@ resource "Incidents" do
       
       json = JSON.parse(response_body)
       incidents = json["data"]
-      expect(incidents.count).to eq(1)
+      expect(incidents.count).to eq(2)
 
       incident_json = incidents[0]
       expect(incident_json["id"]).to eq(incident.id)
@@ -50,6 +62,84 @@ resource "Incidents" do
       expect(pagination["page"]).to eq(1)
       expect(pagination["total_pages"]).to eq(1)
       expect(pagination["count"]).to eq(Incident.all.size)
+    end
+
+    example "Search Incidents for User" do
+      do_request(write_key: api_key.write_key, user_id: user.id)
+
+      expect(status).to eq(200)
+      
+      json = JSON.parse(response_body)
+      incidents = json["data"]
+      expect(incidents.count).to eq(1)
+
+      incident_json = incidents[0]
+      expect(incident_json["id"]).to eq(incident.id)
+    end
+
+    example "Search Incidents by Reactions" do
+      do_request(write_key: api_key.write_key, reactions: reaction.name)
+
+      expect(status).to eq(200)
+      
+      json = JSON.parse(response_body)
+      incidents = json["data"]
+      expect(incidents.count).to eq(1)
+
+      incident_json = incidents[0]
+      expect(incident_json["id"]).to eq(incident.id)
+    end
+
+    example "Search Incidents by Tags" do
+      do_request(write_key: api_key.write_key, tags: tag.name)
+
+      expect(status).to eq(200)
+      
+      json = JSON.parse(response_body)
+      incidents = json["data"]
+      expect(incidents.count).to eq(1)
+
+      incident_json = incidents[0]
+      expect(incident_json["id"]).to eq(incident.id)
+    end
+
+    example "Search Incidents by Incident Type" do
+      do_request(write_key: api_key.write_key, incident_type_id: incident_type.id)
+
+      expect(status).to eq(200)
+      
+      json = JSON.parse(response_body)
+      incidents = json["data"]
+      expect(incidents.count).to eq(1)
+
+      incident_json = incidents[0]
+      expect(incident_json["id"]).to eq(incident.id)
+    end
+    
+    example "Search Incidents by Ratings" do
+      do_request(write_key: api_key.write_key, ratings: "1")
+
+      expect(status).to eq(200)
+      
+      json = JSON.parse(response_body)
+      incidents = json["data"]
+      expect(incidents.count).to eq(1)
+
+      incident_json = incidents[0]
+      expect(incident_json["id"]).to eq(incident.id)
+    end
+
+    example "Search Incidents by Place" do
+      do_request(write_key: api_key.write_key, place_id: state.id)
+
+      expect(status).to eq(200)
+      
+      json = JSON.parse(response_body)
+      incidents = json["data"]
+      expect(incidents.count).to eq(1)
+
+      incident_json = incidents[0]
+      expect(incident_json["id"]).to eq(incident.id)
     end
   end
 

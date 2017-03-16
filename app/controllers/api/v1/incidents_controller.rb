@@ -1,7 +1,13 @@
 class API::V1::IncidentsController < API::V1::APIController
 
   def index
-    scope = Incident.all
+    scope = Incident.search_by( user_id: params[:user_id], 
+                                reactions: params[:reactions],
+                                tags: params[:tags],
+                                ratings: params[:ratings],
+                                incident_type_id: params[:incident_type_id],
+                                place_id: params[:place_id]
+                                )
     @incidents = scope.page(params[:page])
     render_collection(@incidents, scope)
   end

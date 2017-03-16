@@ -79,16 +79,16 @@ class Incident < ApplicationRecord
     self.write_attribute(:start_time, Time.at(value.to_i))
   end
 
-  def self.search_by( user: nil, completed: nil, 
+  def self.search_by( user_id: nil, completed: nil, 
                       reactions: nil, tags: nil, ratings: nil,
-                      incident_type: nil, place: nil,
+                      incident_type_id: nil, place_id: nil,
                       start_time: nil, end_time: nil
                       )
 
     scope = Incident.all
 
-    if user
-      scope = scope.by_user(user)
+    if user_id
+      scope = scope.by_user(User.find user_id)
     end
 
     if start_time || end_time
@@ -119,11 +119,13 @@ class Incident < ApplicationRecord
       scope = scope.with_any_rating(array)
     end
 
-    if incident_type
+    if incident_type_id
+      incident_type = IncidentType.find(incident_type_id)
       scope = scope.by_incident_type(incident_type)
     end
 
-    if place
+    if place_id
+      place = Place.find(place_id)
       scope = scope.where(place: place.self_and_descendants)
     end
 

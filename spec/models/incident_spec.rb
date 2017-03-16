@@ -119,7 +119,7 @@ RSpec.describe Incident, type: :model do
     it "should search incidents by user" do
       incident2 = FactoryGirl.create(:incident)
 
-      incidents = Incident.search_by(user: user)
+      incidents = Incident.search_by(user_id: user.id)
 
       expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
@@ -160,7 +160,7 @@ RSpec.describe Incident, type: :model do
     end
 
     it "should search by incident_type" do
-      incidents = Incident.search_by(incident_type: incident_type)
+      incidents = Incident.search_by(incident_type_id: incident_type.id)
 
       expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
@@ -196,21 +196,21 @@ RSpec.describe Incident, type: :model do
     end
 
     it "should search by place" do
-      incidents = Incident.search_by(place: neighborhood)
+      incidents = Incident.search_by(place_id: neighborhood.id)
 
       expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
     end
 
     it "should search by a place's direct children" do
-      incidents = Incident.search_by(place: city)
+      incidents = Incident.search_by(place_id: city.id)
 
       expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
     end
 
     it "should search by a place's children" do
-      incidents = Incident.search_by(place: state)
+      incidents = Incident.search_by(place_id: state.id)
 
       expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)

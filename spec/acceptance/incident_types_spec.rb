@@ -15,7 +15,7 @@ resource "IncidentTypes" do
       expect(status).to eq(200)
       
       json = JSON.parse(response_body)
-      puts json
+      
       incident_types = json["data"]
       expect(incident_types.count).to eq(IncidentType.all.count)
 

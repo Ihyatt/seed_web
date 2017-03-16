@@ -16,8 +16,7 @@ class CreateUserService
 
     user.add_role :admin
     user.save
-    puts 'admin: ' << user.email
-
+  
     return user
   end
 end
