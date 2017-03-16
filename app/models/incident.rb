@@ -124,15 +124,10 @@ class Incident < ApplicationRecord
     end
 
     if place
-      scope = scope.where(place: place)
+      scope = scope.where(place: place.self_and_descendants)
     end
 
     return scope
-  end
-
-  def self.with_any_rating(ratings)
-    ratings = ratings.map(&:to_i)
-    where(rating: ratings)
   end
 
   rails_admin do      

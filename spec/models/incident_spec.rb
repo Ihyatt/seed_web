@@ -106,7 +106,9 @@ RSpec.describe Incident, type: :model do
   describe "search" do
     let!(:user)     { FactoryGirl.create(:user) }
     let!(:incident_type) { FactoryGirl.create(:incident_type) }
-    let!(:neighborhood) { FactoryGirl.create(:place, level: Place::NEIGHBORHOOD, name: "Noe Valley") }
+    let!(:state) { FactoryGirl.create(:place, level: Place::STATE, name: "California") }
+    let!(:city) { FactoryGirl.create(:place, level: Place::CITY, name: "San Francisco", parent: state) }
+    let!(:neighborhood) { FactoryGirl.create(:place, level: Place::NEIGHBORHOOD, name: "Noe Valley", parent: city) }
     let!(:incident) { FactoryGirl.create(:incident, user: user, reactions: [reaction.name], 
                       tags: [tag.name], incident_type: incident_type, 
                       start_time: Time.zone.now + 4.hours, rating: 1,
@@ -195,6 +197,20 @@ RSpec.describe Incident, type: :model do
 
     it "should search by place" do
       incidents = Incident.search_by(place: neighborhood)
+
+      expect(incidents.count).to eq(1)
+      expect(incidents.first).to eq(incident)
+    end
+
+    it "should search by a place's direct children" do
+      incidents = Incident.search_by(place: city)
+
+      expect(incidents.count).to eq(1)
+      expect(incidents.first).to eq(incident)
+    end
+
+    it "should search by a place's children" do
+      incidents = Incident.search_by(place: state)
 
       expect(incidents.count).to eq(1)
       expect(incidents.first).to eq(incident)
