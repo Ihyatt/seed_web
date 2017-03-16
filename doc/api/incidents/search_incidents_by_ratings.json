@@ -1,0 +1,76 @@
+{
+  "resource": "Incidents",
+  "http_method": "GET",
+  "route": "/api/v1/incidents",
+  "description": "Search Incidents by Ratings",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "page",
+      "description": "Page of incidents"
+    },
+    {
+      "name": "completed",
+      "description": "If nil, all incidents are returned. If true only completed incidents. If false only incomplete incidents"
+    },
+    {
+      "name": "user_id",
+      "description": "Incidents only by a specific user"
+    },
+    {
+      "name": "reactions",
+      "description": "Comma delimited list of reactions to match with ANY search"
+    },
+    {
+      "name": "tags",
+      "description": "Comma delimited list of tags to match with ANY search"
+    },
+    {
+      "name": "ratings",
+      "description": "Comma delimited list of ratings to match with ANY search"
+    },
+    {
+      "name": "incident_type_id",
+      "description": "Any Incidents matching the incident type"
+    },
+    {
+      "name": "place_id",
+      "description": "Any Incidents matching the place or place's descendents. Searching for California place, matches SF places"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/incidents?write_key=842fca87ae52efb34feeab1c399b9767&ratings=1",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "write_key": "842fca87ae52efb34feeab1c399b9767",
+        "ratings": "1"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 12,\n      \"slug\": \"B5bsF7GV\",\n      \"user_id\": 14,\n      \"incident_type_id\": 7,\n      \"description\": null,\n      \"start_time\": \"2017-03-16T19:10:15Z\",\n      \"location\": null,\n      \"reactions_list\": \"Mrs. Richmond Ebert\",\n      \"tags_list\": \"Alejandrin Windler III\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": 1,\n      \"completed\": false,\n      \"metadata\": {\n      },\n      \"created_at\": \"2017-03-16T15:10:15Z\",\n      \"updated_at\": \"2017-03-16T15:10:15Z\",\n      \"user\": {\n        \"id\": 14,\n        \"uid\": \"6394928a\",\n        \"facebook_id\": null,\n        \"created_at\": \"2017-03-16T15:10:15Z\",\n        \"updated_at\": \"2017-03-16T15:10:15Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"religion_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n        {\n          \"id\": 7,\n          \"incident_id\": 12,\n          \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMTYvOXFwMmtlM2hsbF9pbWFnZS5wbmciXV0/image.png?sha=06bcd1c0b9ad016e\",\n          \"asset_name\": \"image.png\",\n          \"asset_width\": 640,\n          \"asset_height\": 640,\n          \"created_at\": \"2017-03-16T15:10:15Z\",\n          \"updated_at\": \"2017-03-16T15:10:15Z\"\n        }\n      ],\n      \"officers\": [\n        {\n          \"id\": 6,\n          \"incident_id\": 12,\n          \"race_id\": null,\n          \"gender_id\": null,\n          \"name\": null,\n          \"badge_number\": null,\n          \"description\": null,\n          \"age_estimate\": null,\n          \"created_at\": \"2017-03-16T15:10:15Z\",\n          \"updated_at\": \"2017-03-16T15:10:15Z\"\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"8568e8a75690d8b704982601ac4d0c80\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "859e8d92-a095-46ec-845f-9765ccc8342f",
+        "X-Runtime": "0.020001",
+        "Content-Length": "1159"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

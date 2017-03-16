@@ -17,29 +17,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/incidents/3?write_key=e7b824211f79aca4208233d69e86dec1",
+      "request_path": "/api/v1/incidents/16?write_key=842fca87ae52efb34feeab1c399b9767",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "e7b824211f79aca4208233d69e86dec1"
+        "write_key": "842fca87ae52efb34feeab1c399b9767"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 3,\n    \"slug\": \"Hbbc9wgh\",\n    \"user_id\": 5,\n    \"incident_type_id\": 3,\n    \"description\": null,\n    \"start_time\": null,\n    \"location\": null,\n    \"reactions_list\": \"\",\n    \"tags_list\": \"\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"rating\": null,\n    \"completed\": false,\n    \"metadata\": {\n    },\n    \"created_at\": \"2017-03-09T05:04:23Z\",\n    \"updated_at\": \"2017-03-09T05:04:23Z\",\n    \"user\": {\n      \"id\": 5,\n      \"uid\": \"6724987b\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-09T05:04:23Z\",\n      \"updated_at\": \"2017-03-09T05:04:23Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 3,\n        \"incident_id\": 3,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMDgvNWR1N3Q3MmF0aF9pbWFnZS5wbmciXV0/image.png?sha=e1c3fc6d6bdea27c\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2017-03-09T05:04:23Z\",\n        \"updated_at\": \"2017-03-09T05:04:23Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 2,\n        \"incident_id\": 3,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"age_estimate\": null,\n        \"created_at\": \"2017-03-09T05:04:23Z\",\n        \"updated_at\": \"2017-03-09T05:04:23Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 16,\n    \"slug\": \"gszFxMU6\",\n    \"user_id\": 18,\n    \"incident_type_id\": 9,\n    \"description\": null,\n    \"start_time\": \"2017-03-16T19:10:15Z\",\n    \"location\": null,\n    \"reactions_list\": \"Zora Cruickshank\",\n    \"tags_list\": \"Gunnar Ward\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"rating\": 1,\n    \"completed\": false,\n    \"metadata\": {\n    },\n    \"created_at\": \"2017-03-16T15:10:15Z\",\n    \"updated_at\": \"2017-03-16T15:10:15Z\",\n    \"user\": {\n      \"id\": 18,\n      \"uid\": \"8c4fb717\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-16T15:10:15Z\",\n      \"updated_at\": \"2017-03-16T15:10:15Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 9,\n        \"incident_id\": 16,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMTYvNG12enFhdTRqdF9pbWFnZS5wbmciXV0/image.png?sha=d8c3660e1fabeb23\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2017-03-16T15:10:15Z\",\n        \"updated_at\": \"2017-03-16T15:10:15Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 8,\n        \"incident_id\": 16,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"age_estimate\": null,\n        \"created_at\": \"2017-03-16T15:10:15Z\",\n        \"updated_at\": \"2017-03-16T15:10:15Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"a42c6953f6fddf17ef4fea694fd8b975\"",
+        "ETag": "W/\"bd701a998090219ffc7f58b48771f065\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "fc5aa8b1-ef4d-4af7-8726-9eb4ff509e98",
-        "X-Runtime": "0.023764",
-        "Content-Length": "1046"
+        "X-Request-Id": "51ce8b1a-b234-4943-99df-cf724adfccc3",
+        "X-Runtime": "0.019035",
+        "Content-Length": "1093"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

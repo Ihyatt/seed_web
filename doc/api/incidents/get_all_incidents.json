@@ -22,8 +22,20 @@
       "description": "Comma delimited list of reactions to match with ANY search"
     },
     {
+      "name": "tags",
+      "description": "Comma delimited list of tags to match with ANY search"
+    },
+    {
+      "name": "ratings",
+      "description": "Comma delimited list of ratings to match with ANY search"
+    },
+    {
       "name": "incident_type_id",
       "description": "Any Incidents matching the incident type"
+    },
+    {
+      "name": "place_id",
+      "description": "Any Incidents matching the place or place's descendents. Searching for California place, matches SF places"
     }
   ],
   "response_fields": [
@@ -32,29 +44,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/incidents?write_key=e7b824211f79aca4208233d69e86dec1",
+      "request_path": "/api/v1/incidents?write_key=842fca87ae52efb34feeab1c399b9767",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "e7b824211f79aca4208233d69e86dec1"
+        "write_key": "842fca87ae52efb34feeab1c399b9767"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 2,\n      \"slug\": \"xvXpzq7D\",\n      \"user_id\": 4,\n      \"incident_type_id\": 2,\n      \"description\": null,\n      \"start_time\": null,\n      \"location\": null,\n      \"reactions_list\": \"\",\n      \"tags_list\": \"\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": null,\n      \"completed\": false,\n      \"metadata\": {\n      },\n      \"created_at\": \"2017-03-09T05:04:23Z\",\n      \"updated_at\": \"2017-03-09T05:04:23Z\",\n      \"user\": {\n        \"id\": 4,\n        \"uid\": \"42f63f53\",\n        \"facebook_id\": null,\n        \"created_at\": \"2017-03-09T05:04:23Z\",\n        \"updated_at\": \"2017-03-09T05:04:23Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"religion_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n        {\n          \"id\": 2,\n          \"incident_id\": 2,\n          \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMDgvOXU0N3RxNm9yeV9pbWFnZS5wbmciXV0/image.png?sha=ceb0a866571b8971\",\n          \"asset_name\": \"image.png\",\n          \"asset_width\": 640,\n          \"asset_height\": 640,\n          \"created_at\": \"2017-03-09T05:04:23Z\",\n          \"updated_at\": \"2017-03-09T05:04:23Z\"\n        }\n      ],\n      \"officers\": [\n        {\n          \"id\": 1,\n          \"incident_id\": 2,\n          \"race_id\": null,\n          \"gender_id\": null,\n          \"name\": null,\n          \"badge_number\": null,\n          \"description\": null,\n          \"age_estimate\": null,\n          \"created_at\": \"2017-03-09T05:04:23Z\",\n          \"updated_at\": \"2017-03-09T05:04:23Z\"\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 2,\n      \"slug\": \"yu4ySQ85\",\n      \"user_id\": 4,\n      \"incident_type_id\": 2,\n      \"description\": null,\n      \"start_time\": \"2017-03-16T19:10:14Z\",\n      \"location\": null,\n      \"reactions_list\": \"Beaulah Skiles\",\n      \"tags_list\": \"Green Kuvalis DVM\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": 1,\n      \"completed\": false,\n      \"metadata\": {\n      },\n      \"created_at\": \"2017-03-16T15:10:14Z\",\n      \"updated_at\": \"2017-03-16T15:10:14Z\",\n      \"user\": {\n        \"id\": 4,\n        \"uid\": \"d0fff030\",\n        \"facebook_id\": null,\n        \"created_at\": \"2017-03-16T15:10:14Z\",\n        \"updated_at\": \"2017-03-16T15:10:14Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"religion_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n        {\n          \"id\": 2,\n          \"incident_id\": 2,\n          \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMTYvMTF0eTJrOGJnZV9pbWFnZS5wbmciXV0/image.png?sha=97e49a6e63ad27e5\",\n          \"asset_name\": \"image.png\",\n          \"asset_width\": 640,\n          \"asset_height\": 640,\n          \"created_at\": \"2017-03-16T15:10:14Z\",\n          \"updated_at\": \"2017-03-16T15:10:14Z\"\n        }\n      ],\n      \"officers\": [\n        {\n          \"id\": 1,\n          \"incident_id\": 2,\n          \"race_id\": null,\n          \"gender_id\": null,\n          \"name\": null,\n          \"badge_number\": null,\n          \"description\": null,\n          \"age_estimate\": null,\n          \"created_at\": \"2017-03-16T15:10:14Z\",\n          \"updated_at\": \"2017-03-16T15:10:14Z\"\n        }\n      ]\n    },\n    {\n      \"id\": 3,\n      \"slug\": \"hg38Au34\",\n      \"user_id\": 5,\n      \"incident_type_id\": null,\n      \"description\": null,\n      \"start_time\": null,\n      \"location\": null,\n      \"reactions_list\": \"\",\n      \"tags_list\": \"\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": 5,\n      \"completed\": true,\n      \"metadata\": {\n      },\n      \"created_at\": \"2017-03-16T15:10:14Z\",\n      \"updated_at\": \"2017-03-16T15:10:14Z\",\n      \"user\": {\n        \"id\": 5,\n        \"uid\": \"6d062c0a\",\n        \"facebook_id\": null,\n        \"created_at\": \"2017-03-16T15:10:14Z\",\n        \"updated_at\": \"2017-03-16T15:10:14Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"religion_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n\n      ],\n      \"officers\": [\n\n      ]\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 2\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"9669b8c22edd3121e5843c1643bc0df9\"",
+        "ETag": "W/\"ce57150818f154cab399dd189f317e86\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "d61cec60-153b-4b26-8c1a-0043f22e3f0f",
-        "X-Runtime": "0.054647",
-        "Content-Length": "1098"
+        "X-Request-Id": "79a9c428-9192-40f5-8892-75c85d415a74",
+        "X-Runtime": "0.056568",
+        "Content-Length": "1664"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

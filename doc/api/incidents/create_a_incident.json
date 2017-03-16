@@ -58,7 +58,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/incidents",
-      "request_body": "user_id=8&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Lorena+Stehr%2C+Alverta+Wyman&tags_list=Morton+Bechtelar%2C+Marilyne+Greenfelder&rating=5&start_time=1489035863&incident_type_id=6&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=e7b824211f79aca4208233d69e86dec1",
+      "request_body": "user_id=24&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Nathan+Farrell%2C+Kenneth+Leannon&tags_list=Mrs.+Aletha+Nitzsche%2C+Berry+O%27Hara+DDS&rating=5&start_time=1489677016&incident_type_id=12&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=842fca87ae52efb34feeab1c399b9767",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -69,17 +69,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 7,\n    \"slug\": \"BjxfcxFz\",\n    \"user_id\": 8,\n    \"incident_type_id\": 6,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2017-03-09T05:04:23Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Lorena Stehr,Alverta Wyman\",\n    \"tags_list\": \"Morton Bechtelar,Marilyne Greenfelder\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"rating\": 5,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-09T05:04:23Z\",\n    \"updated_at\": \"2017-03-09T05:04:23Z\",\n    \"user\": {\n      \"id\": 8,\n      \"uid\": \"ab558f57\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-09T05:04:23Z\",\n      \"updated_at\": \"2017-03-09T05:04:23Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 24,\n    \"slug\": \"qTuyyXDZ\",\n    \"user_id\": 24,\n    \"incident_type_id\": 12,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2017-03-16T15:10:16Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Nathan Farrell,Kenneth Leannon\",\n    \"tags_list\": \"Mrs. Aletha Nitzsche,Berry O'Hara DDS\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"rating\": 5,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-16T15:10:17Z\",\n    \"updated_at\": \"2017-03-16T15:10:17Z\",\n    \"user\": {\n      \"id\": 24,\n      \"uid\": \"85688476\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-16T15:10:16Z\",\n      \"updated_at\": \"2017-03-16T15:10:16Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"bc317f6a4de27c2b955033605c84b332\"",
+        "ETag": "W/\"f85ef44d47abf39ff4274e9e0f39779b\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "5e31b95b-82bb-4ce5-b653-455a17847de4",
-        "X-Runtime": "0.088126",
-        "Content-Length": "705"
+        "X-Request-Id": "270f70f5-c862-4ac6-82d4-0d7563735ae3",
+        "X-Runtime": "0.166788",
+        "Content-Length": "713"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

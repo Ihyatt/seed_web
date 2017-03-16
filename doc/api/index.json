@@ -75,6 +75,48 @@
           "method": "get"
         },
         {
+          "description": "Search Incidents by Incident Type",
+          "link": "incidents/search_incidents_by_incident_type.json",
+          "groups": "all",
+          "route": "/api/v1/incidents",
+          "method": "get"
+        },
+        {
+          "description": "Search Incidents by Place",
+          "link": "incidents/search_incidents_by_place.json",
+          "groups": "all",
+          "route": "/api/v1/incidents",
+          "method": "get"
+        },
+        {
+          "description": "Search Incidents by Ratings",
+          "link": "incidents/search_incidents_by_ratings.json",
+          "groups": "all",
+          "route": "/api/v1/incidents",
+          "method": "get"
+        },
+        {
+          "description": "Search Incidents by Reactions",
+          "link": "incidents/search_incidents_by_reactions.json",
+          "groups": "all",
+          "route": "/api/v1/incidents",
+          "method": "get"
+        },
+        {
+          "description": "Search Incidents by Tags",
+          "link": "incidents/search_incidents_by_tags.json",
+          "groups": "all",
+          "route": "/api/v1/incidents",
+          "method": "get"
+        },
+        {
+          "description": "Search Incidents for User",
+          "link": "incidents/search_incidents_for_user.json",
+          "groups": "all",
+          "route": "/api/v1/incidents",
+          "method": "get"
+        },
+        {
           "description": "Update A Incident",
           "link": "incidents/update_a_incident.json",
           "groups": "all",
