@@ -105,8 +105,8 @@ RSpec.describe Incident, type: :model do
   describe "search" do
     let!(:user)     { FactoryGirl.create(:user) }
     let!(:incident_type) { FactoryGirl.create(:incident_type) }
-    let!(:incident) { FactoryGirl.create(:incident, user: user, reactions: [reaction.name], incident_type: incident_type) }
-    let!(:completed_incident) { FactoryGirl.create(:incident, completed: true) }
+    let!(:incident) { FactoryGirl.create(:incident, user: user, reactions: [reaction.name], tags: [tag.name], incident_type: incident_type, start_time: Time.zone.now + 4.hours, rating: 1) }
+    let!(:completed_incident) { FactoryGirl.create(:incident, completed: true, rating: 5) }
 
     it "should search incidents by user" do
       incident2 = FactoryGirl.create(:incident)
@@ -143,11 +143,48 @@ RSpec.describe Incident, type: :model do
       expect(incidents.first).to eq(incident)
     end
 
+    it "should search by tags" do
+      incidents = Incident.search_by(tags: "#{tag.name},foo")
+      expect(incidents.count).to eq(1)
+
+      expect(incidents.first).to eq(incident)
+    end
+
     it "should search by incident_type" do
       incidents = Incident.search_by(incident_type: incident_type)
       expect(incidents.count).to eq(1)
 
       expect(incidents.first).to eq(incident)
     end
+
+    it "should search by single rating" do
+      incidents = Incident.search_by(ratings: "1")
+      expect(incidents.count).to eq(1)
+
+      expect(incidents.first).to eq(incident)
+    end
+
+    it "should search by multiple rating" do
+      incidents = Incident.search_by(ratings: "1,5")
+      expect(incidents.count).to eq(2)
+
+      expect(incidents.first).to eq(incident)
+      expect(incidents.last).to eq(completed_incident)
+    end
+
+    it "should search between start time and end_time" do
+      incidents = Incident.search_by(start_time:Time.zone.now, end_time: Time.zone.now + 1.day)
+      expect(incidents.count).to eq(1)
+
+      expect(incidents.first).to eq(incident)
+    end
+
+    it "should search after start time" do
+      incidents = Incident.search_by(start_time:Time.zone.now)
+      expect(incidents.count).to eq(1)
+
+      expect(incidents.first).to eq(incident)
+    end
+
   end
 end

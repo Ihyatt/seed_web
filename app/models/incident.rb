@@ -13,6 +13,8 @@ class Incident < ApplicationRecord
   scope :incomplete, ->       { where(completed: false) }
   scope :by_user, ->          (user) { where(user: user) }
   scope :by_incident_type, -> (incident_type) { where(incident_type: incident_type) }
+  scope :between, ->          (start_date, end_date) { where("incidents.start_time BETWEEN ? and ?", start_date, end_date) }
+  scope :with_any_rating, ->  (ratings) { where(rating: ratings.map(&:to_i)) }
   
   # Associations
   belongs_to :user
@@ -76,11 +78,21 @@ class Incident < ApplicationRecord
     self.write_attribute(:start_time, Time.at(value.to_i))
   end
 
-  def self.search_by(user: nil, completed: nil, reactions: nil, incident_type: nil)
+  def self.search_by( user: nil, completed: nil, 
+                      reactions: nil, tags: nil, ratings: nil,
+                      incident_type: nil, 
+                      start_time: nil, end_time: nil
+                      )
+
     scope = Incident.all
 
     if user
       scope = scope.by_user(user)
+    end
+
+    if start_time || end_time
+      end_time = start_time + 1.year if end_time.nil?
+      scope = scope.between(start_time, end_time)
     end
 
     unless completed.nil?
@@ -96,11 +108,26 @@ class Incident < ApplicationRecord
       scope = scope.with_any_reactions(array)
     end
 
+    if tags
+      array = tags.split(",").map!(&:strip)
+      scope = scope.with_any_tags(array)
+    end
+
+    if ratings
+      array = ratings.split(",").map(&:strip)
+      scope = scope.with_any_rating(array)
+    end
+
     if incident_type
       scope = scope.by_incident_type(incident_type)
     end
 
     return scope
+  end
+
+  def self.with_any_rating(ratings)
+    ratings = ratings.map(&:to_i)
+    where(rating: ratings)
   end
 
   rails_admin do      
