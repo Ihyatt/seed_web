@@ -26,7 +26,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/attachments",
-      "request_body": "incident_id=2&asset_url=http%3A%2F%2Fraheem.ai%2Fimages%2Flogo_light%402x.png&write_key=10a01609a89b06226b298440ab3fdfe8",
+      "request_body": "incident_id=2&asset_url=http%3A%2F%2Fraheem.ai%2Fimages%2Flogo_light%402x.png&write_key=4d0e98f85f251cef5476470ba141d1db",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -37,16 +37,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 2,\n    \"incident_id\": 2,\n    \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMjAvNmRkMWw0czZzel9sb2dvX2xpZ2h0XzJ4LnBuZyJdXQ/logo_light%402x.png?sha=fcb8aafccc68ede1\",\n    \"asset_name\": \"logo_light@2x.png\",\n    \"asset_width\": 132,\n    \"asset_height\": 156,\n    \"created_at\": \"2017-03-20T12:34:39Z\",\n    \"updated_at\": \"2017-03-20T12:34:39Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 2,\n    \"incident_id\": 2,\n    \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMjAvOTFic2hsOXk3d19sb2dvX2xpZ2h0XzJ4LnBuZyJdXQ/logo_light%402x.png?sha=adc2c591d5a58055\",\n    \"asset_name\": \"logo_light@2x.png\",\n    \"asset_width\": 132,\n    \"asset_height\": 156,\n    \"created_at\": \"2017-03-20T13:09:44Z\",\n    \"updated_at\": \"2017-03-20T13:09:44Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"0a3cbd1ad0d63bf5b6a2e0d17c45a645\"",
+        "ETag": "W/\"b3d85dbd837a5acd0d851b0bc64e292c\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "100fee4d-b404-4653-8aca-d82064ba0899",
-        "X-Runtime": "0.305296",
+        "X-Request-Id": "8a643d9a-1613-4521-ba28-efae150b7e58",
+        "X-Runtime": "0.261448",
         "Content-Length": "356"
       },
       "response_content_type": "application/json; charset=utf-8",

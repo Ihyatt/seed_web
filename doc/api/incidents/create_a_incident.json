@@ -58,7 +58,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/incidents",
-      "request_body": "user_id=25&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Omer+Hintz%2C+Skyla+Bogisich+DDS&tags_list=Ronaldo+Kautzer%2C+Rachel+Pacocha+PhD&rating=5&start_time=1490013282&incident_type_id=12&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=10a01609a89b06226b298440ab3fdfe8",
+      "request_body": "user_id=25&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Hailie+Borer+DVM%2C+Christopher+Sauer&tags_list=Vern+Dare%2C+Hayley+Witting&rating=5&start_time=1490015387&incident_type_id=12&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=4d0e98f85f251cef5476470ba141d1db",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -69,17 +69,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 25,\n    \"slug\": \"B7zPz5Ay\",\n    \"user_id\": 25,\n    \"incident_type_id\": 12,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2017-03-20T12:34:42Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Omer Hintz,Skyla Bogisich DDS\",\n    \"tags_list\": \"Ronaldo Kautzer,Rachel Pacocha PhD\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"rating\": 5,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-20T12:34:42Z\",\n    \"updated_at\": \"2017-03-20T12:34:42Z\",\n    \"user\": {\n      \"id\": 25,\n      \"uid\": \"85b70e69\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-20T12:34:42Z\",\n      \"updated_at\": \"2017-03-20T12:34:42Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 25,\n    \"slug\": \"mjshhsZm\",\n    \"user_id\": 25,\n    \"incident_type_id\": 12,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2017-03-20T13:09:47Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Hailie Borer DVM,Christopher Sauer\",\n    \"tags_list\": \"Vern Dare,Hayley Witting\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"address\": \"8411 Market St, San Francisco, CA 94103, USA\",\n    \"rating\": 5,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-20T13:09:47Z\",\n    \"updated_at\": \"2017-03-20T13:09:47Z\",\n    \"user\": {\n      \"id\": 25,\n      \"uid\": \"ed964de8\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-20T13:09:47Z\",\n      \"updated_at\": \"2017-03-20T13:09:47Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"e2ea26acb4e53a64834b99f84e8ed025\"",
+        "ETag": "W/\"fb443b87e40305ac6c7c340adfc87135\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "38e45099-2896-4c29-a1eb-7d372fb2cafc",
-        "X-Runtime": "0.125301",
-        "Content-Length": "709"
+        "X-Request-Id": "c02053e9-5419-4b71-8cf5-fc42e9659300",
+        "X-Runtime": "0.203999",
+        "Content-Length": "761"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
