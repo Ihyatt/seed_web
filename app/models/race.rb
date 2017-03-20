@@ -1,4 +1,5 @@
 class Race < ApplicationRecord
+  include Searchable
   # Scopes
   scope :by_position, -> { order('position ASC') }
   

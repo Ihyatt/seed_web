@@ -1,5 +1,6 @@
 class Religion < ApplicationRecord
   # Extensions
+  include Searchable
   extend FriendlyId
   friendly_id :name, use: :slugged
 

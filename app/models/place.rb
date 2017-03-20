@@ -1,4 +1,6 @@
 class Place < ApplicationRecord
+  include Searchable
+
   COUNTRY = "country"
   REGION = "region"
   DIVISION = "division"
@@ -41,10 +43,6 @@ class Place < ApplicationRecord
     return name if parent.nil?
     return "#{name}-#{parent.short}" if parent.short
     return "#{name}-#{parent.name}"
-  end
-
-  def self.search_by_name(query)
-    where("#{self.table_name}.name ILIKE ?", "%#{query}%")
   end
 
   def self.import_countries
