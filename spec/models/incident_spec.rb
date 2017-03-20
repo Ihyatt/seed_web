@@ -217,4 +217,14 @@ RSpec.describe Incident, type: :model do
     end
 
   end
+
+  describe "reverse geocode" do
+    it "should reverse geocode from lat, long" do
+      incident.latitude = 37.743424
+      incident.longitude = -122.428573
+      incident.save
+
+      expect(incident.address).to eq "385 29th St, San Francisco, CA 94131, USA"
+    end
+  end
 end

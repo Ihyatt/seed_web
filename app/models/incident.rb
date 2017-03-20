@@ -6,7 +6,11 @@ class Incident < ApplicationRecord
   extend FriendlyId
   friendly_id :slug
   geocoded_by :location              # can also be an IP address
-  after_validation :geocode          # auto-fetch coordinates   
+  after_validation :geocode          # auto-fetch coordinates
+
+  reverse_geocoded_by :latitude, :longitude 
+  after_validation :reverse_geocode
+  
 
   # Scopes
   scope :completed, ->        { where(completed: true) }
