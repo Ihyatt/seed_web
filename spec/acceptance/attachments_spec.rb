@@ -8,12 +8,36 @@ resource "Attachments" do
   
   post "/api/v1/attachments" do
     parameter :attachment_id, "Incident ID", required: true
-    parameter :asset, "Asset upload"
+    parameter :asset, "Asset File OR"
+    parameter :asset_url, "Internet URL to file"
     
     example "Create An Attachment" do
 
       do_request( incident_id: incident.id,
                   asset: File.open( Rails.root + 'spec/support/fixtures/image.png'),
+                  write_key: api_key.write_key)
+
+      expect(status).to eq(200)
+      
+      # get the newly created attachment
+      attachment = Attachment.last
+
+      json = JSON.parse(response_body)
+      #json.should == ""
+
+      attachment_json = json["data"]
+    
+      expect(attachment_json["id"]).to eq(attachment.id)
+      expect(attachment_json["incident_id"]).to eq(incident.id)
+      expect(attachment_json["asset_original_url"]).not_to be_nil
+      expect(attachment_json["created_at"]).not_to be_nil
+      expect(attachment_json["updated_at"]).not_to be_nil
+    end
+
+    example "Create An Attachment with Asset URL" do
+
+      do_request( incident_id: incident.id,
+                  asset_url: "http://raheem.ai/images/logo_light@2x.png",
                   write_key: api_key.write_key)
 
       expect(status).to eq(200)

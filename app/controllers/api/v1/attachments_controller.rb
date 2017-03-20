@@ -12,6 +12,6 @@ class API::V1::AttachmentsController < API::V1::APIController
 
   private
   def attachment_params
-    params.permit(:incident_id, :asset)
+    params.permit(:incident_id, :asset, :asset_url)
   end
 end
