@@ -44,6 +44,6 @@ class API::V1::UsersController < API::V1::APIController
 
   private
   def user_params
-    params.permit(:email, :password, :first_name, :last_name, :race_id, :gender_id, :religion_id, :birthday )
+    params.permit(:email, :password, :first_name, :last_name, :race_id, :race_name, :gender_id, :gender_name, :religion_id, :religion_name, :birthday )
   end
 end

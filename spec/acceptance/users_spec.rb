@@ -146,7 +146,10 @@ resource "Users" do
     parameter :last_name, "Last Name"
     parameter :race_id, "Race ID"
     parameter :gender_id, "Gender ID"
-    parameter :religion, "Religion ID"
+    parameter :religion_id, "Religion ID"
+    parameter :race_name, "Race Name"
+    parameter :gender_name, "Gender Name"
+    parameter :religion_name, "Religion Name"
     parameter :birthday, "Birthday in Epoch Time (seconds since 1970)"
 
     example "Update A User" do
@@ -160,9 +163,9 @@ resource "Users" do
                   first_name: "Ketan", 
                   last_name: "Foo", 
                   write_key: api_key.write_key, 
-                  race_id: Race.first.id, 
-                  gender_id: Gender.first.id, 
-                  religion_id: Religion.first.id, 
+                  race_id: Race.last.id, 
+                  gender_id: Gender.last.id, 
+                  religion_id: Religion.last.id, 
                   birthday: birthday.to_i)
 
       expect(status).to eq(200)
@@ -177,9 +180,45 @@ resource "Users" do
       user_json = json["data"]
       expect(user_json["id"]).to eq(user.id)
       expect(user_json["uid"]).to eq(user.uid)
-      expect(user_json["race_id"]).to eq(Race.first.id)
-      expect(user_json["gender_id"]).to eq(Gender.first.id)
-      expect(user_json["religion_id"]).to eq(Religion.first.id)
+      expect(user_json["race_id"]).to eq(Race.last.id)
+      expect(user_json["gender_id"]).to eq(Gender.last.id)
+      expect(user_json["religion_id"]).to eq(Religion.last.id)
+      expect(user_json["birthday"]).not_to be_nil
+      expect(user_json["created_at"]).not_to be_nil
+      expect(user_json["updated_at"]).not_to be_nil
+    end
+
+    example "Update User Gender, Race and Religion as Name" do
+      Race.seed
+      Gender.seed
+      Religion.seed
+      email = FactoryGirl.generate(:email)
+      birthday = DateTime.now
+      do_request(id: user.id, 
+                  email: email, 
+                  first_name: "Ketan", 
+                  last_name: "Foo", 
+                  write_key: api_key.write_key, 
+                  race_name: Race.last.name,
+                  gender_name: Gender.last.name,
+                  religion_name: Religion.last.name,
+                  birthday: birthday.to_i)
+
+      expect(status).to eq(200)
+      
+      # reload the user due to update call
+      user.reload
+      expect(user.unconfirmed_email).to eq(email)
+      expect(user.first_name).to eq("Ketan")
+
+      json = JSON.parse(response_body)
+      
+      user_json = json["data"]
+      expect(user_json["id"]).to eq(user.id)
+      expect(user_json["uid"]).to eq(user.uid)
+      expect(user_json["race_id"]).to eq(Race.last.id)
+      expect(user_json["gender_id"]).to eq(Gender.last.id)
+      expect(user_json["religion_id"]).to eq(Religion.last.id)
       expect(user_json["birthday"]).not_to be_nil
       expect(user_json["created_at"]).not_to be_nil
       expect(user_json["updated_at"]).not_to be_nil
