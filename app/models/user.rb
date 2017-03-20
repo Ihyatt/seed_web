@@ -48,6 +48,21 @@ class User < ApplicationRecord
     return first_name if first_name.present?
     return email
   end
+
+  def race_name=(value)
+    found_record = Race.search_by_exact_name(value).first
+    self.race = found_record if found_record.present?
+  end
+
+  def gender_name=(value)
+    found_record = Gender.search_by_exact_name(value).first
+    self.gender = found_record if found_record.present?
+  end
+
+  def religion_name=(value)
+    found_record = Religion.search_by_exact_name(value).first
+    self.religion = found_record if found_record.present?
+  end
   
   # Send Devise notifications through ActiveJob deliver_later
   # https://github.com/plataformatec/devise#activejob-integration

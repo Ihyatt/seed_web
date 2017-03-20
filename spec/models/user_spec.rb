@@ -42,4 +42,33 @@ RSpec.describe User, type: :model do
       expect(user).to eq(user2)
     end
   end
+
+  describe "setters" do
+    it "should support setting race by name" do
+      Race.seed
+      race = Race.first
+      user.race_name = race.name
+      user.save
+
+      expect(user.race_id).to eq race.id
+    end
+
+    it "should support setting gender by name" do
+      Gender.seed
+      gender = Gender.first
+      user.gender_name = gender.name
+      user.save
+
+      expect(user.gender_id).to eq gender.id
+    end
+
+    it "should support setting religion by name" do
+      Religion.seed
+      religion = Religion.first
+      user.religion_name = religion.name
+      user.save
+
+      expect(user.religion_id).to eq religion.id
+    end
+  end
 end
