@@ -44,30 +44,30 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/incidents?write_key=9304ba7a37cf0fd8ddae2ffee359eaf4&ratings=1",
+      "request_path": "/api/v1/incidents?write_key=fd019ed35f2e69a4b35d42eb4d76f4d9&ratings=1",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "9304ba7a37cf0fd8ddae2ffee359eaf4",
+        "write_key": "fd019ed35f2e69a4b35d42eb4d76f4d9",
         "ratings": "1"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 12,\n      \"slug\": \"Grw6s4zp\",\n      \"user_id\": 14,\n      \"incident_type_id\": 7,\n      \"description\": null,\n      \"start_time\": \"2017-03-16T22:57:35Z\",\n      \"location\": null,\n      \"reactions_list\": \"Amya Swaniawski\",\n      \"tags_list\": \"Scotty Murazik I\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": 1,\n      \"completed\": false,\n      \"metadata\": {\n      },\n      \"created_at\": \"2017-03-16T18:57:35Z\",\n      \"updated_at\": \"2017-03-16T18:57:35Z\",\n      \"user\": {\n        \"id\": 14,\n        \"uid\": \"4b5f6e63\",\n        \"facebook_id\": null,\n        \"created_at\": \"2017-03-16T18:57:35Z\",\n        \"updated_at\": \"2017-03-16T18:57:35Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"religion_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n        {\n          \"id\": 7,\n          \"incident_id\": 12,\n          \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMTYvNWhxazFpdGQ4Y19pbWFnZS5wbmciXV0/image.png?sha=e7bf351672d63500\",\n          \"asset_name\": \"image.png\",\n          \"asset_width\": 640,\n          \"asset_height\": 640,\n          \"created_at\": \"2017-03-16T18:57:35Z\",\n          \"updated_at\": \"2017-03-16T18:57:35Z\"\n        }\n      ],\n      \"officers\": [\n        {\n          \"id\": 6,\n          \"incident_id\": 12,\n          \"race_id\": null,\n          \"gender_id\": null,\n          \"name\": null,\n          \"badge_number\": null,\n          \"description\": null,\n          \"age_estimate\": null,\n          \"created_at\": \"2017-03-16T18:57:35Z\",\n          \"updated_at\": \"2017-03-16T18:57:35Z\"\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 13,\n      \"slug\": \"qVqyK9Zg\",\n      \"user_id\": 15,\n      \"incident_type_id\": 7,\n      \"description\": null,\n      \"start_time\": \"2017-03-20T06:35:28Z\",\n      \"location\": null,\n      \"reactions_list\": \"Joe Sauer\",\n      \"tags_list\": \"Neil Howe\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": 1,\n      \"completed\": false,\n      \"metadata\": {\n      },\n      \"created_at\": \"2017-03-20T02:35:28Z\",\n      \"updated_at\": \"2017-03-20T02:35:28Z\",\n      \"user\": {\n        \"id\": 15,\n        \"uid\": \"241f43d0\",\n        \"facebook_id\": null,\n        \"created_at\": \"2017-03-20T02:35:28Z\",\n        \"updated_at\": \"2017-03-20T02:35:28Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"religion_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n        {\n          \"id\": 8,\n          \"incident_id\": 13,\n          \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMTkvOHlpYXB6bzQ4a19pbWFnZS5wbmciXV0/image.png?sha=180ce0531a3314d2\",\n          \"asset_name\": \"image.png\",\n          \"asset_width\": 640,\n          \"asset_height\": 640,\n          \"created_at\": \"2017-03-20T02:35:28Z\",\n          \"updated_at\": \"2017-03-20T02:35:28Z\"\n        }\n      ],\n      \"officers\": [\n        {\n          \"id\": 6,\n          \"incident_id\": 13,\n          \"race_id\": null,\n          \"gender_id\": null,\n          \"name\": null,\n          \"badge_number\": null,\n          \"description\": null,\n          \"age_estimate\": null,\n          \"created_at\": \"2017-03-20T02:35:28Z\",\n          \"updated_at\": \"2017-03-20T02:35:28Z\"\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"fe577a2087a26ff1f3c6e21b5b8b9802\"",
+        "ETag": "W/\"6b67b478616b300b3e0a6a40d4ac69d0\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "aa230d8b-6026-4434-918a-65b0e9a49e57",
-        "X-Runtime": "0.021676",
-        "Content-Length": "1149"
+        "X-Request-Id": "0d7d3150-20de-4890-b345-28897ca61f4c",
+        "X-Runtime": "0.021921",
+        "Content-Length": "1136"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

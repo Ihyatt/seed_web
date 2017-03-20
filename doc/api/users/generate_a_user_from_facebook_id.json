@@ -18,7 +18,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/users/generate",
-      "request_body": "facebook_id=12JaSUVaZMLMqEeBiabewJz7eAXGht4zdN_1",
+      "request_body": "facebook_id=1N4pvunvRYs25TbcM8HgXLEEhm3mVkuyki_1",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -29,16 +29,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 44,\n    \"uid\": \"d6364005\",\n    \"facebook_id\": \"12JaSUVaZMLMqEeBiabewJz7eAXGht4zdN_1\",\n    \"created_at\": \"2017-03-16T18:57:41Z\",\n    \"updated_at\": \"2017-03-16T18:57:41Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"religion_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 45,\n    \"uid\": \"d66ff866\",\n    \"facebook_id\": \"1N4pvunvRYs25TbcM8HgXLEEhm3mVkuyki_1\",\n    \"created_at\": \"2017-03-20T02:35:35Z\",\n    \"updated_at\": \"2017-03-20T02:35:35Z\",\n    \"race_id\": null,\n    \"gender_id\": null,\n    \"religion_id\": null,\n    \"birthday\": null\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"1339a8df685f758b05bb4d1545c87daa\"",
+        "ETag": "W/\"21241ba748cfc9b95751d49e2421fbaa\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "9862c1c4-33bf-479e-87b9-a7f057e62274",
-        "X-Runtime": "0.036618",
+        "X-Request-Id": "a7e819b9-d5be-49e4-b564-c705da01740c",
+        "X-Runtime": "0.026255",
         "Content-Length": "249"
       },
       "response_content_type": "application/json; charset=utf-8",
