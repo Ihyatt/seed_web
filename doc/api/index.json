@@ -143,6 +143,13 @@
           "method": "post"
         },
         {
+          "description": "Add Officer to Incident by Race, Gender Name",
+          "link": "officers/add_officer_to_incident_by_race,_gender_name.json",
+          "groups": "all",
+          "route": "/api/v1/officers",
+          "method": "post"
+        },
+        {
           "description": "Update Officer",
           "link": "officers/update_officer.json",
           "groups": "all",

@@ -37,8 +37,8 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/api/v1/officers/14.json",
-      "request_body": "name=Officer+Bob&badge_number=123&description=not+nice&race_id=1&gender_id=3&write_key=d039ee8f2694de52e63e66d4b62210ca",
+      "request_path": "/api/v1/officers/15.json",
+      "request_body": "name=Officer+Bob&badge_number=123&description=not+nice&race_id=1&gender_id=3&write_key=10a01609a89b06226b298440ab3fdfe8",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -49,16 +49,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 14,\n    \"incident_id\": 29,\n    \"race_id\": 1,\n    \"gender_id\": 3,\n    \"name\": \"Officer Bob\",\n    \"badge_number\": \"123\",\n    \"description\": \"not nice\",\n    \"age_estimate\": null,\n    \"created_at\": \"2017-03-20T03:03:57Z\",\n    \"updated_at\": \"2017-03-20T03:03:57Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 15,\n    \"incident_id\": 30,\n    \"race_id\": 1,\n    \"gender_id\": 3,\n    \"name\": \"Officer Bob\",\n    \"badge_number\": \"123\",\n    \"description\": \"not nice\",\n    \"age_estimate\": null,\n    \"created_at\": \"2017-03-20T12:34:43Z\",\n    \"updated_at\": \"2017-03-20T12:34:43Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"338c1ec250fd15da5017d4e4da0fa421\"",
+        "ETag": "W/\"f4bb397d45442fd9bffd8123d96f13a8\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "73aa1854-a99d-4b57-8541-f25457e556b2",
-        "X-Runtime": "0.020412",
+        "X-Request-Id": "96197328-6b38-47f2-96b7-0e703ad048a4",
+        "X-Runtime": "0.016545",
         "Content-Length": "242"
       },
       "response_content_type": "application/json; charset=utf-8",

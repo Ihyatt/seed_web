@@ -17,29 +17,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/incidents/17?write_key=d039ee8f2694de52e63e66d4b62210ca",
+      "request_path": "/api/v1/incidents/17?write_key=10a01609a89b06226b298440ab3fdfe8",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "d039ee8f2694de52e63e66d4b62210ca"
+        "write_key": "10a01609a89b06226b298440ab3fdfe8"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 17,\n    \"slug\": \"2X9gyJWY\",\n    \"user_id\": 19,\n    \"incident_type_id\": 9,\n    \"description\": null,\n    \"start_time\": \"2017-03-20T07:03:55Z\",\n    \"location\": null,\n    \"reactions_list\": \"Vito Cruickshank\",\n    \"tags_list\": \"Asa Lynch\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"rating\": 1,\n    \"completed\": false,\n    \"metadata\": {\n    },\n    \"created_at\": \"2017-03-20T03:03:55Z\",\n    \"updated_at\": \"2017-03-20T03:03:55Z\",\n    \"user\": {\n      \"id\": 19,\n      \"uid\": \"864e49aa\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-20T03:03:55Z\",\n      \"updated_at\": \"2017-03-20T03:03:55Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 10,\n        \"incident_id\": 17,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMTkvNm1uMHhreDJhN19pbWFnZS5wbmciXV0/image.png?sha=61adfcc0268f1b06\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2017-03-20T03:03:55Z\",\n        \"updated_at\": \"2017-03-20T03:03:55Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 8,\n        \"incident_id\": 17,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"age_estimate\": null,\n        \"created_at\": \"2017-03-20T03:03:55Z\",\n        \"updated_at\": \"2017-03-20T03:03:55Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 17,\n    \"slug\": \"CNw6zDmp\",\n    \"user_id\": 19,\n    \"incident_type_id\": 9,\n    \"description\": null,\n    \"start_time\": \"2017-03-20T16:34:41Z\",\n    \"location\": null,\n    \"reactions_list\": \"Alec Medhurst DDS\",\n    \"tags_list\": \"Derick O'Connell\",\n    \"latitude\": null,\n    \"longitude\": null,\n    \"rating\": 1,\n    \"completed\": false,\n    \"metadata\": {\n    },\n    \"created_at\": \"2017-03-20T12:34:41Z\",\n    \"updated_at\": \"2017-03-20T12:34:41Z\",\n    \"user\": {\n      \"id\": 19,\n      \"uid\": \"9c1a675d\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-20T12:34:41Z\",\n      \"updated_at\": \"2017-03-20T12:34:41Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 10,\n        \"incident_id\": 17,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMjAvbHJhemJ4Z3hnX2ltYWdlLnBuZyJdXQ/image.png?sha=7b17440fa85853c5\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2017-03-20T12:34:41Z\",\n        \"updated_at\": \"2017-03-20T12:34:41Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 8,\n        \"incident_id\": 17,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"age_estimate\": null,\n        \"created_at\": \"2017-03-20T12:34:41Z\",\n        \"updated_at\": \"2017-03-20T12:34:41Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"b3ced24d66ff0ad76ad45d442cc7c489\"",
+        "ETag": "W/\"19426f6d60fd956ab8cf9727ef139548\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "cc808f04-4111-487d-803a-c5d4d821546f",
-        "X-Runtime": "0.030439",
-        "Content-Length": "1092"
+        "X-Request-Id": "83fc5c87-f077-4cfe-b68a-fb1bc73d2cb9",
+        "X-Runtime": "0.018615",
+        "Content-Length": "1099"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

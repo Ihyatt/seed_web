@@ -2,7 +2,7 @@
   "resource": "Officers",
   "http_method": "POST",
   "route": "/api/v1/officers",
-  "description": "Add Officer to Incident",
+  "description": "Add Officer to Incident by Race, Gender Name",
   "explanation": null,
   "parameters": [
     {
@@ -50,7 +50,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/officers",
-      "request_body": "incident_id=28&name=Officer&badge_number=123&description=not+nice&race_id=1&gender_id=3&age_estimate=20-30&write_key=10a01609a89b06226b298440ab3fdfe8",
+      "request_body": "incident_id=29&name=Officer&badge_number=123&description=not+nice&race_name=White&gender_name=Male&age_estimate=20-30&write_key=10a01609a89b06226b298440ab3fdfe8",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -61,16 +61,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 13,\n    \"incident_id\": 28,\n    \"race_id\": 1,\n    \"gender_id\": 3,\n    \"name\": \"Officer\",\n    \"badge_number\": \"123\",\n    \"description\": \"not nice\",\n    \"age_estimate\": \"20-30\",\n    \"created_at\": \"2017-03-20T12:34:43Z\",\n    \"updated_at\": \"2017-03-20T12:34:43Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 14,\n    \"incident_id\": 29,\n    \"race_id\": 1,\n    \"gender_id\": 3,\n    \"name\": \"Officer\",\n    \"badge_number\": \"123\",\n    \"description\": \"not nice\",\n    \"age_estimate\": \"20-30\",\n    \"created_at\": \"2017-03-20T12:34:43Z\",\n    \"updated_at\": \"2017-03-20T12:34:43Z\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"a713911d91869a09ea40554ff8669d03\"",
+        "ETag": "W/\"f72cb1b8b9ed9554e3bafe10f9717f2d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "07498a39-bf41-4222-a2d8-68cc8d53b581",
-        "X-Runtime": "0.015666",
+        "X-Request-Id": "b041fc89-2571-4cd2-8ea8-3d4db89b5be1",
+        "X-Runtime": "0.040362",
         "Content-Length": "241"
       },
       "response_content_type": "application/json; charset=utf-8",
