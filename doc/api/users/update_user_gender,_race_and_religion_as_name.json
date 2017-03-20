@@ -2,7 +2,7 @@
   "resource": "Users",
   "http_method": "PUT",
   "route": "/api/v1/users/:id.json",
-  "description": "Update A User",
+  "description": "Update User Gender, Race and Religion as Name",
   "explanation": null,
   "parameters": [
     {
@@ -61,8 +61,8 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/api/v1/users/44.json",
-      "request_body": "email=madelyn_46%40kozey.io&first_name=Ketan&last_name=Foo&write_key=d039ee8f2694de52e63e66d4b62210ca&race_id=3&gender_id=4&religion_id=20&birthday=1489979042",
+      "request_path": "/api/v1/users/45.json",
+      "request_body": "email=daryl_48%40kirlinkemmer.org&first_name=Ketan&last_name=Foo&write_key=d039ee8f2694de52e63e66d4b62210ca&race_name=Asian&gender_name=Female&religion_name=Sikh&birthday=1489979042",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -73,16 +73,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 44,\n    \"uid\": \"70708f7f\",\n    \"facebook_id\": null,\n    \"created_at\": \"2017-03-20T03:04:02Z\",\n    \"updated_at\": \"2017-03-20T03:04:02Z\",\n    \"race_id\": 3,\n    \"gender_id\": 4,\n    \"religion_id\": 20,\n    \"birthday\": \"2017-03-19\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 45,\n    \"uid\": \"5c6e8c27\",\n    \"facebook_id\": null,\n    \"created_at\": \"2017-03-20T03:04:02Z\",\n    \"updated_at\": \"2017-03-20T03:04:03Z\",\n    \"race_id\": 3,\n    \"gender_id\": 4,\n    \"religion_id\": 30,\n    \"birthday\": \"2017-03-19\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"91fe1b8653a5f0e5ae9e47f18a3c4a6b\"",
+        "ETag": "W/\"e2014fc9b16b7c59dfb7f1e4cdc8c9c7\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "31eeca70-8e62-41e6-be98-b17beba04b18",
-        "X-Runtime": "0.020719",
+        "X-Request-Id": "6d71f24f-b712-47d0-af53-0dcc0dae55c2",
+        "X-Runtime": "0.030812",
         "Content-Length": "215"
       },
       "response_content_type": "application/json; charset=utf-8",

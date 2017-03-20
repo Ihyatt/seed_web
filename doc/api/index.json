@@ -273,6 +273,13 @@
           "groups": "all",
           "route": "/api/v1/users/:id.json",
           "method": "put"
+        },
+        {
+          "description": "Update User Gender, Race and Religion as Name",
+          "link": "users/update_user_gender,_race_and_religion_as_name.json",
+          "groups": "all",
+          "route": "/api/v1/users/:id.json",
+          "method": "put"
         }
       ]
     }

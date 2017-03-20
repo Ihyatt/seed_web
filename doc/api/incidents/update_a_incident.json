@@ -58,7 +58,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/incidents/26.json",
-      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Bettye+Williamson+Sr.&tags_list=Nasir+Weimann&rating=1&start_time=1489977329&incident_type_id=13&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=fd019ed35f2e69a4b35d42eb4d76f4d9",
+      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Cleora+Bosco&tags_list=Juana+Sawayn&rating=1&start_time=1489979037&incident_type_id=13&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=d039ee8f2694de52e63e66d4b62210ca",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -69,17 +69,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 26,\n    \"slug\": \"Fy77rTzX\",\n    \"user_id\": 27,\n    \"incident_type_id\": 13,\n    \"description\": \"I was stopped\",\n    \"start_time\": \"2017-03-20T02:35:29Z\",\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Bettye Williamson Sr.\",\n    \"tags_list\": \"Nasir Weimann\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-20T02:35:29Z\",\n    \"updated_at\": \"2017-03-20T02:35:29Z\",\n    \"user\": {\n      \"id\": 27,\n      \"uid\": \"77f08b90\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-20T02:35:29Z\",\n      \"updated_at\": \"2017-03-20T02:35:29Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 14,\n        \"incident_id\": 26,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMTkvN2NnZTBodjRzdV9pbWFnZS5wbmciXV0/image.png?sha=5e5ad0864ea20143\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2017-03-20T02:35:29Z\",\n        \"updated_at\": \"2017-03-20T02:35:29Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 12,\n        \"incident_id\": 26,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"age_estimate\": null,\n        \"created_at\": \"2017-03-20T02:35:29Z\",\n        \"updated_at\": \"2017-03-20T02:35:29Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 26,\n    \"slug\": \"X8kdyzey\",\n    \"user_id\": 27,\n    \"incident_type_id\": 13,\n    \"description\": \"I was stopped\",\n    \"start_time\": \"2017-03-20T03:03:57Z\",\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Cleora Bosco\",\n    \"tags_list\": \"Juana Sawayn\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"rating\": 1,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-20T03:03:57Z\",\n    \"updated_at\": \"2017-03-20T03:03:57Z\",\n    \"user\": {\n      \"id\": 27,\n      \"uid\": \"1094d9dd\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-20T03:03:57Z\",\n      \"updated_at\": \"2017-03-20T03:03:57Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 14,\n        \"incident_id\": 26,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMTkvMnZqY2loNmh2MF9pbWFnZS5wbmciXV0/image.png?sha=4e32cfd7445d7915\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2017-03-20T03:03:57Z\",\n        \"updated_at\": \"2017-03-20T03:03:57Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 12,\n        \"incident_id\": 26,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"age_estimate\": null,\n        \"created_at\": \"2017-03-20T03:03:57Z\",\n        \"updated_at\": \"2017-03-20T03:03:57Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"98e79c4e499a40b3dcdf85a7bab833e8\"",
+        "ETag": "W/\"6ca671e8acbe60d4fdfc0decc45a35e2\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "cc2c50d8-c7ac-46f3-8c23-fc99336d096d",
-        "X-Runtime": "0.109275",
-        "Content-Length": "1172"
+        "X-Request-Id": "6cfe6f25-828c-440f-8579-531364d74fa4",
+        "X-Runtime": "0.109838",
+        "Content-Length": "1162"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

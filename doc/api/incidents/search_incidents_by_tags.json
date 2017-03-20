@@ -44,30 +44,30 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/incidents?write_key=fd019ed35f2e69a4b35d42eb4d76f4d9&tags=Virginia+Boehm",
+      "request_path": "/api/v1/incidents?write_key=d039ee8f2694de52e63e66d4b62210ca&tags=Dr.+Marco+Hansen",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "fd019ed35f2e69a4b35d42eb4d76f4d9",
-        "tags": "Virginia Boehm"
+        "write_key": "d039ee8f2694de52e63e66d4b62210ca",
+        "tags": "Dr. Marco Hansen"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 9,\n      \"slug\": \"jgJRrzaz\",\n      \"user_id\": 11,\n      \"incident_type_id\": 5,\n      \"description\": null,\n      \"start_time\": \"2017-03-20T06:35:28Z\",\n      \"location\": null,\n      \"reactions_list\": \"Carlie Towne\",\n      \"tags_list\": \"Virginia Boehm\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": 1,\n      \"completed\": false,\n      \"metadata\": {\n      },\n      \"created_at\": \"2017-03-20T02:35:28Z\",\n      \"updated_at\": \"2017-03-20T02:35:28Z\",\n      \"user\": {\n        \"id\": 11,\n        \"uid\": \"9393c07d\",\n        \"facebook_id\": null,\n        \"created_at\": \"2017-03-20T02:35:28Z\",\n        \"updated_at\": \"2017-03-20T02:35:28Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"religion_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n        {\n          \"id\": 6,\n          \"incident_id\": 9,\n          \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMTkvNWpqZGwxY3hzeV9pbWFnZS5wbmciXV0/image.png?sha=755746af50316558\",\n          \"asset_name\": \"image.png\",\n          \"asset_width\": 640,\n          \"asset_height\": 640,\n          \"created_at\": \"2017-03-20T02:35:28Z\",\n          \"updated_at\": \"2017-03-20T02:35:28Z\"\n        }\n      ],\n      \"officers\": [\n        {\n          \"id\": 4,\n          \"incident_id\": 9,\n          \"race_id\": null,\n          \"gender_id\": null,\n          \"name\": null,\n          \"badge_number\": null,\n          \"description\": null,\n          \"age_estimate\": null,\n          \"created_at\": \"2017-03-20T02:35:28Z\",\n          \"updated_at\": \"2017-03-20T02:35:28Z\"\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 9,\n      \"slug\": \"SJS9RzC3\",\n      \"user_id\": 11,\n      \"incident_type_id\": 5,\n      \"description\": null,\n      \"start_time\": \"2017-03-20T07:03:54Z\",\n      \"location\": null,\n      \"reactions_list\": \"Darryl Farrell II\",\n      \"tags_list\": \"Dr. Marco Hansen\",\n      \"latitude\": null,\n      \"longitude\": null,\n      \"rating\": 1,\n      \"completed\": false,\n      \"metadata\": {\n      },\n      \"created_at\": \"2017-03-20T03:03:54Z\",\n      \"updated_at\": \"2017-03-20T03:03:54Z\",\n      \"user\": {\n        \"id\": 11,\n        \"uid\": \"6d3815e9\",\n        \"facebook_id\": null,\n        \"created_at\": \"2017-03-20T03:03:54Z\",\n        \"updated_at\": \"2017-03-20T03:03:54Z\",\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"religion_id\": null,\n        \"birthday\": null\n      },\n      \"attachments\": [\n        {\n          \"id\": 6,\n          \"incident_id\": 9,\n          \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMTkvOWxna2V0MGgweF9pbWFnZS5wbmciXV0/image.png?sha=173f803ab6d1fa37\",\n          \"asset_name\": \"image.png\",\n          \"asset_width\": 640,\n          \"asset_height\": 640,\n          \"created_at\": \"2017-03-20T03:03:54Z\",\n          \"updated_at\": \"2017-03-20T03:03:54Z\"\n        }\n      ],\n      \"officers\": [\n        {\n          \"id\": 4,\n          \"incident_id\": 9,\n          \"race_id\": null,\n          \"gender_id\": null,\n          \"name\": null,\n          \"badge_number\": null,\n          \"description\": null,\n          \"age_estimate\": null,\n          \"created_at\": \"2017-03-20T03:03:54Z\",\n          \"updated_at\": \"2017-03-20T03:03:54Z\"\n        }\n      ]\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"7c840d7f411b9344b847d8bb88e76103\"",
+        "ETag": "W/\"b2caada7681654a3f1e18c69fa175a53\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "f9f521f9-46c4-4152-806a-f39c6b7bad4f",
-        "X-Runtime": "0.026395",
-        "Content-Length": "1141"
+        "X-Request-Id": "11b31046-8fe8-4492-b4c2-9bfe73441fcd",
+        "X-Runtime": "0.023933",
+        "Content-Length": "1148"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
