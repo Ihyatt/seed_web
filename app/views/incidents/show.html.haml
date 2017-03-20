@@ -31,6 +31,17 @@
       %p
         %b Location:
         = @incident.location
+      %p
+        %b Address:
+        = @incident.address
+      %p
+        = link_to "View Map", "http://maps.google.com/?q=#{@incident.latitude}, #{@incident.longitude}", class: "btn btn-info", target: "blank"
+      %p
+        %b Latitude:
+        = @incident.latitude
+        ,
+        %b Longitude:
+        = @incident.longitude
 
       %p
         %b Reactions:
@@ -41,14 +52,7 @@
       %p
         %b Rating:
         = @incident.rating
-      %p
-        = link_to "View Map", "http://maps.google.com/?q=#{@incident.latitude}, #{@incident.longitude}", class: "btn btn-info", target: "blank"
-      %p
-        %b Latitude:
-        = @incident.latitude
-        ,
-        %b Longitude:
-        = @incident.longitude
+      
       %p
         %b Attachments
         %ul.list-unstyled

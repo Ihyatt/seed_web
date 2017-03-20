@@ -227,4 +227,20 @@ RSpec.describe Incident, type: :model do
       expect(incident.address).to eq "385 29th St, San Francisco, CA 94131, USA"
     end
   end
+
+  describe "scopes" do
+    it "should return incidents without_address" do
+      incidents = Incident.without_address
+      expect(Incident.without_address.count).to eq 0
+    end
+
+    it "should return incidents with_coordinates" do
+      incident.latitude = 37.743424
+      incident.longitude = -122.428573
+      incident.save
+      incidents = Incident.with_coordinates
+      expect(incidents.count).to eq 1
+      expect(incidents.first).to eq incident
+    end
+  end
 end
