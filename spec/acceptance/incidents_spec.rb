@@ -208,7 +208,7 @@ resource "Incidents" do
   end
 
   post "/api/v1/incidents" do
-    parameter :user_id, "Incident Email", required: true
+    parameter :user_id, "User ID", required: true
     parameter :incident_type_id, "Incident Type"
     parameter :description, "What happened"
     parameter :location, "City and State"
@@ -218,17 +218,40 @@ resource "Incidents" do
     parameter :longitude, "Float of longitude"
     parameter :rating, "Numeric rating of incident, 1-5"
     parameter :start_time, "When the incident occured in Epoch Time (seconds since 1970)"
-    parameter :metadata, "JSON String"
+    parameter :metadata, "JSON blob"
 
+    example "Initial Incident Creation" do
+      do_request( user_id: user.id,
+                  write_key: api_key.write_key)
 
-    example "Create A Incident" do
+      expect(status).to eq(200)
+
+      # get the newly created incident
+      incident = Incident.last
+      expect(incident.metadata).to be_empty
+
+      json = JSON.parse(response_body)
+
+      incident_json = json["data"]
+
+      expect(incident_json["id"]).to eq(incident.id)
+      expect(incident_json["slug"]).to eq(incident.slug)
+      expect(incident_json["created_at"]).not_to be_nil
+      expect(incident_json["updated_at"]).not_to be_nil
+    end
+
+    example "Fully Populated Incident" do
       description =  "I was arrested"
       location = "San Francisco, CA"
       reactions_list = "#{reaction.name}, #{reaction2.name}"
       tags_list = "#{tag.name}, #{tag2.name}"
       rating = 5
       start_time = DateTime.now
-      metadata = '{"one":"two","key":"value"}'
+      metadata = {
+          key1: "value1",
+          key2: 33.333,
+          key3: 12345
+        }
       do_request( user_id: user.id,
                   description: description,
                   location: location,
@@ -244,6 +267,8 @@ resource "Incidents" do
       
       # get the newly created incident
       incident = Incident.last
+      expect(incident.metadata).not_to be_nil
+      expect(incident.metadata).to eq({"key1" => "value1", "key2" => "33.333", "key3" => "12345"})
 
       json = JSON.parse(response_body)
       #json.should == ""
@@ -261,7 +286,7 @@ resource "Incidents" do
       expect(incident_json["start_time"]).not_to be_nil
       expect(incident_json["incident_type_id"]).to eq(incident_type.id)
 
-      expect(incident_json["metadata"]).to eq("{\"one\":\"two\",\"key\":\"value\"}")
+      expect(incident_json["metadata"]).to eq({"key1" => "value1", "key2" => "33.333", "key3" => "12345"})
 
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil
@@ -279,7 +304,7 @@ resource "Incidents" do
     parameter :longitude, "Float of longitude"
     parameter :rating, "Numeric rating of incident, 1-5"
     parameter :start_time, "When the incident occured in Epoch Time (seconds since 1970)"
-    parameter :metadata, "JSON String"
+    parameter :metadata, "JSON blob"
 
     example "Update A Incident" do
       email = FactoryGirl.generate(:email)
@@ -289,7 +314,11 @@ resource "Incidents" do
       tags_list = "#{tag.name}"
       rating = 1
       start_time = DateTime.now
-      metadata = '{"one":"two","key":"value"}'
+      metadata = {
+          key1: "value1",
+          key2: 33.333,
+          key3: 12345
+        }
 
       do_request( id: incident.id,
                   description: description,
@@ -306,6 +335,8 @@ resource "Incidents" do
       
       # reload the user due to update call
       incident.reload
+      expect(incident.metadata).not_to be_nil
+      expect(incident.metadata).to eq({"key1" => "value1", "key2" => "33.333", "key3" => "12345"})
 
       json = JSON.parse(response_body)
 
@@ -321,7 +352,7 @@ resource "Incidents" do
       expect(incident_json["start_time"]).not_to be_nil
       expect(incident_json["incident_type_id"]).to eq(incident_type.id)
 
-      expect(incident_json["metadata"]).to eq("{\"one\":\"two\",\"key\":\"value\"}")
+      expect(incident_json["metadata"]).to eq({"key1" => "value1", "key2" => "33.333", "key3" => "12345"})
 
       expect(incident_json["created_at"]).not_to be_nil
       expect(incident_json["updated_at"]).not_to be_nil

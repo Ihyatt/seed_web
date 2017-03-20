@@ -39,6 +39,7 @@ class API::V1::IncidentsController < API::V1::APIController
 
   private
   def incident_params
-    params.permit(:user_id, :slug, :description, :start_time, :location,:reactions_list, :tags_list, :latitude, :longitude, :rating, :completed, :incident_type_id, :metadata)
+    metadata_keys = params[:metadata].keys unless params[:metadata].blank?
+    params.permit(:user_id, :slug, :description, :start_time, :location, :reactions_list, :tags_list, :latitude, :longitude, :rating, :completed, :incident_type_id, metadata: metadata_keys)
   end
 end
