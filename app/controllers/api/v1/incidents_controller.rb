@@ -13,7 +13,7 @@ class API::V1::IncidentsController < API::V1::APIController
   end
 
   def show
-    @incident = Incident.find params[:id]
+    set_incident
     render_resource(@incident)
   end
 
@@ -28,7 +28,7 @@ class API::V1::IncidentsController < API::V1::APIController
   end
 
   def update
-    @incident = Incident.find params[:id]
+    set_incident
     if @incident.update_attributes(incident_params)
       render_resource(@incident)
     else
@@ -38,6 +38,10 @@ class API::V1::IncidentsController < API::V1::APIController
   end
 
   private
+  def set_incident
+    @incident = Incident.friendly.find(params[:id])
+  end
+
   def incident_params
     params.permit(:user_id, :slug, :description, :start_time, :location,:reactions_list, :tags_list, :latitude, :longitude, :rating, :completed, :incident_type_id, :incident_type_name, :metadata)
   end
