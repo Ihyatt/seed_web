@@ -58,7 +58,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/incidents/26.json",
-      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Faye+Krajcik&tags_list=Kevon+Fritsch&rating=1&start_time=1490015387&incident_type_id=13&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=4d0e98f85f251cef5476470ba141d1db",
+      "request_body": "description=I+was+stopped&location=New+York%2C+NY&reactions_list=Golden+Bashirian&tags_list=Miss+Myrtice+Green&rating=1&start_time=1490065126&incident_type_id=13&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=69259e42f47902ddb7fe53e618775cf0",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -69,17 +69,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 26,\n    \"slug\": \"b7j4wTsM\",\n    \"user_id\": 27,\n    \"incident_type_id\": 13,\n    \"description\": \"I was stopped\",\n    \"start_time\": \"2017-03-20T13:09:47Z\",\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Faye Krajcik\",\n    \"tags_list\": \"Kevon Fritsch\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"address\": \"New York City Hall, New York, NY 10007, USA\",\n    \"rating\": 1,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-20T13:09:47Z\",\n    \"updated_at\": \"2017-03-20T13:09:48Z\",\n    \"user\": {\n      \"id\": 27,\n      \"uid\": \"a05c97d6\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-20T13:09:47Z\",\n      \"updated_at\": \"2017-03-20T13:09:47Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 14,\n        \"incident_id\": 26,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMjAvNWdzdGlqcHdiMF9pbWFnZS5wbmciXV0/image.png?sha=90f27d61f64c41e1\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2017-03-20T13:09:47Z\",\n        \"updated_at\": \"2017-03-20T13:09:47Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 12,\n        \"incident_id\": 26,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"age_estimate\": null,\n        \"created_at\": \"2017-03-20T13:09:47Z\",\n        \"updated_at\": \"2017-03-20T13:09:47Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 26,\n    \"slug\": \"RtNnHnd5\",\n    \"user_id\": 27,\n    \"incident_type_id\": 13,\n    \"description\": \"I was stopped\",\n    \"start_time\": \"2017-03-21T02:58:46Z\",\n    \"location\": \"New York, NY\",\n    \"reactions_list\": \"Golden Bashirian\",\n    \"tags_list\": \"Miss Myrtice Green\",\n    \"latitude\": 40.7127837,\n    \"longitude\": -74.0059413,\n    \"address\": \"New York City Hall, New York, NY 10007, USA\",\n    \"rating\": 1,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-21T02:58:46Z\",\n    \"updated_at\": \"2017-03-21T02:58:46Z\",\n    \"user\": {\n      \"id\": 27,\n      \"uid\": \"4fea4b76\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-21T02:58:46Z\",\n      \"updated_at\": \"2017-03-21T02:58:46Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n      {\n        \"id\": 14,\n        \"incident_id\": 26,\n        \"asset_original_url\": \"http://localhost:3000/media/W1siZiIsIjIwMTcvMDMvMjAvN2RkZ3N1M2VpaV9pbWFnZS5wbmciXV0/image.png?sha=e77399c99c77a717\",\n        \"asset_name\": \"image.png\",\n        \"asset_width\": 640,\n        \"asset_height\": 640,\n        \"created_at\": \"2017-03-21T02:58:46Z\",\n        \"updated_at\": \"2017-03-21T02:58:46Z\"\n      }\n    ],\n    \"officers\": [\n      {\n        \"id\": 12,\n        \"incident_id\": 26,\n        \"race_id\": null,\n        \"gender_id\": null,\n        \"name\": null,\n        \"badge_number\": null,\n        \"description\": null,\n        \"age_estimate\": null,\n        \"created_at\": \"2017-03-21T02:58:46Z\",\n        \"updated_at\": \"2017-03-21T02:58:46Z\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"23e983b14c1eac748354b32b7917333f\"",
+        "ETag": "W/\"cff50856394b2b94c3e8ba4fce2d64b0\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "5c9a5233-437e-4cab-a968-8286894b73e4",
-        "X-Runtime": "0.492669",
-        "Content-Length": "1219"
+        "X-Request-Id": "b379628f-0f13-4472-9397-3a93cc35857e",
+        "X-Runtime": "0.123549",
+        "Content-Length": "1228"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

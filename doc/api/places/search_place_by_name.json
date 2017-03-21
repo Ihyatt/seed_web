@@ -24,29 +24,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/places?write_key=4d0e98f85f251cef5476470ba141d1db&name=San+Francisco",
+      "request_path": "/api/v1/places?write_key=69259e42f47902ddb7fe53e618775cf0&name=San+Francisco",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "write_key": "4d0e98f85f251cef5476470ba141d1db",
+        "write_key": "69259e42f47902ddb7fe53e618775cf0",
         "name": "San Francisco"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 240,\n      \"name\": \"San Francisco\",\n      \"slug\": \"san-francisco-ca\",\n      \"short\": null,\n      \"level\": \"city\",\n      \"parent_id\": 207,\n      \"latitude\": null,\n      \"longitude\": null,\n      \"created_at\": \"2017-03-20T13:09:50Z\",\n      \"updated_at\": \"2017-03-20T13:09:50Z\"\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": 240,\n      \"name\": \"San Francisco\",\n      \"slug\": \"san-francisco-ca\",\n      \"short\": null,\n      \"level\": \"city\",\n      \"parent_id\": 207,\n      \"latitude\": null,\n      \"longitude\": null,\n      \"created_at\": \"2017-03-21T02:58:49Z\",\n      \"updated_at\": \"2017-03-21T02:58:49Z\"\n    }\n  ],\n  \"meta\": {\n    \"status\": 200,\n    \"pagination\": {\n      \"page\": 1,\n      \"total_pages\": 1,\n      \"count\": 1\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"7e8e19bcc15a532cb3e8cdb7d8397bd9\"",
+        "ETag": "W/\"9143b29f6850bd5d133a79db1330d480\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "30b5eea8-0d7e-4145-a772-67a5b43a206a",
-        "X-Runtime": "0.007876",
+        "X-Request-Id": "404de5a5-efa7-4d99-8e50-e085a695488d",
+        "X-Runtime": "0.008378",
         "Content-Length": "291"
       },
       "response_content_type": "application/json; charset=utf-8",
