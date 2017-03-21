@@ -209,7 +209,8 @@ resource "Incidents" do
 
   post "/api/v1/incidents" do
     parameter :user_id, "Incident Email", required: true
-    parameter :incident_type_id, "Incident Type"
+    parameter :incident_type_id, "Incident Type by ID"
+    parameter :incident_type_name, "OR Incident Type by Name"
     parameter :description, "What happened"
     parameter :location, "City and State"
     parameter :reactions_list, "Reactions to incidents from approved Incdents"
@@ -236,7 +237,7 @@ resource "Incidents" do
                   tags_list: tags_list,
                   rating: rating,
                   start_time: start_time.to_i,
-                  incident_type_id: incident_type.id,
+                  incident_type_name: incident_type.name,
                   metadata: metadata,
                   write_key: api_key.write_key)
 
