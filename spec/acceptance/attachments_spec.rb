@@ -37,7 +37,7 @@ resource "Attachments" do
     example "Create An Attachment with Asset URL" do
 
       do_request( incident_id: incident.id,
-                  asset_url: "http://raheem.ai/images/logo_light@2x.png",
+                  asset_url: "http://www.joehankin.com/snowglobe/rubber_duck.jpg",
                   write_key: api_key.write_key)
 
       expect(status).to eq(200)
