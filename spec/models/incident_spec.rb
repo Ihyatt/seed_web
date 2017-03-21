@@ -243,4 +243,15 @@ RSpec.describe Incident, type: :model do
       expect(incidents.first).to eq incident
     end
   end
+
+  describe "setters" do
+    it "should support setting incident_type by name" do
+      IncidentType.seed
+      incident_type = IncidentType.first
+      incident.incident_type_name = incident_type.name
+      incident.save
+
+      expect(incident.incident_type_id).to eq incident_type.id
+    end
+  end
 end

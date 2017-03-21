@@ -81,6 +81,11 @@ class Incident < ApplicationRecord
     end
   end
 
+  def incident_type_name=(value)
+    found_record = IncidentType.search_by_exact_name(value).first
+    self.incident_type = found_record if found_record.present?
+  end
+
   def start_time=(value)
     self.write_attribute(:start_time, Time.at(value.to_i))
   end
