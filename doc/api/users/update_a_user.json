@@ -62,7 +62,7 @@
     {
       "request_method": "PUT",
       "request_path": "/api/v1/users/45.json",
-      "request_body": "email=michaela.carroll_47%40lueilwitz.info&first_name=Ketan&last_name=Foo&write_key=69259e42f47902ddb7fe53e618775cf0&race_id=3&gender_id=4&religion_id=20&birthday=1490065131",
+      "request_body": "email=eveline_47%40hane.name&first_name=Ketan&last_name=Foo&write_key=cc8531ecd48b3282222e379567c7adb7&race_id=3&gender_id=4&religion_id=20&birthday=1490674597",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -73,16 +73,16 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 45,\n    \"uid\": \"8391990e\",\n    \"facebook_id\": null,\n    \"created_at\": \"2017-03-21T02:58:51Z\",\n    \"updated_at\": \"2017-03-21T02:58:51Z\",\n    \"race_id\": 3,\n    \"gender_id\": 4,\n    \"religion_id\": 20,\n    \"birthday\": \"2017-03-20\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 45,\n    \"uid\": \"ab77aee1\",\n    \"facebook_id\": null,\n    \"created_at\": \"2017-03-28T04:16:37Z\",\n    \"updated_at\": \"2017-03-28T04:16:37Z\",\n    \"race_id\": 3,\n    \"gender_id\": 4,\n    \"religion_id\": 20,\n    \"birthday\": \"2017-03-27\"\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"c5c8da0dedc798db837eda788827fdbb\"",
+        "ETag": "W/\"e9b97c36aa469b0d5555a83f25728a9a\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "8748ad2c-f78b-4131-98d5-1b1518698283",
-        "X-Runtime": "0.029566",
+        "X-Request-Id": "416f5b75-1e85-4d81-923f-53f1d7aec47d",
+        "X-Runtime": "0.021528",
         "Content-Length": "215"
       },
       "response_content_type": "application/json; charset=utf-8",

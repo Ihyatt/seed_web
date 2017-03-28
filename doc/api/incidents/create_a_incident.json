@@ -28,11 +28,11 @@
     },
     {
       "name": "reactions_list",
-      "description": "Reactions to incidents from approved Incdents"
+      "description": "Comma-delimited list of existing reactions, e.g. 'stressed,scared,angry'"
     },
     {
       "name": "tags_list",
-      "description": "Tags"
+      "description": "Comma-delimited list of existing tags, e.g. 'shooting,citation,arrest'"
     },
     {
       "name": "latitude",
@@ -62,7 +62,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/incidents",
-      "request_body": "user_id=25&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Mr.+Nelson+Labadie%2C+Maci+Conn&tags_list=Randal+Smitham%2C+Monroe+Miller&rating=5&start_time=1490065126&incident_type_name=Incident+Type&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=69259e42f47902ddb7fe53e618775cf0",
+      "request_body": "user_id=25&description=I+was+arrested&location=San+Francisco%2C+CA&reactions_list=Coby+Wisoky%2C+Dr.+Damien+Boyle&tags_list=Magnolia+Nicolas%2C+Van+McDermott&rating=5&start_time=1490674593&incident_type_name=Incident+Type&metadata=%7B%22one%22%3A%22two%22%2C%22key%22%3A%22value%22%7D&write_key=cc8531ecd48b3282222e379567c7adb7",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -73,17 +73,17 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": 25,\n    \"slug\": \"G7GAHBZL\",\n    \"user_id\": 25,\n    \"incident_type_id\": 12,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2017-03-21T02:58:46Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Mr. Nelson Labadie,Maci Conn\",\n    \"tags_list\": \"Randal Smitham,Monroe Miller\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"address\": \"8411 Market St, San Francisco, CA 94103, USA\",\n    \"rating\": 5,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-21T02:58:46Z\",\n    \"updated_at\": \"2017-03-21T02:58:46Z\",\n    \"user\": {\n      \"id\": 25,\n      \"uid\": \"3a5a870b\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-21T02:58:45Z\",\n      \"updated_at\": \"2017-03-21T02:58:45Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": 25,\n    \"slug\": \"v6Ezz6pS\",\n    \"user_id\": 25,\n    \"incident_type_id\": 12,\n    \"description\": \"I was arrested\",\n    \"start_time\": \"2017-03-28T04:16:33Z\",\n    \"location\": \"San Francisco, CA\",\n    \"reactions_list\": \"Coby Wisoky,Dr. Damien Boyle\",\n    \"tags_list\": \"Magnolia Nicolas,Van McDermott\",\n    \"latitude\": 37.7749295,\n    \"longitude\": -122.4194155,\n    \"address\": \"8411 Market St, San Francisco, CA 94103, USA\",\n    \"rating\": 5,\n    \"completed\": false,\n    \"metadata\": \"{\\\"one\\\":\\\"two\\\",\\\"key\\\":\\\"value\\\"}\",\n    \"created_at\": \"2017-03-28T04:16:34Z\",\n    \"updated_at\": \"2017-03-28T04:16:34Z\",\n    \"user\": {\n      \"id\": 25,\n      \"uid\": \"0213a864\",\n      \"facebook_id\": null,\n      \"created_at\": \"2017-03-28T04:16:33Z\",\n      \"updated_at\": \"2017-03-28T04:16:33Z\",\n      \"race_id\": null,\n      \"gender_id\": null,\n      \"religion_id\": null,\n      \"birthday\": null\n    },\n    \"attachments\": [\n\n    ],\n    \"officers\": [\n\n    ]\n  },\n  \"meta\": {\n    \"status\": 200\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"f99cfaa28e1d9e9694344e4ddb463a13\"",
+        "ETag": "W/\"f78f978517c3ce742314cc34490bbff7\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "89eaa52c-b28c-436d-9c13-733859c91cb1",
-        "X-Runtime": "0.127619",
-        "Content-Length": "759"
+        "X-Request-Id": "8c23d78f-cce8-4044-9ce8-39606b1924f3",
+        "X-Runtime": "0.231641",
+        "Content-Length": "761"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
