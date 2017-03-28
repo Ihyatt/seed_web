@@ -7,6 +7,7 @@ class Place < ApplicationRecord
   STATE = "state"
   CITY = "city"
   NEIGHBORHOOD = "neighborhood"
+  COUNTY = "country"
 
   VALID_LEVELS = [
     COUNTRY,
@@ -14,7 +15,8 @@ class Place < ApplicationRecord
     DIVISION,
     STATE,
     CITY,
-    NEIGHBORHOOD
+    NEIGHBORHOOD,
+    COUNTY,
   ]
 
   # Extensions
