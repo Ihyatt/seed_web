@@ -1,4 +1,6 @@
 class Incident < ApplicationRecord
+  include RailsAdmin::IncidentAdmin
+
   # Extensions
   acts_as_taggable_array_on :reactions
   acts_as_taggable_array_on :tags
