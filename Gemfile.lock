@@ -1,12 +1,12 @@
 GIT
-  remote: git://github.com/amerine/acts_as_tree.git
-  revision: 6a5b14c2c606c64b688dd0e56ae925b3e8b95422
+  remote: https://github.com/amerine/acts_as_tree.git
+  revision: 5fc75e9561bfc53a3307552a56fe30deb88f002a
   specs:
-    acts_as_tree (2.5.1)
+    acts_as_tree (2.6.1)
       activerecord (>= 3.0.0)
 
 GIT
-  remote: git://github.com/kidbombay/acts-as-taggable-array-on.git
+  remote: https://github.com/kidbombay/acts-as-taggable-array-on.git
   revision: 66f5d6c1b0ed2fb2c3039e9fd53dd6a690377c0b
   specs:
     acts-as-taggable-array-on (0.3.1)
@@ -14,27 +14,22 @@ GIT
       activesupport (>= 4)
 
 GIT
-  remote: git://github.com/kidbombay/fast_seeder.git
+  remote: https://github.com/kidbombay/fast_seeder.git
   revision: 8f481284acfaade1a6fb8918d261b716b9b09c12
   specs:
     fast_seeder (0.0.2)
       rails (>= 3.0)
 
 GIT
-  remote: git://github.com/sinatra/rack-protection.git
-  revision: 7e723a74763bb83989d1249cdceb9cceb2ee6f01
+  remote: https://github.com/sinatra/sinatra.git
+  revision: 69a7b8f23321f19c6de02212153f2821c16c25c7
   specs:
-    rack-protection (2.0.0)
+    rack-protection (2.0.0.rc2)
       rack
-
-GIT
-  remote: git://github.com/sinatra/sinatra.git
-  revision: 285275b42fa1bf096a5c9559b6cead2f31b65b66
-  specs:
-    sinatra (2.0.0.pre.alpha)
-      mustermann (~> 0.4)
+    sinatra (2.0.0.rc2)
+      mustermann (= 1.0.0)
       rack (~> 2.0)
-      rack-protection (~> 2.0)
+      rack-protection (= 2.0.0.rc2)
       tilt (~> 2.0)
 
 GEM
@@ -236,8 +231,7 @@ GEM
     minitest (5.9.0)
     multi_json (1.12.1)
     mustache (1.0.3)
-    mustermann (0.4.0)
-      tool (~> 0.2)
+    mustermann (1.0.0)
     nenv (0.3.0)
     nested_form (0.3.2)
     netrc (0.11.0)
@@ -379,7 +373,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
-    tool (0.2.3)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
@@ -466,4 +459,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.6
+   1.14.3

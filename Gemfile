@@ -30,7 +30,12 @@ gem 'rolify'
 gem 'friendly_id', '~> 5.1.0'
 gem 'redis', '~>3.2'
 gem 'sidekiq'
-gem 'rack-protection', github: 'sinatra/rack-protection', require: false
+
+github 'sinatra/sinatra' do
+  gem 'rack-protection'
+end
+# gem 'rack-protection', github: 'sinatra/rack-protection', require: false
+
 gem 'sinatra', github: 'sinatra', require: false
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'apitome'
