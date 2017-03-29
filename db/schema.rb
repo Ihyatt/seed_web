@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320130424) do
+ActiveRecord::Schema.define(version: 20170329133348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,25 @@ ActiveRecord::Schema.define(version: 20170320130424) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.integer  "position",   default: 0, null: false
+  end
+
+  create_table "incident_queries", force: :cascade do |t|
+    t.integer  "total_count",      default: 0, null: false
+    t.integer  "negative_count",   default: 0, null: false
+    t.integer  "positive_count",   default: 0, null: false
+    t.integer  "population",       default: 0, null: false
+    t.boolean  "completed"
+    t.string   "reactions"
+    t.string   "tags"
+    t.string   "ratings"
+    t.integer  "incident_type_id"
+    t.integer  "place_id"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["incident_type_id"], name: "index_incident_queries_on_incident_type_id", using: :btree
+    t.index ["place_id"], name: "index_incident_queries_on_place_id", using: :btree
   end
 
   create_table "incident_types", force: :cascade do |t|
