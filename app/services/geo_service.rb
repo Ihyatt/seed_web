@@ -5,13 +5,14 @@ class GeoService
       results.first
     end
 
+    # result - Geocoder::Result subclass
     def cache_result(result)
       # WARNING: This code is prone to race conditions.
       # To ensure data integrity when this function is called in parallel,
-      # make sure that there is a unique index on Place
+      # make sure that there is a unique index on Place for the appropriate set of columns
       #
       # WARNING: This code isn't properly indexed, so it's going to be slow
-      # Need to add indicies for the select query
+      # Need to add indices for the select query
 
       country = state = county = city = neighborhood = nil
       Place.transaction do
@@ -73,6 +74,20 @@ class GeoService
           city: city,
           neighborhood: neighborhood,
       }
+    end
+
+    def reverse_geocode_incident(incident)
+      result = GeoService.reverse_geocode(incident.latitude, incident.longitude)
+      places = GeoService.cache_result(result)
+
+      incident.address = result.formatted_address
+
+      IncidentPlacing.transaction do
+        incident.save!
+        places.each do |type, place|
+          IncidentPlacing.create!(incident_id: incident.id, place_id: place.id)
+        end
+      end
     end
   end
 end

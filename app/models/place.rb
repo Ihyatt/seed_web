@@ -7,7 +7,7 @@ class Place < ApplicationRecord
   STATE = "state"
   CITY = "city"
   NEIGHBORHOOD = "neighborhood"
-  COUNTY = "country"
+  COUNTY = "county"
 
   VALID_LEVELS = [
     COUNTRY,

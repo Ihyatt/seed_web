@@ -1,14 +1,14 @@
 require "rails_helper"
 
 describe GeoService do
-  # Geocoder.configure(lookup: :test)
-
+  Geocoder.configure(lookup: :test)
   Geocoder::Lookup::Test.set_default_stub(
       [
           {
               latitude: 37.7434243,
               longitude: -122.4285729,
               address: '385 29th St, San Francisco, CA 94131, USA',
+              formatted_address: '385 29th St, San Francisco, CA 94131, USA',
               state: 'California',
               state_code: 'CA',
               country: 'United States',
@@ -57,6 +57,23 @@ describe GeoService do
       expect(Place.count).to eq 5
 
       expect(ps[:state].parent_id).to eq usa.id
+    end
+  end
+
+  describe "reverse geocoding an incident" do
+    let(:incident) { FactoryGirl.create(:incident, latitude: lat, longitude: lon) }
+    subject { GeoService.reverse_geocode_incident(incident) }
+
+    it "saves the places" do
+      expect(Place.count).to eq 0
+      subject
+      expect(Place.count).to eq 5
+    end
+
+    it "associates an incident with a location" do
+      expect(IncidentPlacing.count).to eq 0
+      subject
+      expect(IncidentPlacing.count).to eq 5
     end
   end
 end
