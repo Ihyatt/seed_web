@@ -229,6 +229,28 @@ RSpec.describe Incident, type: :model do
   end
 
   describe "scopes" do
+    it "should return negative incidents" do
+      incident = FactoryGirl.create(:incident, rating: 1)
+      incident = FactoryGirl.create(:incident, rating: 2)
+      incident = FactoryGirl.create(:incident, rating: 3)
+      incident = FactoryGirl.create(:incident, rating: 4)
+      incident = FactoryGirl.create(:incident, rating: 5)
+
+      incidents = Incident.negative
+      expect(incidents.count).to eq 3
+    end
+
+    it "should return positive incidents" do
+      incident = FactoryGirl.create(:incident, rating: 1)
+      incident = FactoryGirl.create(:incident, rating: 2)
+      incident = FactoryGirl.create(:incident, rating: 3)
+      incident = FactoryGirl.create(:incident, rating: 4)
+      incident = FactoryGirl.create(:incident, rating: 5)
+
+      incidents = Incident.positive
+      expect(incidents.count).to eq 2
+    end
+
     it "should return incidents without_address" do
       incidents = Incident.without_address
       expect(Incident.without_address.count).to eq 0

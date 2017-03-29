@@ -21,6 +21,8 @@ class Incident < ApplicationRecord
   scope :by_incident_type, -> (incident_type) { where(incident_type: incident_type) }
   scope :between, ->          (start_date, end_date) { where("incidents.start_time BETWEEN ? and ?", start_date, end_date) }
   scope :with_any_rating, ->  (ratings) { where(rating: ratings.map(&:to_i)) }
+  scope :negative, ->         { where("rating < ?", 4) }
+  scope :positive, ->         { where("rating > ?", 3) }
   scope :with_coordinates, -> { where.not(latitude: nil, longitude: nil) }
   scope :without_address, ->  { where(address: nil)}
   
