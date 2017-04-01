@@ -64,6 +64,16 @@ resource "Incidents" do
       expect(pagination["count"]).to eq(Incident.all.size)
     end
 
+    example "Search results will page with size 100" do
+      Incident.transaction do
+        100.times { FactoryGirl.create(:incident) }
+      end
+
+      do_request(write_key: api_key.write_key)
+      incidents = JSON.parse(response_body)["data"]
+      expect(incidents.count).to eq 100
+    end
+
     example "Search Incidents for User" do
       do_request(write_key: api_key.write_key, user_id: user.id)
 

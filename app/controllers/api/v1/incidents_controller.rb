@@ -8,7 +8,7 @@ class API::V1::IncidentsController < API::V1::APIController
                                 incident_type_id: params[:incident_type_id],
                                 place_id: params[:place_id]
                                 )
-    @incidents = scope.page(params[:page])
+    @incidents = scope.page(params[:page]).per(100)
     render_collection(@incidents, scope)
   end
 
